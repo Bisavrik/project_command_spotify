@@ -223,6 +223,7 @@
 
 .sidebar-left__primary-label {
   font-size: 13px;
+  color: #ffffff;
 }
 
 .sidebar-left__secondary-btn {
@@ -244,8 +245,10 @@
   height: 18px;
 }
 
-.sidebar-left__secondary-label {
+.sidebar-left__secondary-label 
+{
   font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ТЕКСТОВЫЕ КНОПКИ ПЛЕЙЛИСТОВ */
@@ -472,6 +475,7 @@
 
 .mood-card__label {
   font-size: 13px;
+  color: #ffffff;
 }
 
 /* ТОП МУЗЫКА */
@@ -528,16 +532,17 @@
   justify-content: center;
   gap: 6px;
   background: transparent;
-  border-style: dashed;
+  border-style: none;
 }
 
 .track-card__more-icon {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 
 .track-card__more-text {
   font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ПРАВАЯ ПАНЕЛЬ */
