@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lumtune</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ШРИФТЫ
+       Сюда потом вставишь свои ссылки на шрифты, например:
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  -->
+</head>
+<body>
+  <div class="app">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <!-- ЛОГО СЛЕВА -->
+        <div class="navbar__logo">
+          <img src="img/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+        </div>
+
+        <!-- ПОИСК ПО ЦЕНТРУ -->
+        <div class="navbar__search">
+          <span class="navbar__search-icon navbar__search-icon--left">
+            <img src="img/icon-search.svg" alt="Пошук">
+          </span>
+
+          <input
+            type="text"
+            class="navbar__search-input"
+            placeholder="Виконавці, треки, подкасти..."
+          >
+
+          <span class="navbar__search-icon navbar__search-icon--right">
+            <img src="img/icon-mic.svg" alt="Голосовий пошук">
+          </span>
+        </div>
+
+        <!-- ИКОНКИ СПРАВА -->
+        <div class="navbar__actions">
+          <button class="navbar__icon-btn" aria-label="Сповіщення">
+            <img src="img/icon-bell.svg" alt="Сповіщення">
+          </button>
+          <button class="navbar__icon-btn" aria-label="Профіль">
+            <img src="img/icon-user.svg" alt="Профіль">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+    <main class="page-content">
+      <div class="layout">
+        <!-- ЛЕВОЕ МЕНЮ -->
+        <aside class="sidebar-left">
+          <div class="sidebar-left__inner">
+            <div class="sidebar-left__section">
+              <p class="sidebar-left__caption">Меню</p>
+
+              <button class="sidebar-left__primary-btn">
+                <span class="sidebar-left__primary-icon">
+                  <img src="img/icon-home.svg" alt="Головна">
+                </span>
+                <span class="sidebar-left__primary-label">Головна</span>
+              </button>
+
+              <button class="sidebar-left__secondary-btn">
+                <span class="sidebar-left__secondary-icon">
+                  <img src="img/icon-library.svg" alt="Моя медіатека">
+                </span>
+                <span class="sidebar-left__secondary-label">Моя медіатека</span>
+              </button>
+            </div>
+
+            <div class="sidebar-left__section">
+              <p class="sidebar-left__caption">Плейлісти</p>
+
+              <button class="sidebar-left__text-btn">
+                <span class="sidebar-left__text-icon">
+                  <img src="img/icon-heart-outline.svg" alt="Улюблені треки">
+                </span>
+                <span>Улюблені треки</span>
+              </button>
+
+              <button class="sidebar-left__text-btn">
+                <span class="sidebar-left__text-icon">
+                  <img src="img/icon-plus-square.svg" alt="Створити плейліст">
+                </span>
+                <span>Створити плейліст</span>
+              </button>
+            </div>
+
+            <div class="sidebar-left__section">
+              <div class="sidebar-left__section-header">
+                <p class="sidebar-left__caption">Ваші плейлісти</p>
+                <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
+                  <img src="img/icon-playlist-menu.svg" alt="Меню">
+                </button>
+              </div>
+
+              <ul class="sidebar-left__playlist-list">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img/playlist-lisa.svg" alt="Lisa">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lisa</p>
+                    <p class="sidebar-left__playlist-meta">Відтворюється</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img/playlist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lady Gaga</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img/playlist-bruno-mars.svg" alt="Bruno Mars">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Bruno Mars</p>
+                    <p class="sidebar-left__playlist-meta">Виконавець</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img/playlist-bts.svg" alt="BTS">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">BTS</p>
+                    <p class="sidebar-left__playlist-meta">Гурт</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lana Del Rey</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-left__section sidebar-left__section--bottom">
+              <p class="sidebar-left__caption">Нещодавно прослухані</p>
+              <div class="sidebar-left__clock-wrap">
+                <img src="img/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+        <section class="content-center">
+          <div class="content-center__inner">
+            <!-- ТАБЫ -->
+            <div class="content-center__tabs">
+              <button class="content-center__tab content-center__tab--active">Всі</button>
+              <button class="content-center__tab">Треки</button>
+              <button class="content-center__tab">Інше</button>
+            </div>
+
+            <!-- ГЛАВНЫЙ БАННЕР -->
+            <div class="content-center__hero">
+              <div class="hero-banner">
+                <img src="img/hero-exoplanet.svg" alt="Exoplanet" class="hero-banner__img">
+              </div>
+            </div>
+
+            <!-- НАСТРОЕНИЯ -->
+            <section class="moods">
+              <div class="moods__header">
+                <p class="moods__title">
+                  Саундтреки на основі твого <span>настрою</span>
+                </p>
+                <button class="moods__settings">
+                  Настрій
+                  <img src="img/icon-arrow-down.svg" alt="Настройки">
+                </button>
+              </div>
+
+              <div class="moods__list">
+                <button class="mood-card">
+                  <img src="img/mood-sun.svg" alt="Хеппі" class="mood-card__circle">
+                  <span class="mood-card__label">Хеппі</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img/mood-drop.svg" alt="Меланхолія" class="mood-card__circle">
+                  <span class="mood-card__label">Меланхолія</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img/mood-heart.svg" alt="Романтика" class="mood-card__circle">
+                  <span class="mood-card__label">Романтика</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img/mood-lightning.svg" alt="Драйв" class="mood-card__circle">
+                  <span class="mood-card__label">Драйв</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img/mood-party.svg" alt="Туса" class="mood-card__circle">
+                  <span class="mood-card__label">Туса</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- ТОП ВАША МУЗЫКА СЕГОДНЯ -->
+            <section class="top-music">
+              <div class="top-music__header">
+                <h2 class="top-music__title">
+                  Топ <span>ВАША музика</span> сьогодні!!
+                </h2>
+              </div>
+
+              <div class="top-music__grid">
+                <article class="track-card">
+                  <img src="img/track-die-with-a-smile.svg" alt="Die with a smile" class="track-card__cover">
+                  <h3 class="track-card__title">Die with a smile</h3>
+                  <p class="track-card__artist">Lady Gaga &amp; Bruno Mars</p>
+                </article>
+
+                <article class="track-card">
+                  <img src="img/track-deep.svg" alt="Глубоко" class="track-card__cover">
+                  <h3 class="track-card__title">Глубоко</h3>
+                  <p class="track-card__artist">Марія &amp; Нікита Дорошенко</p>
+                </article>
+
+                <article class="track-card">
+                  <img src="img/track-superman.svg" alt="Superman" class="track-card__cover">
+                  <h3 class="track-card__title">Superman</h3>
+                  <p class="track-card__artist">Eminem</p>
+                </article>
+
+                <article class="track-card">
+                  <img src="img/track-sweater-weather.svg" alt="Sweater Weather" class="track-card__cover">
+                  <h3 class="track-card__title">Sweater Weather</h3>
+                  <p class="track-card__artist">The Neighbourhood</p>
+                </article>
+
+                <article class="track-card">
+                  <img src="img/track-cry-me-a-river.svg" alt="Cry Me A River" class="track-card__cover">
+                  <h3 class="track-card__title">Cry Me A River</h3>
+                  <p class="track-card__artist">Justin Timberlake</p>
+                </article>
+
+                <button class="track-card track-card--more">
+                  <img src="img/icon-plus-circle.svg" alt="Більше" class="track-card__more-icon">
+                  <span class="track-card__more-text">Все тут</span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ LANA DEL REY RADIO -->
+        <aside class="sidebar-right">
+          <div class="sidebar-right__inner">
+            <header class="sidebar-right__header">
+              <h3 class="sidebar-right__title">Lana Del Rey Radio</h3>
+              <!-- <div class="sidebar-right__header-icons">
+                <button class="sidebar-right__icon-btn">
+                  <img src="img/icon-dots.svg" alt="Меню">
+                </button>
+                <button class="sidebar-right__icon-btn">
+                  <img src="img/icon-close.svg" alt="Закрити">
+                </button>
+              </div> -->
+            </header>
+
+            <div class="sidebar-right__cover-main">
+              <img src="img/radio-lana-top.svg" alt="Lana Del Rey main cover">
+            </div>
+
+            <div class="sidebar-right__track">
+              <div class="sidebar-right__track-cover">
+                <!-- <img src="img/radio-track-kill-this-love.svg" alt="Kill This Love"> -->
+              </div>
+              <div class="sidebar-right__track-text">
+                <p class="sidebar-right__track-title">Kill This Love</p>
+                <p class="sidebar-right__track-artist">BLACK PINK</p>
+              </div>
+              <div class="sidebar-right__track-icons">
+                <button class="sidebar-right__icon-btn">
+                  <img src="img/icon-share.svg" alt="Поділитися">
+                </button>
+                <button class="sidebar-right__icon-btn">
+                  <img src="img/icon-add.svg" alt="Додати">
+                </button>
+              </div>
+            </div>
+
+            <div class="sidebar-right__artist-card">
+              <div class="sidebar-right__artist-cover">
+                <img src="img/radio-lana-bottom.svg" alt="Lana Del Rey">
+              </div>
+              <div class="sidebar-right__artist-body">
+                <p class="sidebar-right__artist-name">Lana Del Rey</p>
+                <p class="sidebar-right__artist-stat">72 780 975 слухачів на місяць</p>
+                <p class="sidebar-right__artist-desc">
+                    Sabrina Carpenter зачарувала мільйони слухачів як співачка, авторка пісень, 
+                    акторка та ікона стилю. 
+                    Завдяки своїй музиці вона кожного року створює один хіт за іншим...
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
