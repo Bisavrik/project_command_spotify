@@ -58,8 +58,9 @@
         <!-- ЛЕВОЕ МЕНЮ -->
         <aside class="sidebar-left">
           <div class="sidebar-left__inner">
-            <div class="sidebar-left__section">
-              <p class="sidebar-left__caption">Меню</p>
+            <!-- БЛОК "МЕНЮ" -->
+            <div class="sidebar-left__section sidebar-left__section--menu">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Меню</p>
 
               <button class="sidebar-left__primary-btn">
                 <span class="sidebar-left__primary-icon">
@@ -76,8 +77,9 @@
               </button>
             </div>
 
-            <div class="sidebar-left__section">
-              <p class="sidebar-left__caption">Плейлісти</p>
+            <!-- БЛОК "ПЛЕЙЛІСТИ" -->
+            <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
 
               <button class="sidebar-left__text-btn">
                 <span class="sidebar-left__text-icon">
@@ -92,11 +94,9 @@
                 </span>
                 <span>Створити плейліст</span>
               </button>
-            </div>
 
-            <div class="sidebar-left__section">
               <div class="sidebar-left__section-header">
-                <p class="sidebar-left__caption">Ваші плейлісти</p>
+                <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
                 <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
                   <img src="img/icon-playlist-menu.svg" alt="Меню">
                 </button>
@@ -155,8 +155,15 @@
               </ul>
             </div>
 
-            <div class="sidebar-left__section sidebar-left__section--bottom">
-              <p class="sidebar-left__caption">Нещодавно прослухані</p>
+            <!-- БЛОК "НЕЩОДАВНО ПРОСЛУХАНІ" -->
+            <div class="sidebar-left__section sidebar-left__section--bottom sidebar-left__section--divider">
+              <div class="sidebar-left__recent-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
+                <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
+                  <img src="img/icon-refresh-arrow.svg" alt="Оновити">
+                </button>
+              </div>
+
               <div class="sidebar-left__clock-wrap">
                 <img src="img/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
               </div>
@@ -174,10 +181,62 @@
               <button class="content-center__tab">Інше</button>
             </div>
 
-            <!-- ГЛАВНЫЙ БАННЕР -->
+            <!-- ГЛАВНЫЙ БАННЕР (CSS-СЛАЙДЕР) -->
             <div class="content-center__hero">
-              <div class="hero-banner">
-                <img src="img/hero-exoplanet.svg" alt="Exoplanet" class="hero-banner__img">
+              <div class="hero-carousel">
+
+                <!-- Радио-кнопки (переключатели слайдов) -->
+                <input type="radio" name="hero-slider" id="hero-slide-1" class="hero-radio" checked>
+                <input type="radio" name="hero-slider" id="hero-slide-2" class="hero-radio">
+                <input type="radio" name="hero-slider" id="hero-slide-3" class="hero-radio">
+
+                <!-- Сам баннер со слайдами -->
+                <div class="hero-banner">
+                  <!-- Точки навигации сверху -->
+                  <div class="hero-dots">
+                    <label class="hero-dot hero-dot-1" for="hero-slide-1"></label>
+                    <label class="hero-dot hero-dot-2" for="hero-slide-2"></label>
+                    <label class="hero-dot hero-dot-3" for="hero-slide-3"></label>
+                  </div>
+
+                  <!-- Слайды -->
+                  <div class="hero-slide hero-slide-1">
+                    <img src="img/hero-exoplanet.svg" alt="Exoplanet" class="hero-banner__img">
+                  </div>
+
+                  <div class="hero-slide hero-slide-2">
+                    <img src="img/hero-born-pink.svg" alt="Born Pink" class="hero-banner__img">
+                  </div>
+
+                  <div class="hero-slide hero-slide-3">
+                    <img src="img/hero-blackpink-concert.svg" alt="Blackpink Live" class="hero-banner__img">
+                  </div>
+                </div>
+
+                <!-- Стрелки слева/справа -->
+                <!-- Когда активен 1 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-1" for="hero-slide-3">
+                  <img src="img/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-1" for="hero-slide-2">
+                  <img src="img/icon-arrow-right.svg" alt="Вперед">
+                </label>
+
+                <!-- Когда активен 2 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-2" for="hero-slide-1">
+                  <img src="img/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-2" for="hero-slide-3">
+                  <img src="img/icon-arrow-right.svg" alt="Вперед">
+                </label>
+
+                <!-- Когда активен 3 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-3" for="hero-slide-2">
+                  <img src="img/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-3" for="hero-slide-1">
+                  <img src="img/icon-arrow-right.svg" alt="Вперед">
+                </label>
               </div>
             </div>
 
@@ -274,14 +333,6 @@
           <div class="sidebar-right__inner">
             <header class="sidebar-right__header">
               <h3 class="sidebar-right__title">Lana Del Rey Radio</h3>
-              <!-- <div class="sidebar-right__header-icons">
-                <button class="sidebar-right__icon-btn">
-                  <img src="img/icon-dots.svg" alt="Меню">
-                </button>
-                <button class="sidebar-right__icon-btn">
-                  <img src="img/icon-close.svg" alt="Закрити">
-                </button>
-              </div> -->
             </header>
 
             <div class="sidebar-right__cover-main">
