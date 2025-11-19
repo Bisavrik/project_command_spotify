@@ -492,11 +492,11 @@
   background: #000;
 }
 
-/* Размер баннера — как у референса */
+/* Размер баннера */
 .hero-banner__img {
   width: 100%;
   display: block;
-  max-height: 300px;      /* если нужно, подправь 280–320 */
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -556,12 +556,11 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  display: none;  
+  display: none;
   align-items: center;
   justify-content: center;
 }
 
-/* Позиция стрелок слева/справа от баннера */
 .hero-arrow--left {
   order: -1; /* слева */
 }
@@ -575,7 +574,7 @@
   height: 24px;
 }
 
-/* Когда активен 1-й слайд — показываем свою пару стрелок */
+/* Когда активен 1-й слайд */
 #hero-slide-1:checked ~ .hero-arrow-left-1,
 #hero-slide-1:checked ~ .hero-arrow-right-1 {
   display: flex;
@@ -650,11 +649,10 @@
   width: 130px;
   height: 130px;
   display: block;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .mood-card__circle:hover {
   transform: scale(1.08);
- 
 }
 .mood-card__label {
   font-size: 13px;
@@ -664,68 +662,83 @@
 /* ТОП МУЗЫКА */
 
 .top-music__header {
-  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
 }
 
 .top-music__title {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .top-music__title span {
   color: #32aaff;
 }
+button.top-music__arrow-btn
+{
+  background: none;
+  border: none;
+}
+.top-music__arrow-btn img
+{
+  width: 20px;
+  height: 20px;
+}
+/* Строка карточек как на макете – в линию, с большим отступом */
 
-.top-music__grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 14px;
+.cards-row {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* чтобы всегда были в один ряд, как на скрине */
+  flex-wrap: nowrap;
 }
 
-.track-card {
-  border-radius: 12px;
-  background: rgba(7, 18, 44, 0.96);
-  padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+/* Одна карточка */
+.card {
+  background: #050d1c;
+  border-radius: 14px;
+  width: 150px;
+  /* overflow: hidden; */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.track-card__cover {
+/* Ховер-эффект, как у плеера */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.95);
+}
+
+/* Обложка */
+.card-cover img {
+  display: block;
   width: 100%;
-  height: 130px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 8px;
+  height: auto;
 }
 
-.track-card__title {
-  margin: 0 0 2px;
-  font-size: 13px;
+/* Текстовая часть */
+.card-info {
+  padding: 0 10px 16px 16px;
 }
 
-.track-card__artist {
-  margin: 0;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.7);
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #ffffff;
 }
 
-.track-card--more {
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: transparent;
-  border-style: none;
-}
-
-.track-card__more-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.track-card__more-text {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
+.card-artist {
+  font-size: 9px;
+  color: #9fa9c5;
 }
 
 /* ПРАВАЯ ПАНЕЛЬ */
@@ -740,10 +753,11 @@
     rgba(3, 9, 26, 0.98);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.9);
+  align-self: flex-start;
 }
 
 .sidebar-right__inner {
-  padding: 16px 16px 18px;
+  padding: 20px 18px 18px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -757,12 +771,8 @@
 
 .sidebar-right__title {
   margin: 0;
-  font-size: 15px;
-}
-
-.sidebar-right__header-icons {
-  display: flex;
-  gap: 8px;
+  font-size: 20px;
+  margin-left: 50px;
 }
 
 .sidebar-right__icon-btn {
@@ -770,6 +780,7 @@
   background: transparent;
   padding: 0;
   cursor: pointer;
+  margin-right: 6px;
 }
 
 .sidebar-right__icon-btn img {
@@ -831,6 +842,7 @@
   border-radius: 16px;
   background: rgba(7, 18, 44, 0.96);
   overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .sidebar-right__artist-cover img {
