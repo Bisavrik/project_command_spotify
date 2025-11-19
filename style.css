@@ -741,6 +741,46 @@ button.top-music__arrow-btn
   color: #9fa9c5;
 }
 
+/* НОВЫЕ релізи */
+.new-releases__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.new-releases__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.new-releases__title span {
+  color: #32aaff;
+}
+.card-track-number {
+  font-size: 9px;
+  color: #f0f0f0;
+
+  
+}
+/* БОЛЬШИЕ ОТСТУПЫ МЕЖДУ БЛОКАМИ В ЦЕНТРАЛЬНОМ МЕНЮ */
+.content-center__hero {
+  margin-bottom: 48px;   /* было 24px */
+}
+
+.moods {
+  margin-bottom: 56px;   /* добавили отступ после блока настроений */
+}
+
+.top-music {
+  margin-bottom: 48px;   /* отступ между "Топ ВАША музика" и "Нові релізи" */
+}
+
+/* при желании можно чуть ослабить внутренние отступы,
+   чтобы не было "слишком тесно" внутри блоков */
+.moods__list {
+  margin-bottom: 32px;   /* вместо 28px, чуть больше воздуха под иконками */
+}
+
 /* ПРАВАЯ ПАНЕЛЬ */
 
 .sidebar-right {
