@@ -436,6 +436,8 @@
     rgba(3, 8, 26, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+
+  overflow: hidden;
 }
 
 .content-center__inner {
@@ -762,6 +764,278 @@ button.top-music__arrow-btn
 
   
 }
+
+/* ТВОЇ УЛЮБЛЕНІ ВИКОНАВЦІ */
+
+.favorite-artists {
+  margin-top: 56px;
+}
+
+.favorite-artists__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.favorite-artists__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.favorite-artists__title span {
+  color: #32aaff;
+}
+
+/* ряд кружочков с артистами */
+.artist-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.artist-card {
+  text-align: center;
+}
+
+/* круглый аватар */
+.artist-card__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease;
+}
+.artist-card__avatar:hover {
+  transform: scale(1.05);
+}
+.artist-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* подписи под кругами */
+.artist-card__name {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.artist-card__listeners {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* НОВІ РЕЛІЗИ ПОДКАСТІВ */
+
+.podcasts {
+  margin-top: 64px;
+}
+
+.podcasts__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.podcasts__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.podcasts__title span {
+  color: #32aaff;
+}
+
+.podcasts__list {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* ——— УМЕНЬШЕННЫЙ РАЗМЕР КАРТОЧКИ ——— */
+.podcast-card {
+  flex: 1 1 0;
+  max-width: 240px;
+  transition: all 0.2s ease;
+}
+.podcast-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.95);
+}
+
+
+.podcast-card__inner {
+  height: auto;
+  border-radius: 18px;
+  background: rgba(4, 15, 39, 0.98);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* заголовок */
+.podcast-card__title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* маленькая строка с метой */
+.podcast-card__meta {
+  margin: 0 0 10px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* уменьшенный квадрат */
+.podcast-card__cover-wrap {
+  margin: 12px 0 14px;
+  width: 150px;
+  height: 150px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-left: 26px;
+}
+
+.podcast-card__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* текст описания */
+.podcast-card__desc {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* НОВІ РЕЛІЗИ АУДІОКНИГ */
+
+.audiobooks {
+  margin-top: 56px;
+}
+
+.audiobooks__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.audiobooks__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.audiobooks__title span {
+  color: #32aaff;
+}
+
+.audiobooks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* одна горизонтальна картка */
+
+.audiobook-card__inner {
+  display: flex;
+  align-items: stretch;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: transparent;
+  /* box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9); */
+}
+
+.audiobook-card__cover-wrap {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 18px;
+  transition: transform 0.3s ease;
+}
+.audiobook-card__cover-wrap:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.audiobook-card__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+.audiobook-card__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* верхний ряд: назва + автор */
+
+.audiobook-card__title-row {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.audiobook-card__name {
+  color: #ffffff;
+}
+
+.audiobook-card__divider {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.audiobook-card__author {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* жанр */
+
+.audiobook-card__genre {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* описання – як у прикладі, на всю ширину */
+
+.audiobook-card__desc {
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* дата + тривалість внизу */
+
+.audiobook-card__meta {
+  margin: 0;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
 /* БОЛЬШИЕ ОТСТУПЫ МЕЖДУ БЛОКАМИ В ЦЕНТРАЛЬНОМ МЕНЮ */
 .content-center__hero {
   margin-bottom: 48px;   /* было 24px */
