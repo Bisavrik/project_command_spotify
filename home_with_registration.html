@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lumtune</title>
+
+  <link rel="stylesheet" href="style_home_with_registration.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <!-- ЛОГО СЛЕВА -->
+        <div class="navbar__logo">
+          <img src="img_home_with_registration/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+        </div>
+
+        <!-- ПОИСК ПО ЦЕНТРУ -->
+        <div class="navbar__search">
+          <span class="navbar__search-icon navbar__search-icon--left">
+            <img src="img_home_with_registration/icon-search.svg" alt="Пошук">
+          </span>
+
+          <input
+            type="text"
+            class="navbar__search-input"
+            placeholder="Виконавці, треки, подкасти..."
+          >
+
+          <span class="navbar__search-icon navbar__search-icon--right">
+            <img src="img_home_with_registration/icon-mic.svg" alt="Голосовий пошук">
+          </span>
+        </div>
+
+        <!-- ИКОНКИ СПРАВА -->
+        <div class="navbar__actions">
+          <button class="navbar__icon-btn" aria-label="Сповіщення">
+            <img src="img_home_with_registration/icon-bell.svg" alt="Сповіщення">
+          </button>
+          <button class="navbar__icon-btn" aria-label="Профіль">
+            <img src="img_home_with_registration/icon-user-registratite.svg" alt="Профіль">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+    <main class="page-content">
+      <div class="layout">
+        <!-- ЛЕВОЕ МЕНЮ -->
+        <aside class="sidebar-left">
+          <div class="sidebar-left__inner">
+            <!-- БЛОК "МЕНЮ" -->
+            <div class="sidebar-left__section sidebar-left__section--menu">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Меню</p>
+
+              <button class="sidebar-left__primary-btn">
+                <span class="sidebar-left__primary-icon">
+                  <img src="img_home_with_registration/icon-home.svg" alt="Головна">
+                </span>
+                <span class="sidebar-left__primary-label">Головна</span>
+              </button>
+
+              <button class="sidebar-left__secondary-btn">
+                <span class="sidebar-left__secondary-icon">
+                  <img src="img_home_with_registration/icon-library.svg" alt="Моя медіатека">
+                </span>
+                <span class="sidebar-left__secondary-label">Моя медіатека</span>
+              </button>
+            </div>
+
+            <!-- БЛОК "ПЛЕЙЛІСТИ" -->
+            <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
+
+              <button class="sidebar-left__text-btn">
+                <span class="sidebar-left__text-icon">
+                  <img src="img_home_with_registration/icon-heart-outline.svg" alt="Улюблені треки">
+                </span>
+                <span>Улюблені треки</span>
+              </button>
+
+              <button class="sidebar-left__text-btn">
+                <span class="sidebar-left__text-icon">
+                  <img src="img_home_with_registration/icon-plus-square.svg" alt="Створити плейліст">
+                </span>
+                <span>Створити плейліст</span>
+              </button>
+
+              <div class="sidebar-left__section-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
+                <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
+                  <img src="img_home_with_registration/icon-playlist-menu.svg" alt="Меню">
+                </button>
+              </div>
+
+              <ul class="sidebar-left__playlist-list">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_home_with_registration/playlist-lisa.svg" alt="Lisa">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lisa</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_home_with_registration/playlist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lady Gaga</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_home_with_registration/playlist-bruno-mars.svg" alt="Bruno Mars">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Bruno Mars</p>
+                    <p class="sidebar-left__playlist-meta">Виконавець</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_home_with_registration/playlist-bts.svg" alt="BTS">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">BTS</p>
+                    <p class="sidebar-left__playlist-meta">Гурт</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_home_with_registration/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lana Del Rey</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- БЛОК "НЕЩОДАВНО ПРОСЛУХАНІ" -->
+            <div class="sidebar-left__section sidebar-left__section--bottom sidebar-left__section--divider">
+              <div class="sidebar-left__recent-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
+                <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
+                  <img src="img_home_with_registration/icon-refresh-arrow.svg" alt="Оновити">
+                </button>
+              </div>
+
+              <div class="sidebar-left__clock-wrap">
+                <img src="img_home_with_registration/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+        <section class="content-center">
+          <div class="content-center__inner">
+            <!-- ТАБЫ -->
+            <div class="content-center__tabs">
+              <button class="content-center__tab content-center__tab--active">Всі</button>
+              <button class="content-center__tab">Треки</button>
+              <button class="content-center__tab">Інше</button>
+            </div>
+
+            <!-- ГЛАВНЫЙ БАННЕР (CSS-СЛАЙДЕР) -->
+            <div class="content-center__hero">
+              <div class="hero-carousel">
+
+                <!-- Радио-кнопки (переключатели слайдов) -->
+                <input type="radio" name="hero-slider" id="hero-slide-1" class="hero-radio" checked>
+                <input type="radio" name="hero-slider" id="hero-slide-2" class="hero-radio">
+                <input type="radio" name="hero-slider" id="hero-slide-3" class="hero-radio">
+
+                <!-- Сам баннер со слайдами -->
+                <div class="hero-banner">
+                  <!-- Точки навигации сверху -->
+                  <div class="hero-dots">
+                    <label class="hero-dot hero-dot-1" for="hero-slide-1"></label>
+                    <label class="hero-dot hero-dot-2" for="hero-slide-2"></label>
+                    <label class="hero-dot hero-dot-3" for="hero-slide-3"></label>
+                  </div>
+
+                  <!-- Слайды -->
+                  <div class="hero-slide hero-slide-1">
+                    <img src="img_home_with_registration/hero-exoplanet.svg" alt="Exoplanet" class="hero-banner__img">
+                  </div>
+
+                  <div class="hero-slide hero-slide-2">
+                    <img src="img_home_with_registration/hero-born-pink.svg" alt="Born Pink" class="hero-banner__img">
+                  </div>
+
+                  <div class="hero-slide hero-slide-3">
+                    <img src="img_home_with_registration/hero-blackpink-concert.svg" alt="Blackpink Live" class="hero-banner__img">
+                  </div>
+                </div>
+
+                <!-- Стрелки слева/справа -->
+                <!-- Когда активен 1 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-1" for="hero-slide-3">
+                  <img src="img_home_with_registration/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-1" for="hero-slide-2">
+                  <img src="img_home_with_registration/icon-arrow-right.svg" alt="Вперед">
+                </label>
+
+                <!-- Когда активен 2 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-2" for="hero-slide-1">
+                  <img src="img_home_with_registration/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-2" for="hero-slide-3">
+                  <img src="img_home_with_registration/icon-arrow-right.svg" alt="Вперед">
+                </label>
+
+                <!-- Когда активен 3 слайд -->
+                <label class="hero-arrow hero-arrow--left hero-arrow-left-3" for="hero-slide-2">
+                  <img src="img_home_with_registration/icon-arrow-left.svg" alt="Назад">
+                </label>
+                <label class="hero-arrow hero-arrow--right hero-arrow-right-3" for="hero-slide-1">
+                  <img src="img_home_with_registration/icon-arrow-right.svg" alt="Вперед">
+                </label>
+              </div>
+            </div>
+
+            <!-- НАСТРОЕНИЯ -->
+            <section class="moods">
+              <div class="moods__header">
+                <p class="moods__title">
+                  Саундтреки на основі твого <span>настрою</span>
+                </p>
+                <button class="moods__settings">
+                  Настрій
+                  <img src="img_home_with_registration/icon-arrow-down.svg" alt="Настройки">
+                </button>
+              </div>
+
+              <div class="moods__list">
+                <button class="mood-card">
+                  <img src="img_home_with_registration/mood-sun.svg" alt="Хеппі" class="mood-card__circle">
+                  <span class="mood-card__label">Хеппі</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img_home_with_registration/mood-drop.svg" alt="Меланхолія" class="mood-card__circle">
+                  <span class="mood-card__label">Меланхолія</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img_home_with_registration/mood-heart.svg" alt="Романтика" class="mood-card__circle">
+                  <span class="mood-card__label">Романтика</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img_home_with_registration/mood-lightning.svg" alt="Драйв" class="mood-card__circle">
+                  <span class="mood-card__label">Драйв</span>
+                </button>
+
+                <button class="mood-card">
+                  <img src="img_home_with_registration/mood-party.svg" alt="Туса" class="mood-card__circle">
+                  <span class="mood-card__label">Туса</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- ТОП ВАША МУЗЫКА СЕГОДНЯ -->
+            <section class="top-music">
+              <div class="top-music__header">
+                <h2 class="top-music__title">
+                  Топ <span>ВАША музика</span> сьогодні!!
+                </h2>
+
+                <!-- стрелки как на референсе -->
+                <div class="top-music__controls">
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-left-small.svg" alt="Назад">
+                  </button>
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-right-small.svg" alt="Вперед">
+                  </button>
+                </div>
+              </div>
+
+              <div class="cards-row">
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-die-with-a-smile.svg" alt="Die with a smile">
+                  </div>
+                  <div class="card-info">
+                    <h3 class="card-title">Die with a smile</h3>
+                    <p class="card-artist">Lady Gaga &amp; Bruno Mars</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-deep.svg" alt="Глубоко">
+                  </div>
+                  <div class="card-info">
+                    <h3 class="card-title">Глубоко</h3>
+                    <p class="card-artist">Monatik &amp; Надя Дорофєєва</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-superman.svg" alt="Superman">
+                  </div>
+                  <div class="card-info">
+                    <h3 class="card-title">Superman</h3>
+                    <p class="card-artist">Eminem</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-sweater-weather.svg" alt="Sweater Weather">
+                  </div>
+                  <div class="card-info">
+                    <h3 class="card-title">Sweater Weather</h3>
+                    <p class="card-artist">The Neighbourhood</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-cry-me-a-river.svg" alt="Cry Me A River">
+                  </div>
+                  <div class="card-info">
+                    <h3 class="card-title">Cry Me A River</h3>
+                    <p class="card-artist">Justin Timberlake</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- НОВЫЕ релізи -->
+            <section class="new-releases">
+              <div class="new-releases__header">
+                <h2 class="new-releases__title">
+                  Нові <span>музичні</span> релізи
+                </h2>
+
+                <div class="top-music__controls">
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-left-small.svg" alt="Назад">
+                  </button>
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-right-small.svg" alt="Вперед">
+                  </button>
+                </div>
+              </div>
+
+              <div class="cards-row">
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-on-the-floor.svg" alt="On The Floor">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">On The Floor</h3>
+                    <p class="card-artist">by JLO</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-reputation.svg" alt="Reputation">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Reputation</h3>
+                    <p class="card-artist">by Taylor Swift</p> 
+                    <p class="card-track-number">10 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-yours-truly.svg" alt="Yours Truly">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Yours Truly</h3>
+                    <p class="card-artist">by Ariana Grande</p> 
+                    <p class="card-track-number">5 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-margarita.svg" alt="Маргарита">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Маргарита</h3>
+                    <p class="card-artist">by Michelle Andrade</p> 
+                    <p class="card-track-number">7 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_home_with_registration/track-30-vinyl.svg" alt="30 Vinyl">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">30 Vinyl</h3>
+                    <p class="card-artist">by Adele</p> 
+                    <p class="card-track-number">7 tracks</p>
+                  </div>
+                </article>
+              </div> 
+            </section>
+
+            <!-- ТВОЇ УЛЮБЛЕНІ ВИКОНАВЦІ -->
+            <section class="favorite-artists">
+              <div class="favorite-artists__header">
+                <h2 class="favorite-artists__title">
+                  Твої улюблені <span>виконавці</span>
+                </h2>
+
+                <!-- используем те же стрелки, что и выше -->
+                <div class="top-music__controls">
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-left-small.svg" alt="Назад">
+                  </button>
+                  <button class="top-music__arrow-btn">
+                    <img src="img_home_with_registration/icon-arrow-right-small.svg" alt="Вперед">
+                  </button>
+                </div>
+              </div>
+
+              <div class="artist-row">
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_home_with_registration/artist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <p class="artist-card__name">Lana Del Rey</p>
+                  <p class="artist-card__listeners">4 690 563</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_home_with_registration/artist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <p class="artist-card__name">Lady Gaga</p>
+                  <p class="artist-card__listeners">4 690 563</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_home_with_registration/artist-shakira.svg" alt="Shakira">
+                  </div>
+                  <p class="artist-card__name">Shakira</p>
+                  <p class="artist-card__listeners">4 690 563</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_home_with_registration/artist-jlo.svg" alt="Jennifer Lopez">
+                  </div>
+                  <p class="artist-card__name">Jennifer Lopez</p>
+                  <p class="artist-card__listeners">4 690 563</p>
+                </article>
+              </div>
+            </section>
+
+            <!-- НОВІ РЕЛІЗИ ПОДКАСТІВ -->
+            <section class="podcasts">
+              <div class="podcasts__header">
+                <h2 class="podcasts__title">
+                  Нові релізи <span>подкастів</span>
+                </h2>
+              </div>
+
+              <div class="podcasts__list">
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Хроніки майбутнього
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_home_with_registration/podcast-1.svg" alt="Подкаст 1" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • «Яким буде світ за 50 років? Чи зможемо ми
+                      вибирати?» Ми говоримо про наукові відкриття, гіпотези і те,
+                      як вони можуть змінити наше майбутнє.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 10. Тіньові справи
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_home_with_registration/podcast-2.svg" alt="Подкаст 2" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • Реальні кримінальні історії, розказані зсередини. Ми аналізуємо
+                      резонансні злочини, розслідування,
+                      хто і чому порушує закон.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Теорії змови
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_home_with_registration/podcast-3.svg" alt="Подкаст 3" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • Від таємного уряду до фейкової
+                      висадки на Місяць – розбираємось у теоріях
+                      змови та шукаємо, де правда, а де — вигадка.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+              <!-- НОВІ РЕЛІЗИ АУДІОКНИГ -->
+            <section class="audiobooks">
+              <div class="audiobooks__header">
+                <h2 class="audiobooks__title">
+                  Нові релізи <span>аудіокниг</span>
+                </h2>
+              </div>
+
+              <div class="audiobooks__list">
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_home_with_registration/audiobook-1.svg" alt="Тінь минулого" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Тінь минулого</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">Xonnie Hlnn</span>
+                      </p>
+                      <p class="audiobook-card__genre">Історичний роман, Драма</p>
+                      <p class="audiobook-card__desc">
+                        Під час холодної осені 1921 року, в невеликому гірському містечку, загубленому серед Карпат,
+                        молодий лікар Арсен випадково рятує від смерті незнайому жінку...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_home_with_registration/audiobook-2.svg" alt="Остання надія" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Остання надія</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">NewTree</span>
+                      </p>
+                      <p class="audiobook-card__genre">Драма, Сучасна проза</p>
+                      <p class="audiobook-card__desc">
+                        П’ятеро друзів з дитинства опинилися на життєвому роздоріжжі. Хтось бореться з залежностями,
+                        хтось не може пробачити собі старі помилки...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_home_with_registration/audiobook-3.svg" alt="Голос снів" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Голос снів</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">Аманда Т.</span>
+                      </p>
+                      <p class="audiobook-card__genre">Психологічний трилер</p>
+                      <p class="audiobook-card__desc">
+                        Психотерапевт Андрій починає чути голоси своїх пацієнтів у снах. Вони розповідають йому про події,
+                        які ще не відбулись, але невдовзі стають реальністю...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ LANA DEL REY RADIO -->
+        <aside class="sidebar-right">
+          <div class="sidebar-right__inner">
+            <header class="sidebar-right__header">
+              <h3 class="sidebar-right__title">Lana Del Rey Radio</h3>
+            </header>
+
+            <div class="sidebar-right__cover-main">
+              <img src="img_home_with_registration/radio-lana-top.svg" alt="Lana Del Rey main cover">
+            </div>
+
+            <div class="sidebar-right__track">
+              <div class="sidebar-right__track-text">
+                <p class="sidebar-right__track-title">Kill This Love</p>
+                <p class="sidebar-right__track-artist">BLACK PINK</p>
+              </div>
+              <div class="sidebar-right__track-icons">
+                <button class="sidebar-right__icon-btn">
+                  <img src="img_home_with_registration/icon-share.svg" alt="Поділитися">
+                </button>
+                <button class="sidebar-right__icon-btn">
+                  <img src="img_home_with_registration/icon-add.svg" alt="Додати">
+                </button>
+              </div>
+            </div>
+
+            <div class="sidebar-right__artist-card">
+              <div class="sidebar-right__artist-cover">
+                <img src="img_home_with_registration/radio-lana-bottom.svg" alt="Lana Del Rey">
+              </div>
+              <div class="sidebar-right__artist-body">
+                <p class="sidebar-right__artist-name">Lana Del Rey</p>
+                <p class="sidebar-right__artist-stat">72 780 975 слухачів на місяць</p>
+                <p class="sidebar-right__artist-desc">
+                    Sabrina Carpenter зачарувала мільйони слухачів як співачка, авторка пісень,
+                    акторка та ікона стилю.
+                    Завдяки своїй музиці вона кожного року створює один хіт за іншим...
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- Верхній ряд -->
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="img_home_with_registration/footer-logo.svg" alt="Lumtune">
+          </div>
+
+          <div class="footer__info">
+            <p class="footer__address">
+              <img src="img_home_with_registration/footer-location.svg" alt="">
+              Address: st. Shevchenko, 25 house, UA, Odessa, 00000
+            </p>
+
+            <p class="footer__phone">
+              <img src="img_home_with_registration/footer-phone.svg" alt="">
+              (380) 00-000-00-00           
+            </p>
+
+            <p class="footer__mail">
+              <img src="img_home_with_registration/footer-mail.svg" alt="">
+              lumitune@gmail.com
+            </p>
+
+            <div class="footer__socials">
+              <img src="img_home_with_registration/footer-facebook.svg" alt="">
+              <img src="img_home_with_registration/footer-twitter.svg" alt="">
+              <img src="img_home_with_registration/footer-pinterest.svg" alt="">
+              <img src="img_home_with_registration/footer-rss.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="footer__bottom">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- PLAYER BAR -->
+    <div class="player-bar">
+      <div class="player-bar__inner">
+        <!-- Левая часть: обложка + название трека -->
+        <div class="player-bar__left">
+            <div class="player-bar__cover">
+                <img src="img_home_with_registration/track-die-with-a-smile.svg" alt="Die with a smile">
+            </div>
+            <div class="player-bar__track">
+                <p class="player-bar__title">The Show</p>
+                <p class="player-bar__artist">BUDGIE</p>
+            </div>
+            <div class="player-bar__icons">
+                <button class="player-bar__icon-btn">
+                    <img src="img_home_with_registration/like-button-player.svg" alt="">
+                </button>
+                <button class="player-bar__icon-btn">
+                    <img src="img_home_with_registration/plus-button-player.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Центр: кнопки и прогресс -->
+        <div class="player-bar__center">
+          <div class="player-bar__controls">
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_home_with_registration/spin-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_home_with_registration/previous-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--main">
+                <img src="img_home_with_registration/play-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_home_with_registration/next-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_home_with_registration/mix-button-player.svg" alt="">
+            </button>
+          </div>
+
+          <div class="player-bar__progress">
+            <span class="player-bar__time">0:32</span>
+            <div class="player-bar__progress-line">
+              <div class="player-bar__progress-fill"></div>
+            </div>
+            <span class="player-bar__time">3:48</span>
+          </div>
+        </div>
+
+        <!-- Правая часть: громкость / доп.иконки -->
+        <div class="player-bar__right">
+          <div class="player-bar__volume">
+            <span class="player-bar__icon">
+                <img src="img_home_with_registration/volume-button-player.svg" alt="">
+            </span>
+            <div class="player-bar__volume-line">
+              <div class="player-bar__volume-fill"></div>
+            </div>
+          </div>
+
+          <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_home_with_registration/device-button-player.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+</body>
+</html>
