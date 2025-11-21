@@ -1362,3 +1362,373 @@ button.top-music__arrow-btn
 {
   color: #32aaff;
 }
+
+/* ========== 1) Планшет ~1024 и ниже: убираем правый сайдбар, чуть сжимаем поля ========== */
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 16px 20px 32px;
+  }
+
+  .layout {
+    max-width: 1000px;
+    grid-template-columns: 240px minmax(0, 1fr); /* лево + центр */
+  }
+
+  .sidebar-right {
+    display: none; /* Lana Del Rey Radio прячем */
+  }
+
+  .footer__inner {
+    padding: 0 24px;
+  }
+}
+
+/* ========== 2) Планшет 768px: макет как на первом скрине ========== */
+@media (max-width: 768px) {
+  /* общие отступы */
+  .page-content {
+    padding: 12px 16px 24px;
+  }
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar__logo-img {
+    height: 56px;
+  }
+
+  .navbar__search {
+    max-width: 420px;
+  }
+
+  .navbar__actions {
+    gap: 12px;
+    margin-left: 16px;
+  }
+
+  /* сетка: левый сайдбар + контент по центру */
+  .layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .content-center__inner {
+    padding: 16px 18px 20px;
+  }
+
+  .hero-banner__img {
+    max-height: 240px;
+  }
+
+  .moods__title,
+  .top-music__title,
+  .new-releases__title,
+  .favorite-artists__title,
+  .podcasts__title,
+  .audiobooks__title {
+    font-size: 20px;
+  }
+
+  /* карточки треков – 3 в ряд */
+  .cards-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: auto;
+    flex: 0 0 calc(33.333% - 8px);
+  }
+
+  /* любимые исполнители – переносятся */
+  .artist-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .artist-card {
+    flex: 0 0 calc(33.333% - 16px);
+  }
+
+  /* подкасты – 2–3 карточки в строке */
+  .podcasts__list {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .podcast-card {
+    max-width: none;
+    flex: 0 0 calc(33.333% - 14px);
+  }
+
+  /* аудиокниги – обложка чуть меньше */
+  .audiobook-card__cover-wrap {
+    flex: 0 0 130px;
+    height: 130px;
+    margin-right: 14px;
+  }
+
+  .footer {
+    margin-top: 48px;
+    padding: 40px 0 30px;
+  }
+
+  .footer__top {
+    gap: 60px;
+    margin-bottom: 30px;
+  }
+
+  .footer__logo img {
+    width: 160px;
+  }
+}
+
+/* ========== 3) Телефон ~480px и ниже ========== */
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  /* NAVBAR на две строки, поиск на всю ширину */
+  .navbar {
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .navbar__inner {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    margin-right: 8px;
+  }
+
+  .navbar__logo-img {
+    height: 48px;
+  }
+
+  .navbar__actions {
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .navbar__icon-btn img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar__search {
+    order: 3;              /* поиск под логотипом и иконками */
+    width: 100%;
+    max-width: none;
+  }
+
+  .navbar__search-input {
+    padding: 8px 40px;
+    font-size: 12px;
+  }
+
+  /* прячем оба сайдбара */
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+
+  .page-content {
+    padding: 12px 10px 24px;
+  }
+
+  .content-center__inner {
+    padding: 14px 12px 18px;
+  }
+
+  /* герой-баннер компактнее */
+  .hero-carousel {
+    gap: 10px;
+  }
+
+  .hero-banner__img {
+    max-height: 200px;
+  }
+
+  /* Настроение – скролл по горизонтали, как иконки в один ряд */
+  .moods__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .moods__title {
+    font-size: 18px;
+  }
+
+  .moods__list {
+    margin-bottom: 20px;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .mood-card__circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* карточки треков – по 2 в ряд */
+  .top-music__title,
+  .new-releases__title {
+    font-size: 18px;
+  }
+
+  .top-music__header,
+  .new-releases__header {
+    align-items: center;
+  }
+
+  .cards-row {
+    gap: 10px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 6px);
+  }
+
+  /* любимые исполнители – 2 в ряд */
+  .favorite-artists {
+    margin-top: 32px;
+  }
+
+  .favorite-artists__title {
+    font-size: 18px;
+  }
+
+  .artist-row {
+    gap: 20px;
+  }
+
+  .artist-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .artist-card__avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* подкасты – одна карточка на всю ширину */
+  .podcasts {
+    margin-top: 40px;
+  }
+
+  .podcasts__title {
+    font-size: 18px;
+  }
+
+  .podcasts__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .podcast-card {
+    max-width: none;
+  }
+
+  .podcast-card__cover-wrap {
+    margin: 10px auto 12px;
+  }
+
+  /* аудиокниги – stack */
+  .audiobooks {
+    margin-top: 40px;
+  }
+
+  .audiobooks__title {
+    font-size: 18px;
+  }
+
+  .audiobook-card__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .audiobook-card__cover-wrap {
+    margin-right: 0;
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  /* FOOTER на телефоне */
+  .footer {
+    margin-top: 32px;
+    padding: 32px 0 24px;
+  }
+
+  .footer__inner {
+    padding: 0 16px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__info p {
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .footer__socials {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .footer__bottom {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  .footer__bottom a {
+    font-size: 12px;
+  }
+}
+
+/* ========== 4) Очень узкие экраны ~350px (как на втором скрине) ========== */
+@media (max-width: 360px) {
+  .navbar {
+    padding-inline: 8px;
+  }
+
+  .navbar__search-input {
+    font-size: 11px;
+  }
+
+  .content-center__inner {
+    padding-inline: 10px;
+  }
+
+  .card {
+    flex: 0 0 100%; /* по одной карточке в строке, чтобы не было слишком мелко */
+  }
+
+  .artist-card {
+    flex: 0 0 100%;
+  }
+
+  .podcast-card__inner,
+  .audiobook-card__inner {
+    padding-inline: 12px;
+  }
+}
