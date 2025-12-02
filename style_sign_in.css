@@ -16,7 +16,7 @@
  body {
   height: 100%;
   margin: 0;
-  font-family: "Inter";
+  font-family: "Open Sans", sans-serif;
   background: url("img/11.jpg") no-repeat center center / cover;
   display: flex;
   align-items: center;
