@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LumiTune — Увійти</title>
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Подключение CSS -->
+  <link rel="stylesheet" href="style_sign_in.css">
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="card ">
+
+      <!-- ЛОГОТИП -->
+      <div class="logo">
+        <img src="img\logo.png" alt="Logo" class="logo-img">
+      </div>
+
+      <h1 class="title">Пориньте у LumiTune</h1>
+<div class="socials">
+  <button class="social fb">
+    <span class="ico">
+      <img src="img/fee.png" alt="Facebook" width="20" height="20">
+    </span>
+    Увійти з Facebook
+  </button>
+
+  <button class="social gg">
+    <span class="ico">
+      <img src="img\gg.png" alt="Google" width="20" height="20">
+    </span>
+    Увійти з Google
+  </button>
+
+  <button class="social ap">
+    <span class="ico">
+      <img src="img\apl.png" alt="Apple" width="20" height="20">
+    </span>
+    Увійти з Apple
+  </button>
+</div>
+      <div class="divider"></div>
+
+      <form class="form" onsubmit="return false;">
+
+        <label class="field-label">Електронна пошта або ім'я користувача</label>
+        <input class="input" type="email" placeholder="@gmail.com">
+
+        <label class="field-row">
+          <span>Пароль</span>
+          <a class="forgot" href="index4.html">Забули пароль?</a>
+        </label>
+
+        <div class="password-wrap">
+          <input class="input" type="password" placeholder="********">
+          <button type="button" class="eye-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+			 <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z"
+                        stroke="#7db7ff" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3" stroke="#7db7ff" stroke-width="2"/>
+                
+              
+            </svg>
+          </button>
+        </div>
+
+        <button class="primary">Увійти</button>
+      </form>
+
+      <div class="bottom-line"></div>
+
+      <div class="footer">
+        Немає аккаунта?
+        <a class="signup" href="index1.html">Реєстрація у LumiTune</a>
+		
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
