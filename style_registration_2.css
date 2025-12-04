@@ -1,0 +1,236 @@
+:root {
+  --card-bg: rgba(10,18,28,0.65);
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.75);
+  --title: #eaf6ff;
+  --accent: #fff;
+  --accent2: #4bb0ff;
+}
+
+/* Общие стили */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background: url("img/11.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+/* Карточка */
+.card {
+  width: 380px;
+  max-width: 95%;
+  padding: 26px 34px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.55);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* Кнопка назад */
+.back {
+  display: inline-block;
+  color: #9cc9ff;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  padding-bottom: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.back:hover {
+  color: #c3e0ff;
+}
+.back::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: #9cc9ff;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0 10px;
+}
+.logo-img {
+  width: 62px;
+  max-width: 100%;
+}
+
+/* Заголовки */
+.title {
+  text-align: center;
+  margin: 6px 0 2px;
+  font-size: 22px;
+  color: var(--title);
+}
+.step-sub {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.step-line {
+  height: 3px;
+  width: 100%;
+  margin: 0 auto 24px;
+  background: linear-gradient(to right, #72c5ff 35%, rgba(255,255,255,0.1) 55%);
+  border-radius: 3px;
+}
+
+/* Поля ввода */
+.label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+}
+.password-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+.input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 3px;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+.input:focus {
+  border-color: var(--accent2);
+  background: rgba(255,255,255,0.1);
+  outline: none;
+}
+.eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.eye-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Список требований */
+.req-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.req-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.req-list label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.req-list input[type="radio"] {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+.req-list input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease;
+}
+.req-list input[type="radio"]:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Кнопка продолжить с анимацией */
+.primary {
+  width: 100%;
+  margin-top: 22px;
+  background: #6fb7ff;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #042033;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  background: #7fc4ff;
+}
+.primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 16px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .step-sub, .label, .req-list label {
+    font-size: 12px;
+  }
+  .input {
+    font-size: 14px;
+    padding: 8px 36px 8px 10px;
+  }
+  .primary {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  .logo-img {
+    width: 50px;
+  }
+}
