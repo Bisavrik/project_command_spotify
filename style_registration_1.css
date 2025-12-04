@@ -1,0 +1,207 @@
+:root {
+  --card-bg: rgba(10,18,28,0.65);
+  --card-border: rgba(255,255,255,0.25);
+  --muted: rgba(255,255,255,0.65);
+  --input-bg: rgba(255,255,255,0.04);
+  --accent: #89c9ff;
+  --text-light: #e8f8ff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background: url("img/11.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--muted);
+}
+
+/* Карточка */
+.card.small {
+  width: 320px;
+  padding: 16px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
+/* Логотип */
+.logo-img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+/* Заголовок */
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Поля ввода */
+.input.email {
+  width: 100%;
+  padding: 10px 10px;
+  background: var(--input-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+/* Кнопка Продолжить с анимацией */
+.primary.next {
+  width: 100%;
+  padding: 10px 0;
+  background: #6fc2ff;
+  border: none;
+  color: #05232c;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.primary.next:hover {
+  background: #52b0ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.primary.next:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* Разделитель */
+.divider {
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 12px;
+  margin: 12px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+/* Соцсети с анимацией */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social .ico img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.social:hover .ico img {
+  transform: scale(1.2);
+}
+
+.social:active {
+  transform: translateY(1px) scale(1);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* Нижняя линия и футер */
+.bottom {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+  margin: 14px 0 10px;
+}
+
+.footer {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.signup {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .card.small {
+    width: 90%;
+    padding: 14px 16px;
+  }
+  .title { font-size: 16px; }
+  .input.email { font-size: 13px; padding: 8px; }
+  .primary.next { font-size: 13px; padding: 8px 0; }
+}
+
+@media (max-width: 480px) {
+  .card.small {
+    width: 95%;
+    padding: 12px 14px;
+  }
+  .title { font-size: 14px; }
+  .input.email { font-size: 12px; padding: 6px; }
+  .primary.next { font-size: 12px; padding: 6px 0; }
+  .social { font-size: 12px; padding: 6px 8px; }
+}
