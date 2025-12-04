@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Створити профіль — Крок 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="card">
+
+      <a href="index2.html" class="back">Назад</a>
+
+      <div class="logo">
+        <img src="img/logo.png" class="logo-img">
+      </div>
+
+      <h1 class="title">Створіть профіль</h1>
+      <div class="step-sub">Крок 2 із 2</div>
+      <div class="step-line"></div>
+
+      <!-- ІМ’Я -->
+      <label class="label">Ім’я</label>
+      <div class="sub">Це ім’я відображатиметься в профілі</div>
+      <input type="text" class="input" placeholder="Ім’я">
+
+      <!-- ДАТА НАРОДЖЕННЯ -->
+      <label class="label">Дата народження</label>
+      <div class="sub">Для чого нам потрібна ваша дата народження?</div>
+      <a class="more">Докладніше</a>
+
+      <div class="row-3">
+        <input type="text" class="input small" placeholder="ДД">
+
+        <select class="input small placeholder">
+          <option value="" disabled selected hidden>Місяць</option>
+          <option>Січень</option>
+          <option>Лютий</option>
+          <option>Березень</option>
+          <option>Квітень</option>
+          <option>Травень</option>
+          <option>Червень</option>
+          <option>Липень</option>
+          <option>Серпень</option>
+          <option>Вересень</option>
+          <option>Жовтень</option>
+          <option>Листопад</option>
+          <option>Грудень</option>
+        </select>
+
+        <input type="text" class="input small" placeholder="РРРР">
+      </div>
+
+      <!-- РЕГІОН -->
+      <label class="label">Регіон проживання</label>
+      <div class="sub">Для чого нам потрібна ваше місце проживання?</div>
+      <a class="more">Докладніше</a>
+
+      <div class="row-2">
+        <div class="select-group">
+          <label for="country">Країна</label>
+          <select id="country" class="input placeholder">
+            <option value="" disabled selected hidden>Виберіть країну</option>
+            <option>Україна</option>
+            <option>США</option>
+            <option>Канада</option>
+			 <option>Испания</option>
+          </select>
+        </div>
+
+        <div class="select-group">
+          <label for="city">Місто</label>
+          <select id="city" class="input placeholder">
+            <option value="" disabled selected hidden>Виберіть місто</option>
+            <option>Одеса</option>
+            <option>Вашингтон</option>
+            <option>Торонто</option>
+			 <option>Барселона</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ХТО ВИ -->
+      <label class="label">Хто ви?</label>
+
+      <div class="req-list">
+        <label><input type="radio" name="who"> Я звичайний користувач</label>
+        <label><input type="radio" name="who"> Я автор пісень</label>
+      </div>
+
+      <button class="primary">Зареєструватися</button>
+
+    </div>
+  </div>
+</body>
+</html>

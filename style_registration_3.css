@@ -1,0 +1,224 @@
+:root {
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.75);
+  --title: #eaf6ff;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("img/11.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+}
+
+.card {
+  width: 220px;          /* компактная карточка */
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.45);
+}
+
+.back {
+  display: inline-block;
+  color: #9cc9ff;
+  font-size: 10px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #9cc9ff;
+  padding-bottom: 1px;
+}
+.logo {
+  display: flex;            /* включаем flex */
+  justify-content: center;  /* горизонтальное центрирование */
+  align-items: center;      /* вертикальное центрирование, если нужно */
+  margin: 10px 0;           /* отступ сверху и снизу */
+}
+
+.logo-img {
+  width: 40px;              /* размер логотипа */
+  height: auto;             /* сохраняем пропорции */
+  display: block;           /* для корректного центрирования */
+}
+
+.title {
+  text-align: center;
+  font-size: 14px;
+  margin: 2px 0;
+  color: var(--title);
+}
+
+.step-sub {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.step-line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #6fc2ff, rgba(255,255,255,0.1));
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+/* Текстовые элементы */
+.label {
+  font-size: 11px;
+  margin-top: 10px;
+  display: block;
+}
+
+.sub {
+  font-size: 9px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1px;
+}
+
+.more {
+  font-size: 9px;
+  color: #86c7ff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* Поля */
+.input {
+  width: 80%;
+  padding: 4px 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: white;
+  font-size: 11px;
+  margin-bottom: 6px;
+  appearance: none;
+  position: relative;
+}
+
+select.input {
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l5 5 5-5" stroke="%23A9D4FF" stroke-width="2" fill="none" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 12px;
+}
+
+.placeholder option[disabled] {
+  color: rgba(255,255,255,0.4);
+}
+
+select {
+  background-color: rgba(25,40,65,0.8);
+}
+
+select option {
+  background: #0f1b2b;
+  color: white;
+}
+
+/* Ряды полей */
+.row-3,
+.row-2 {
+  display: flex;
+  gap: 4px;
+}
+
+.small {
+  flex: 1;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.select-group label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+/* Радио-кнопки */
+.req-list input[type="radio"] {
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.req-list input[type="radio"]:checked {
+  background: #7db7ff;
+  box-shadow: 0 0 2px #7db7ff;
+  border-color: #7db7ff;
+}
+
+.req-list label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 0;
+  font-size: 11px;
+}
+
+/* Кнопка с анимацией */
+.primary {
+  width: 100%;
+  background: #6fb7ff;
+  padding: 6px 0;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #042033;
+  cursor: pointer;
+  margin-top: 8px;
+
+  /* Анимация */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover */
+.primary:hover {
+  background: #5aa1e6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Active */
+.primary:active {
+  background: #4892cc;
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* === Адаптивность для планшетов и мобильных === */
+@media (max-width: 400px) {
+  .card { width: 90%; padding: 10px; }
+  .title { font-size: 16px; }
+  .label, .select-group label { font-size: 12px; }
+  .sub, .more { font-size: 10px; }
+  .input { font-size: 12px; padding: 5px; }
+  .primary { font-size: 13px; padding: 8px 0; }
+  .row-2, .row-3 { flex-direction: column; gap: 6px; } /* на маленьких экранах select и поля ставим друг под другом */
+}
+
+@media (max-width: 300px) {
+  .card { width: 95%; padding: 8px; }
+  .title { font-size: 14px; }
+  .label, .select-group label { font-size: 11px; }
+  .sub, .more { font-size: 9px; }
+  .input { font-size: 11px; padding: 4px; }
+  .primary { font-size: 12px; padding: 6px 0; }
+}
