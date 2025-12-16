@@ -355,15 +355,53 @@ body
     background: #19242E;
     text-align: center;
     padding: 20px;
-    width: 300px;
+    width: 350px;
+    height: auto;
     border-radius: 8px;
     position: relative;
+}
+.modal-content h3
+{
+  color: #9ED8E9;
+  font-size: 24px;
+  font-weight: bold;
+}
+.album_name
+{
+  width: 80%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  background: #213644;
+  color: #648EAA;
+  border: transparent solid 1px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  outline: none;
+}
+.album_name::placeholder 
+{
+  color: rgba(255, 255, 255, 0.5);
+} 
+
+.create_playlist
+{
+  width: auto;
+  background: #6BC9DC;
+  color: #00252D;
+  font-size: 24px;
+  font-weight: bold;
+  border: transparent solid 1px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .close 
 {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 10px;
     font-size: 22px;
     cursor: pointer;
