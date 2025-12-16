@@ -83,12 +83,49 @@
                 <span>Улюблені треки</span>
               </button>
 
-              <button class="sidebar-left__text-btn">
+              <button class="sidebar-left__text-btn_bt6">
                 <span class="sidebar-left__text-icon">
                   <img src="img_home_with_registration/icon-plus-square.svg" alt="Створити плейліст">
                 </span>
                 <span>Створити плейліст</span>
               </button>
+
+              <div class="modal" id="modal">
+                  <div class="modal-content">
+                      <span class="close" id="closeBtn">&times;</span>
+
+                      <h3>Придумайте назву для вашого плейлиста</h3>
+                      <input type="text" class="album_name" placeholder="Назва плейлиста">
+                      <button class="create_playlist">Створити</button>
+                  </div>
+              </div>
+
+              <script>
+                  const modal = document.getElementById("modal");
+                  const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
+                  const closeBtn = document.getElementById("closeBtn");
+
+                  // Відкрити вікно
+                  openBtn.onclick = function () 
+                  {
+                      modal.style.display = "flex";
+                  };
+
+                  // Закрити по кліку на хрестик
+                  closeBtn.onclick = function () 
+                  {
+                      modal.style.display = "none";
+                  };
+
+                  // Закрити по кліку на фон
+                  window.onclick = function (event) 
+                  {
+                      if (event.target === modal) 
+                      {
+                          modal.style.display = "none";
+                      }
+                  };
+              </script>
 
               <div class="sidebar-left__section-header">
                 <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
@@ -100,10 +137,10 @@
               <ul class="sidebar-left__playlist-list">
                 <li class="sidebar-left__playlist sidebar-left__playlist--active">
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_home_with_registration/playlist-lisa.svg" alt="Lisa">
+                    <img src="img_home_with_registration/playlist-blackpink.svg" alt="Lisa">
                   </div>
                   <div class="sidebar-left__playlist-content">
-                    <p class="sidebar-left__playlist-name">Lisa</p>
+                    <p class="sidebar-left__playlist-name">Blackpink</p>
                     <p class="sidebar-left__playlist-meta">Виконавиця</p>
                   </div>
                 </li>
