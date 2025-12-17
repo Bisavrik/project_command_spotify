@@ -218,7 +218,43 @@
                     <span class="profile-header__label">Профіль</span>
 
                     <div class="profile-header__actions">
-                    <button><img src="img_profile/icon-edit.svg" alt=""></button>
+                    <button class="btn-edit-prof"><img src="img_profile/icon-edit.svg" alt=""></button>
+                    <div class="modal2" id="modal2">
+                        <div class="modal2-content">
+                            <span class="close2" id="closeBtn2">&times;</span>
+
+                            <h3>Редагування профіля</h3>
+                            <input type="text" class="album_name" placeholder="Назва плейлиста">
+                            <button class="create_playlist" onclick='window.location.href="moya_mediateka.html"'>Створити</button>
+                        </div>
+                    </div>
+
+                    <script>
+                        const modal2 = document.getElementById("modal2");
+                        const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
+                        const closeBtn = document.getElementById("closeBtn");
+
+                        // Відкрити вікно
+                        openBtn.onclick = function () 
+                        {
+                            modal.style.display = "flex";
+                        };
+
+                        // Закрити по кліку на хрестик
+                        closeBtn.onclick = function () 
+                        {
+                            modal.style.display = "none";
+                        };
+
+                        // Закрити по кліку на фон
+                        window.onclick = function (event) 
+                        {
+                            if (event.target === modal) 
+                            {
+                                modal.style.display = "none";
+                            }
+                        };
+                    </script>
                     <button><img src="img_profile/icon-settings.svg" alt=""></button>
                     </div>
                 </div>
