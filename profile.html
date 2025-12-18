@@ -218,43 +218,58 @@
                     <span class="profile-header__label">Профіль</span>
 
                     <div class="profile-header__actions">
-                    <button class="btn-edit-prof"><img src="img_profile/icon-edit.svg" alt=""></button>
-                    <div class="modal2" id="modal2">
-                        <div class="modal2-content">
-                            <span class="close2" id="closeBtn2">&times;</span>
+                    <button class="btn-edit-prof" id="editProfileBtn"><img src="img_profile/icon-edit.svg" alt=""></button>
+                    
+                    <div class="edit-profile-modal" id="editProfileModal">
+                      <div class="edit-profile-box">
+                        <span class="edit-profile-close" id="closeEditProfile">&times;</span>
 
-                            <h3>Редагування профіля</h3>
-                            <input type="text" class="album_name" placeholder="Назва плейлиста">
-                            <button class="create_playlist" onclick='window.location.href="moya_mediateka.html"'>Створити</button>
+                        <h2 class="edit-profile-title">Редагування профіля</h2>
+
+                        <div class="edit-profile-body">
+                          <div class="edit-profile-avatar">
+                            <img src="img_profile/icon-user-registratite.svg" alt="">
+                            <div class="edit-profile-upload">
+                              <img src="img_profile/Vector.svg" alt="">
+                              <span>Обкладинка</span>
+                            </div>
+
+                          </div>
+
+                          <div class="edit-profile-fields">
+                            <label>Нікнейм</label>
+                            <input type="text" value="МузикаВітч">
+
+                            <label>Опис</label>
+                            <textarea>Вітаю всіх! Дякую, що завітали на мою сторінку. Тут ви знайдете мою музику, емоції та натхнення. Слухайте та діліться враженнями! 🚀</textarea>
+                          </div>
                         </div>
+
+                        <button class="edit-profile-save">Зберегти</button>
+                      </div>
                     </div>
+                 <script>
+                    const editProfileBtn = document.getElementById("editProfileBtn");
+                    const editProfileModal = document.getElementById("editProfileModal");
+                    const editProfileCloseBtn = document.getElementById("closeEditProfile");
 
-                    <script>
-                        const modal2 = document.getElementById("modal2");
-                        const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
-                        const closeBtn = document.getElementById("closeBtn");
+                    editProfileBtn.addEventListener("click", () => {
+                      editProfileModal.style.display = "flex";
+                    });
 
-                        // Відкрити вікно
-                        openBtn.onclick = function () 
-                        {
-                            modal.style.display = "flex";
-                        };
+                    editProfileCloseBtn.addEventListener("click", () => {
+                      editProfileModal.style.display = "none";
+                    });
 
-                        // Закрити по кліку на хрестик
-                        closeBtn.onclick = function () 
-                        {
-                            modal.style.display = "none";
-                        };
+                    editProfileModal.addEventListener("click", (e) => {
+                      if (e.target === editProfileModal) {
+                        editProfileModal.style.display = "none";
+                      }
+                    });
+                  </script>
 
-                        // Закрити по кліку на фон
-                        window.onclick = function (event) 
-                        {
-                            if (event.target === modal) 
-                            {
-                                modal.style.display = "none";
-                            }
-                        };
-                    </script>
+
+
                     <button><img src="img_profile/icon-settings.svg" alt=""></button>
                     </div>
                 </div>
@@ -289,7 +304,7 @@
                 <p>
                     Вітаю всіх! Дякую, що завітали на мою сторінку.
                     Тут ви знайдете мою музику, емоції та натхнення.
-                    Слухайте, відчувайте та діліться враженнями! 🚀
+                    Слухайте та діліться враженнями! 🚀
                 </p>
                 </div>
 
