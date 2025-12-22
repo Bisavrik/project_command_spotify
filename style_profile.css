@@ -902,6 +902,221 @@ button.top-music__arrow-btn
   color: #9fa9c5;
 }
 
+/* ===== ТОП ТРЕКОВ МЕСЯЦА ===== */
+
+.top-tracks {
+  margin-top: 48px;
+}
+
+.top-tracks__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.top-tracks__table {
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top-tracks__row {
+  display: grid;
+  grid-template-columns: 40px 1fr 140px 80px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 22, 48, 0.85),
+      rgba(12, 32, 64, 0.85)
+    );
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 10px 30px rgba(0,0,0,0.45);
+  transition: background 0.2s ease;
+}
+
+.top-tracks__row:not(.top-tracks__row--head):hover {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14, 38, 82, 0.95),
+      rgba(20, 56, 110, 0.95)
+    );
+
+  transform: translateY(-1px);
+}
+
+.top-tracks__row--head {
+  background: none;
+  box-shadow: none;
+  padding: 6px 16px 10px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.top-tracks__index {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* трек */
+
+.top-tracks__track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-tracks__track img {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.top-tracks__name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top-tracks__track span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+
+.top-tracks__date {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.top-tracks__time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+.top-tracks__time img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 4px rgba(80,170,255,0.6));
+}
+
+/* ===== ВІДКРИТІ ПЛЕЙЛИСТИ ===== */
+
+.open-playlists {
+  margin-top: 56px;
+}
+
+.open-playlists__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.open-playlists__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.open-playlists__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.open-playlists__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.open-playlists__arrow img {
+  width: 22px;
+  height: 22px;
+}
+
+/* ряд карточек */
+.open-playlists__row {
+  display: flex;
+  gap: 18px;
+}
+
+/* карточка */
+.playlist-card {
+  width: auto;
+  height: auto;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.playlist-card:hover {
+  transform: translateY(-6px);
+}
+
+/* обложки */
+.playlist-card__covers {
+  position: relative;
+  height: 120px;
+  margin-bottom: 18px;
+}
+
+.playlist-card__covers img {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.playlist-card__covers img:nth-child(1) {
+  left: 0;
+  z-index: 3;
+}
+
+.playlist-card__covers img:nth-child(2) {
+  left: 26px;
+  top: 10px;
+  z-index: 2;
+}
+
+.playlist-card__covers img:nth-child(3) {
+  left: 52px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* текст */
+.playlist-card__name {
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.playlist-card__meta {
+  font-size: 11px;
+  opacity: 0.7;
+  margin: 0;
+}
+
 
 /* Ви слідкуєте */
 .favorite-artists 
@@ -981,9 +1196,9 @@ button.top-music__arrow-btn
 
 /* ОТСТУПЫ МЕЖДУ БЛОКАМИ В ЦЕНТРАЛЬНОМ МЕНЮ */
 
-.top-music 
+.favorite-artists
 {
-  margin-bottom: 48px;   
+  margin-bottom: 40px;
 }
 
 

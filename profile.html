@@ -61,7 +61,7 @@
                 <span class="sidebar-left__primary-icon">
                   <img src="img_profile/icon-home.svg" alt="Головна">
                 </span>
-                <span class="sidebar-left__primary-label">Головна</span>
+                <span class="sidebar-left__primary-label" onclick='window.location.href="home_with_registration.html"'>Головна</span>
               </button>
 
               <button class="sidebar-left__secondary-btn">
@@ -101,31 +101,33 @@
               </div>
 
               <script>
-                  const modal = document.getElementById("modal");
-                  const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
-                  const closeBtn = document.getElementById("closeBtn");
+              document.addEventListener("DOMContentLoaded", () => {
+                const modal = document.getElementById("modal");
+                const closeBtn = document.getElementById("closeBtn");
 
-                  // Відкрити вікно
-                  openBtn.onclick = function () 
-                  {
-                      modal.style.display = "flex";
-                  };
+                const openButtons = document.querySelectorAll(
+                  ".sidebar-left__text-btn_bt6"
+                );
 
-                  // Закрити по кліку на хрестик
-                  closeBtn.onclick = function () 
-                  {
-                      modal.style.display = "none";
-                  };
+                openButtons.forEach(btn => {
+                  btn.addEventListener("click", () => {
+                    modal.style.display = "flex";
+                  });
+                });
 
-                  // Закрити по кліку на фон
-                  window.onclick = function (event) 
-                  {
-                      if (event.target === modal) 
-                      {
-                          modal.style.display = "none";
-                      }
-                  };
+                closeBtn.addEventListener("click", () => {
+                  modal.style.display = "none";
+                });
+
+                window.addEventListener("click", (event) => {
+                  if (event.target === modal) {
+                    modal.style.display = "none";
+                  }
+                });
+              });
               </script>
+
+
 
               <div class="sidebar-left__section-header">
                 <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
@@ -379,6 +381,140 @@
                     <p class="card-artist">Justin Timberlake</p>
                   </div>
                 </article>
+              </div>
+            </section>
+
+
+            <!-- Топ ваших треків цього місяця -->
+            <section class="top-tracks">
+              <h2 class="top-tracks__title">Топ ваших треків цього місяця</h2>
+
+              <div class="top-tracks__table">
+
+                <!-- Заголовки -->
+                <div class="top-tracks__row top-tracks__row--head">
+                  <div> </div>
+                  <div>    </div>
+                  <div>Дата релізу</div>
+                  <div class="top-tracks__time">Час</div>
+                </div>
+
+                <!-- 1 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">1</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-vymolyv.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">ВИМОЛИВ</p>
+                      <span>Jerry Heil, MONATIK, Evgeny Khmara</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">12.11.2012</div>
+
+                  <div class="top-tracks__time">
+                    <img src="img_profile/icon-heart-filled.svg" alt="">
+                    <span> 3:02</span>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">2</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-dlya-dushi.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Для моєї душі</p>
+                      <span>Саймон Лі</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">24.06.2023</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:45</span>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">3</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-remember-me.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Remember me</p>
+                      <span>Hozen Rocks</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">10.10.2005</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:21</span>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+
+            <!-- Ваші відкриті плейлисти -->
+            <section class="open-playlists">
+
+              <div class="open-playlists__header">
+                <h2 class="open-playlists__title">Ваші відкриті плейлисти</h2>
+
+                <div class="open-playlists__controls">
+                  <button class="open-playlists__arrow">
+                    <img src="img_profile/icon-arrow-left-small.svg" alt="">
+                  </button>
+                  <button class="open-playlists__arrow">
+                    <img src="img_profile/icon-arrow-right-small.svg" alt="">
+                  </button>
+                </div>
+              </div>
+
+              <div class="open-playlists__row">
+
+                <!-- Плейлист 1 -->
+                <article class="playlist-card">
+                  <div class="playlist-card__covers">
+                    <img src="img_profile/pl-1-1.svg">
+                    <img src="img_profile/pl-1-2.svg">
+                    <img src="img_profile/pl-1-3.svg">
+                  </div>
+
+                  <h3 class="playlist-card__name">ДЛЯ НАСТРОЮ1</h3>
+                  <p class="playlist-card__meta">МУЗИКАВІТЧ</p>
+                </article>
+
+                <!-- Плейлист 2 -->
+                <article class="playlist-card">
+                  <div class="playlist-card__covers">
+                    <img src="img_profile/pl-2-1.svg">
+                    <img src="img_profile/pl-2-2.svg">
+                    <img src="img_profile/pl-2-3.svg">
+                  </div>
+
+                  <h3 class="playlist-card__name">ДЛЯ НАСТРОЮ2</h3>
+                  <p class="playlist-card__meta">МУЗИКАВІТЧ</p>
+                </article>
+
+                <!-- Плейлист 3 -->
+                <article class="playlist-card">
+                  <div class="playlist-card__covers">
+                    <img src="img_profile/pl-3-1.svg">
+                    <img src="img_profile/pl-3-2.svg">
+                    <img src="img_profile/pl-3-3.svg">
+                  </div>
+
+                  <h3 class="playlist-card__name">ПІДТРИМКА КО...</h3>
+                  <p class="playlist-card__meta">МУЗИКАВІТЧ</p>
+                </article>
+
               </div>
             </section>
 
