@@ -442,6 +442,7 @@ body
   display: flex;
   flex-direction: column;
   gap: 6px;
+  cursor: pointer;
 }
 
 .sidebar-left__playlist 
