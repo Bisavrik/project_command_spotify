@@ -559,6 +559,78 @@ body
   padding: 18px 22px 22px;
 }
 
+/* ARTIST HERO (Blackpink) */
+.artist-hero {
+  position: relative;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* Фон с градиентом */
+.artist-hero__bg {
+  position: absolute;
+  height: 190px;
+  inset: 0;
+  border: transparent 1px solid;
+  border-radius: 30px;
+  background:
+    linear-gradient(90deg, rgba(3,8,26,0.95) 0%, rgba(3,8,26,0.6) 40%, rgba(3,8,26,0.2) 70%);
+  z-index: 1;
+}
+
+/* Контент поверх фона */
+.artist-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 15px;
+  gap: 22px;
+}
+
+/* Обложка */
+.artist-hero__cover img {
+  width: 160px;
+  height: 160px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Текст */
+.artist-hero__info
+{
+  margin-top: 40px;
+}
+.artist-hero__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.artist-hero__name {
+  margin: 0 0 10px;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.artist-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+.artist-hero__stats img {
+  width: 16px;
+  height: 16px;
+  background: #456090;
+  border: transparent 2px solid;
+  border-radius: 50%;
+}
 
 /* FOOTER */
 .footer 
