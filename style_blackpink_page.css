@@ -462,6 +462,10 @@ body
   background: rgba(255, 255, 255, 0.06);
 }
 
+.sidebar-left__playlist--active
+{
+  background: rgba(255, 255, 255, 0.06);
+}
 .sidebar-left__playlist-avatar img 
 {
   width: 32px;
@@ -565,7 +569,6 @@ body
   height: 220px;
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 24px;
 }
 
 /* Фон с градиентом */
@@ -632,6 +635,243 @@ body
   border-radius: 50%;
 }
 
+/* TOP LINE ABOVE POPULAR TRACKS */
+.popular-tracks__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* LEFT ICONS */
+.popular-tracks__icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.popular-tracks__icons img {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+/* THREE DOTS */
+.popular-tracks__dots {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.popular-tracks__dots:hover {
+  opacity: 1;
+}
+
+/* POPULAR TRACKS */
+.popular-tracks {
+  margin-top: 10px;
+}
+
+.popular-tracks__title {
+  margin-bottom: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #BEF4FF;
+}
+
+/* LIST */
+.popular-tracks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ROW */
+.track-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 60px;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s ease;
+}
+
+.track-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* LEFT */
+.track-row__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* COVER */
+.track-row__cover img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* INFO */
+.track-row__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-row__name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.track-row__artist {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ALBUM / PLAYS / TIME */
+.track-row__album,
+.track-row__plays,
+.track-row__time {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+.track-row__time {
+  text-align: right;
+}
+
+.popular-tracks__showmore {
+  margin-bottom: 14px;
+  margin-top: 15px;
+  color: #93A1B8;
+  font-size: 14px;
+}
+
+/* MUSIC */
+.music 
+{
+  margin-top: 30px;
+}
+.music__header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.music__title 
+{
+  font-size: 24px;
+  font-weight: 700;
+  color: #BEF4FF;
+}
+
+button.top-music__arrow-btn
+{
+  background: none;
+  border: none;
+}
+
+.top-music__arrow-btn img
+{
+  width: 20px;
+  height: 20px;
+}
+
+.content-center__tabs 
+{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.content-center__tab 
+{
+  min-width: 60px;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.content-center__tab--active 
+{
+  background: rgba(255, 255, 255, 0.08);
+}
+.content-center__tab:hover 
+{
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cards-row 
+{
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+/* Одна карточка */
+.card 
+{
+  background: #050d1c;
+  border-radius: 14px;
+  width: 150px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover 
+{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.95);
+}
+
+.card-cover img 
+{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-info 
+{
+  padding: 0 10px 16px 16px;
+}
+
+.card-title 
+{
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.card-artist {
+  font-size: 10px;
+  color: #bcc3d6;
+}
+
+.card-track-number 
+{
+  font-size: 8px;
+  color: #f0f0f0;  
+}
 /* FOOTER */
 .footer 
 {
