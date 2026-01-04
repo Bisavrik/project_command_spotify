@@ -40,7 +40,7 @@
           <button class="navbar__icon-btn" aria-label="Сповіщення">
             <img src="img_settings/icon-bell.svg" alt="Сповіщення">
           </button>
-          <button class="navbar__icon-btn" aria-label="Профіль">
+          <button class="navbar__icon-btn" onclick='window.location.href="profile.html"' aria-label="Профіль">
             <img src="img_settings/icon-user-registratite.svg" alt="Профіль">
           </button>
         </div>
@@ -61,7 +61,7 @@
                 <span class="sidebar-left__primary-icon">
                   <img src="img_settings/icon-home.svg" alt="Головна">
                 </span>
-                <span class="sidebar-left__primary-label">Головна</span>
+                <span class="sidebar-left__primary-label" onclick='window.location.href="home_with_registration.html"'>Головна</span>
               </button>
 
               <button class="sidebar-left__secondary-btn">
@@ -135,7 +135,7 @@
               </div>
 
               <ul class="sidebar-left__playlist-list">
-                <li class="sidebar-left__playlist sidebar-left__playlist--active">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active" onclick='window.location.href="blackpink_page.html"'>
                   <div class="sidebar-left__playlist-avatar">
                     <img src="img_settings/playlist-blackpink.svg" alt="Lisa">
                   </div>
@@ -206,9 +206,173 @@
         <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
         <section class="content-center">
           <div class="content-center__inner">
-            
+
+            <div class="settings">
+
+              <!-- HEADER -->
+              <div class="settings__header">
+                <h2 class="settings__title">Налаштування</h2>
+                <img src="img_settings/icon-search.svg" class="settings__search" alt="">
+              </div>
+
+              <!-- ACCOUNT -->
+              <div class="settings__row">
+                <div>
+                  <h4 class="settings__section-title">Акаунт</h4>
+                </div>
+                <div class="settings__actions">
+                  <button class="settings__btn" onclick='window.location.href="sign_in.html"'>Вийти</button>
+                  <button class="settings__btn settings__btn--primary" onclick='window.location.href="sign_in.html"'>Змінити акаунт</button>
+                </div>
+              </div>
+
+              <!-- OFFLINE -->
+              <div class="settings__row">
+                <div>
+                  <h4 class="settings__section-title">Офлайн-Режим</h4>
+                  <p class="settings__desc">Слухайте музику без підключення до інтернету.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- LANGUAGE -->
+              <div class="settings__row">
+                <div>
+                  <h4 class="settings__section-title">Мова</h4>
+                  <p class="settings__desc">
+                    Оберіть мову платформи. Після цього зробіть перезапуск.
+                  </p>
+                </div>
+                <select class="settings__select">
+                  <option>Українська (UA)</option>
+                  <option>English (EN)</option>
+                </select>
+
+                <script>
+                  document.querySelectorAll('.switch input').forEach((toggle, index) => {
+                    toggle.addEventListener('change', () => {
+                      localStorage.setItem('setting_' + index, toggle.checked);
+                    });
+
+                    const saved = localStorage.getItem('setting_' + index);
+                    if (saved !== null) toggle.checked = saved === 'true';
+                  });
+                </script>
+              </div>
+
+              <!-- NOTIFICATIONS -->
+              <div class="settings__row">
+                <div>
+                  <h4 class="settings__section-title">Сповіщення</h4>
+                  <p class="settings__desc">Контролюйте ваші сповіщення.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- MATURE -->
+              <div class="settings__row">
+                <div>
+                  <h4 class="settings__section-title">
+                    Контент для дорослих (Mature)
+                  </h4>
+                  <p class="settings__desc">
+                    Дозволити контент для дорослих (M). Контент позначений значком M.
+                  </p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider slider--active"></span>
+                </label>
+              </div>
+
+              <!-- PRIVACY -->
+              <div class="settings__block">
+                <h4 class="settings__section-title">Приватність</h4>
+                <p class="settings__desc">
+                  Керуйте тим, хто може бачити ваші плейлісти, підписки та активність.
+                </p>
+
+                <div class="settings__privacy">
+                  <span>Показувати мої публічні плейлісти</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="settings__privacy">
+                  <span>Дозволити іншим бачити, що я слухаю зараз</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="settings__privacy">
+                  <span>Приховати мій профіль з пошуку</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- moya_mediateka -->
+               <div class="settings__block">
+                <h4 class="settings__section-title">Моя медіатека</h4>
+                <p class="settings__desc">
+                  Слухайте музику з вашого пристрою!
+                </p>
+
+                <div class="settings__privacy">
+                  <span>Показати файли на пристрої</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="settings__privacy">
+                  <span>Папка “Музика”</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+               </div>
+
+               <!-- color -->
+                <div class="settings__row">
+                  <h4 class="settings__section-title">Колір системи</h4>
+
+                  <select class="settings__select">
+                    <option>Основна</option>
+                    <option>Світла</option>
+                  </select>
+
+                  <script>
+                    document.querySelectorAll('.switch input').forEach((toggle, index) => {
+                      toggle.addEventListener('change', () => {
+                        localStorage.setItem('setting_' + index, toggle.checked);
+                      });
+
+                      const saved = localStorage.getItem('setting_' + index);
+                      if (saved !== null) toggle.checked = saved === 'true';
+                    });
+                  </script>
+                </div>
+
+            </div>
+
           </div>
         </section>
+
 
       </div>
     </main>
