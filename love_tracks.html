@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lumtune</title>
 
-  <link rel="stylesheet" href="style_notifications.css" />
+  <link rel="stylesheet" href="style_love_tracks.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 </head>
@@ -15,13 +15,13 @@
       <div class="navbar__inner">
         <!-- ЛОГО СЛЕВА -->
         <div class="navbar__logo">
-          <img src="img_notifications/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+          <img src="img_love_tracks/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
         </div>
 
         <!-- ПОИСК ПО ЦЕНТРУ -->
         <div class="navbar__search">
           <span class="navbar__search-icon navbar__search-icon--left">
-            <img src="img_notifications/icon-search.svg" alt="Пошук">
+            <img src="img_love_tracks/icon-search.svg" alt="Пошук">
           </span>
 
           <input
@@ -31,17 +31,17 @@
           >
 
           <span class="navbar__search-icon navbar__search-icon--right">
-            <img src="img_notifications/icon-mic.svg" alt="Голосовий пошук">
+            <img src="img_love_tracks/icon-mic.svg" alt="Голосовий пошук">
           </span>
         </div>
 
         <!-- ИКОНКИ СПРАВА -->
         <div class="navbar__actions">
-          <button class="navbar__icon-btn" aria-label="Сповіщення">
-            <img src="img_notifications/icon-bell.svg" alt="Сповіщення">
+          <button class="navbar__icon-btn" onclick='window.location.href="notifications.html"' aria-label="Сповіщення">
+            <img src="img_love_tracks/icon-bell.svg" alt="Сповіщення">
           </button>
           <button class="navbar__icon-btn" onclick='window.location.href="profile.html"' aria-label="Профіль">
-            <img src="img_notifications/icon-user-registratite.svg" alt="Профіль">
+            <img src="img_love_tracks/icon-user-registratite.svg" alt="Профіль">
           </button>
         </div>
       </div>
@@ -59,14 +59,14 @@
 
               <button class="sidebar-left__primary-btn">
                 <span class="sidebar-left__primary-icon">
-                  <img src="img_notifications/icon-home.svg" alt="Головна">
+                  <img src="img_love_tracks/icon-home.svg" alt="Головна">
                 </span>
                 <span class="sidebar-left__primary-label" onclick='window.location.href="home_with_registration.html"'>Головна</span>
               </button>
 
               <button class="sidebar-left__secondary-btn">
                 <span class="sidebar-left__secondary-icon">
-                  <img src="img_notifications/icon-library.svg" alt="Моя медіатека">
+                  <img src="img_love_tracks/icon-library.svg" alt="Моя медіатека">
                 </span>
                 <span class="sidebar-left__secondary-label">Моя медіатека</span>
               </button>
@@ -76,16 +76,16 @@
             <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
               <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
 
-              <button class="sidebar-left__text-btn" onclick='window.location.href="love_tracks.html"'>
+              <button class="sidebar-left__text-btn">
                 <span class="sidebar-left__text-icon">
-                  <img src="img_notifications/icon-heart-outline.svg" alt="Улюблені треки">
+                  <img src="img_love_tracks/icon-heart-outline.svg" alt="Улюблені треки">
                 </span>
                 <span>Улюблені треки</span>
               </button>
 
               <button class="sidebar-left__text-btn_bt6">
                 <span class="sidebar-left__text-icon">
-                  <img src="img_notifications/icon-plus-square.svg" alt="Створити плейліст">
+                  <img src="img_love_tracks/icon-plus-square.svg" alt="Створити плейліст">
                 </span>
                 <span>Створити плейліст</span>
               </button>
@@ -130,14 +130,14 @@
               <div class="sidebar-left__section-header">
                 <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
                 <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
-                  <img src="img_notifications/icon-playlist-menu.svg" alt="Меню">
+                  <img src="img_love_tracks/icon-playlist-menu.svg" alt="Меню">
                 </button>
               </div>
 
               <ul class="sidebar-left__playlist-list">
                 <li class="sidebar-left__playlist sidebar-left__playlist--active" onclick='window.location.href="blackpink_page.html"'>
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_notifications/playlist-blackpink.svg" alt="Lisa">
+                    <img src="img_love_tracks/playlist-blackpink.svg" alt="Lisa">
                   </div>
                   <div class="sidebar-left__playlist-content">
                     <p class="sidebar-left__playlist-name">Blackpink</p>
@@ -147,7 +147,7 @@
 
                 <li class="sidebar-left__playlist">
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_notifications/playlist-lady-gaga.svg" alt="Lady Gaga">
+                    <img src="img_love_tracks/playlist-lady-gaga.svg" alt="Lady Gaga">
                   </div>
                   <div class="sidebar-left__playlist-content">
                     <p class="sidebar-left__playlist-name">Lady Gaga</p>
@@ -157,7 +157,7 @@
 
                 <li class="sidebar-left__playlist">
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_notifications/playlist-bruno-mars.svg" alt="Bruno Mars">
+                    <img src="img_love_tracks/playlist-bruno-mars.svg" alt="Bruno Mars">
                   </div>
                   <div class="sidebar-left__playlist-content">
                     <p class="sidebar-left__playlist-name">Bruno Mars</p>
@@ -167,7 +167,7 @@
 
                 <li class="sidebar-left__playlist">
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_notifications/playlist-bts.svg" alt="BTS">
+                    <img src="img_love_tracks/playlist-bts.svg" alt="BTS">
                   </div>
                   <div class="sidebar-left__playlist-content">
                     <p class="sidebar-left__playlist-name">BTS</p>
@@ -177,7 +177,7 @@
 
                 <li class="sidebar-left__playlist">
                   <div class="sidebar-left__playlist-avatar">
-                    <img src="img_notifications/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                    <img src="img_love_tracks/playlist-lana-del-rey.svg" alt="Lana Del Rey">
                   </div>
                   <div class="sidebar-left__playlist-content">
                     <p class="sidebar-left__playlist-name">Lana Del Rey</p>
@@ -192,12 +192,12 @@
               <div class="sidebar-left__recent-header">
                 <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
                 <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
-                  <img src="img_notifications/icon-refresh-arrow.svg" alt="Оновити">
+                  <img src="img_love_tracks/icon-refresh-arrow.svg" alt="Оновити">
                 </button>
               </div>
 
               <div class="sidebar-left__clock-wrap">
-                <img src="img_notifications/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
+                <img src="img_love_tracks/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
               </div>
             </div>
           </div>
@@ -207,20 +207,7 @@
         <section class="content-center">
           <div class="content-center__inner">
 
-            <div class="notifications">
-
-              <!-- HEADER -->
-              <div class="notifications__header">
-                <h2 class="notifications__title">Повідомлення</h2>
-              </div>
-              <p class="notifications__text">Функція повідомлень робить взаємодію з музикою ще зручнішою та цікавішою. Нові релізи улюблених артистів, подкастів, оновлення плейлистів.</p>
-
-                <div class="content-center__tabs">
-                    <button class="content-center__tab content-center__tab--active">Всі</button>
-                    <button class="content-center__tab">Треки</button>
-                    <button class="content-center__tab">Інше</button>
-                </div>
-            </div>
+        
 
           </div>
         </section>
@@ -236,30 +223,30 @@
         <!-- Верхній ряд -->
         <div class="footer__top">
           <div class="footer__logo">
-            <img src="img_notifications/footer-logo.svg" alt="Lumtune">
+            <img src="img_love_tracks/footer-logo.svg" alt="Lumtune">
           </div>
 
           <div class="footer__info">
             <p class="footer__address">
-              <img src="img_notifications/footer-location.svg" alt="">
+              <img src="img_love_tracks/footer-location.svg" alt="">
               Address: st. Shevchenko, 25 house, UA, Odessa, 00000
             </p>
 
             <p class="footer__phone">
-              <img src="img_notifications/footer-phone.svg" alt="">
+              <img src="img_love_tracks/footer-phone.svg" alt="">
               (380) 00-000-00-00           
             </p>
 
             <p class="footer__mail">
-              <img src="img_notifications/footer-mail.svg" alt="">
+              <img src="img_love_tracks/footer-mail.svg" alt="">
               lumitune@gmail.com
             </p>
 
             <div class="footer__socials">
-              <img src="img_notifications/footer-facebook.svg" alt="">
-              <img src="img_notifications/footer-twitter.svg" alt="">
-              <img src="img_notifications/footer-pinterest.svg" alt="">
-              <img src="img_notifications/footer-rss.svg" alt="">
+              <img src="img_love_tracks/footer-facebook.svg" alt="">
+              <img src="img_love_tracks/footer-twitter.svg" alt="">
+              <img src="img_love_tracks/footer-pinterest.svg" alt="">
+              <img src="img_love_tracks/footer-rss.svg" alt="">
             </div>
           </div>
         </div>
@@ -282,7 +269,7 @@
         <!-- Левая часть: обложка + название трека -->
         <div class="player-bar__left">
             <div class="player-bar__cover">
-                <img src="img_notifications/track-die-with-a-smile.svg" alt="Die with a smile">
+                <img src="img_love_tracks/track-die-with-a-smile.svg" alt="Die with a smile">
             </div>
             <div class="player-bar__track">
                 <p class="player-bar__title">The Show</p>
@@ -290,10 +277,10 @@
             </div>
             <div class="player-bar__icons">
                 <button class="player-bar__icon-btn">
-                    <img src="img_notifications/like-button-player.svg" alt="">
+                    <img src="img_love_tracks/like-button-player.svg" alt="">
                 </button>
                 <button class="player-bar__icon-btn">
-                    <img src="img_notifications/plus-button-player.svg" alt="">
+                    <img src="img_love_tracks/plus-button-player.svg" alt="">
                 </button>
             </div>
         </div>
@@ -302,19 +289,19 @@
         <div class="player-bar__center">
           <div class="player-bar__controls">
             <button class="player-bar__btn player-bar__btn--small">
-                <img src="img_notifications/spin-button-player.svg" alt="">
+                <img src="img_love_tracks/spin-button-player.svg" alt="">
             </button>
             <button class="player-bar__btn player-bar__btn--small">
-                <img src="img_notifications/previous-button-player.svg" alt="">
+                <img src="img_love_tracks/previous-button-player.svg" alt="">
             </button>
             <button class="player-bar__btn player-bar__btn--main">
-                <img src="img_notifications/play-button-player.svg" alt="">
+                <img src="img_love_tracks/play-button-player.svg" alt="">
             </button>
             <button class="player-bar__btn player-bar__btn--small">
-                <img src="img_notifications/next-button-player.svg" alt="">
+                <img src="img_love_tracks/next-button-player.svg" alt="">
             </button>
             <button class="player-bar__btn player-bar__btn--small">
-                <img src="img_notifications/mix-button-player.svg" alt="">
+                <img src="img_love_tracks/mix-button-player.svg" alt="">
             </button>
           </div>
 
@@ -331,7 +318,7 @@
         <div class="player-bar__right">
           <div class="player-bar__volume">
             <span class="player-bar__icon">
-                <img src="img_notifications/volume-button-player.svg" alt="">
+                <img src="img_love_tracks/volume-button-player.svg" alt="">
             </span>
             <div class="player-bar__volume-line">
               <div class="player-bar__volume-fill"></div>
@@ -339,7 +326,7 @@
           </div>
 
           <button class="player-bar__btn player-bar__btn--small">
-                <img src="img_notifications/device-button-player.svg" alt="">
+                <img src="img_love_tracks/device-button-player.svg" alt="">
           </button>
         </div>
       </div>
