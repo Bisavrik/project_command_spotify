@@ -721,6 +721,7 @@ body
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .moods__title span 
@@ -800,6 +801,7 @@ body
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .top-music__title span 
@@ -886,6 +888,7 @@ button.top-music__arrow-btn
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .new-releases__title span 
@@ -918,6 +921,7 @@ button.top-music__arrow-btn
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .favorite-artists__title span 
@@ -997,6 +1001,7 @@ button.top-music__arrow-btn
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .podcasts__title span 
@@ -1096,6 +1101,7 @@ button.top-music__arrow-btn
   margin: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #BEF4FF;
 }
 
 .audiobooks__title span 
