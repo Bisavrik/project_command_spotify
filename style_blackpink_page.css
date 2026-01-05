@@ -1559,5 +1559,221 @@ button.player-bar__icon-btn
   height: 100%;
   background: #A6DAFF;
 }
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
 
+  .artist-hero__name {
+    font-size: 36px;
+  }
 
+  .track-row {
+    grid-template-columns: 1.4fr 1fr 80px;
+  }
+
+  .track-row__plays {
+    display: none;
+  }
+
+  .cards-row {
+    gap: 10px;
+  }
+
+  .artist-row {
+    gap: 28px;
+  }
+
+  .now-in-tour_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+  }
+}
+@media (max-width: 992px) {
+  /* SIDEBAR */
+  .sidebar-left {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* HERO */
+  .artist-hero {
+    height: auto;
+  }
+
+  .artist-hero__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .artist-hero__cover img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .artist-hero__name {
+    font-size: 32px;
+  }
+
+  /* TRACKS */
+  .track-row {
+    grid-template-columns: 1fr 60px;
+  }
+
+  .track-row__album,
+  .track-row__plays {
+    display: none;
+  }
+
+  /* CARDS */
+  .cards-row {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  /* ARTISTS */
+  .artist-row {
+    overflow-x: auto;
+    gap: 24px;
+  }
+
+  /* TOUR */
+  .now-in-tour_grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 120px;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .navbar__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .navbar__search {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* HERO */
+  .artist-hero__cover img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .artist-hero__name {
+    font-size: 26px;
+  }
+
+  /* TITLES */
+  .popular-tracks__title,
+  .music__title,
+  .you-like_title,
+  .people-love_title,
+  .blackpink-playlist_title,
+  .now-in-tour_title,
+  .about-author_title,
+  .blackpink-shop_title {
+    font-size: 20px;
+  }
+
+  /* TRACK ROW */
+  .track-row {
+    padding: 8px;
+  }
+
+  .track-row__time {
+    font-size: 11px;
+  }
+
+  /* PLAYER */
+  .player-bar__inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .player-bar__left,
+  .player-bar__right {
+    min-width: unset;
+  }
+
+  .player-bar__center {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  /* HERO */
+  .artist-hero__content {
+    padding: 12px;
+  }
+
+  .artist-hero__cover img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .artist-hero__name {
+    font-size: 22px;
+  }
+
+  /* TRACKS */
+  .track-row__cover img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .track-row__name {
+    font-size: 13px;
+  }
+
+  .track-row__artist {
+    font-size: 11px;
+  }
+
+  /* CARDS */
+  .card {
+    width: 130px;
+  }
+
+  /* ARTISTS */
+  .artist-card__avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* ABOUT */
+  .about-author_content {
+    left: 16px;
+    bottom: 16px;
+    max-width: 90%;
+  }
+
+  .about-author_text {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .footer__top {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
