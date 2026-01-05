@@ -551,6 +551,116 @@ body
   padding: 18px 22px 22px;
 }
 
+/* LOVED TRACKS */
+.liked {
+  color: #fff;
+}
+
+.liked__hero {
+  padding: 40px 0 30px;
+  background:
+    radial-gradient(circle at top, rgba(90,160,255,.25), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 38px,
+      rgba(255,255,255,.05) 40px
+    );
+}
+
+.liked__subtitle {
+  font-size: 12px;
+  opacity: .7;
+}
+
+.liked__title {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 6px 0;
+}
+
+.liked__meta {
+  font-size: 13px;
+  opacity: .6;
+}
+
+.liked__controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.liked__btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.liked__btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.liked__btn--play {
+  background: #5ed7ff;
+}
+
+.liked__table-head,
+.liked__row {
+  display: grid;
+  grid-template-columns: 40px 3fr 2fr 1.5fr 60px;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.liked__table-head {
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: .6;
+}
+
+.liked__row {
+  border-radius: 10px;
+  transition: background .2s;
+}
+
+.liked__row:hover {
+  background: rgba(255,255,255,.06);
+}
+
+.liked__row--active {
+  background: rgba(255,255,255,.08);
+}
+
+.liked__track {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.liked__cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.liked__name {
+  font-size: 14px;
+  margin: 0;
+}
+
+.liked__artist {
+  font-size: 12px;
+  opacity: .6;
+}
+
 
 /* FOOTER */
 .footer 
