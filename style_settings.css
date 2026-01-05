@@ -362,12 +362,14 @@ body
     border-radius: 8px;
     position: relative;
 }
+
 .modal-content h3
 {
   color: #9ED8E9;
   font-size: 24px;
   font-weight: bold;
 }
+
 .album_name
 {
   width: 80%;
@@ -381,6 +383,7 @@ body
   font-size: 24px;
   outline: none;
 }
+ 
 .album_name::placeholder 
 {
   color: rgba(255, 255, 255, 0.5);
@@ -558,30 +561,35 @@ body
 }
 
 /* SETTINGS */
-.settings {
+.settings 
+{
   padding: 40px 60px;
 }
 
 /* HEADER */
-.settings__header {
+.settings__header 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.settings__title {
+.settings__title 
+{
   font-size: 26px;
   font-weight: 700;
 }
 
-.settings__search {
+.settings__search 
+{
   width: 22px;
   opacity: 0.8;
 }
 
 /* ROW */
-.settings__row {
+.settings__row 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -596,12 +604,14 @@ body
 }
 
 /* TEXT */
-.settings__section-title {
+.settings__section-title 
+{
   font-size: 20px;
   font-weight: 600;
 }
 
-.settings__desc {
+.settings__desc 
+{
   font-size: 12px;
   color: rgba(255,255,255,0.65);
   max-width: 520px;
@@ -609,7 +619,8 @@ body
 }
 
 /* BUTTONS */
-.settings__actions {
+.settings__actions 
+{
   display: flex;
   gap: 12px;
 }
@@ -624,12 +635,14 @@ body
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
+
 .settings__btn:hover 
 {
   background: #C0F6FF;
   border: 1px solid transparent;
   color: #00252D;
 }
+
 .settings__btn--primary 
 {
   padding: 8px 18px;
@@ -641,7 +654,8 @@ body
 }
 
 /* SELECT */
-.settings__select {
+.settings__select 
+{
   background: #001527;
   border: 1px solid #93E8FF;
   color: #567F8D;
@@ -650,7 +664,8 @@ body
 }
 
 /* PRIVACY ROW */
-.settings__privacy {
+.settings__privacy 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -661,18 +676,22 @@ body
 {
   font-size: 14px;
 }
+
 /* SWITCH */
-.switch {
+.switch 
+{
   position: relative;
   width: 42px;
   height: 22px;
 }
 
-.switch input {
+.switch input 
+{
   display: none;
 }
 
-.slider {
+.slider 
+{
   position: absolute;
   inset: 0;
   background: rgba(255,255,255,0.25);
@@ -681,7 +700,8 @@ body
   transition: 0.3s;
 }
 
-.slider::before {
+.slider::before 
+{
   content: "";
   position: absolute;
   width: 18px;
@@ -693,11 +713,13 @@ body
   transition: 0.3s;
 }
 
-.switch input:checked + .slider {
+.switch input:checked + .slider 
+{
   background: #4fd3ff;
 }
 
-.switch input:checked + .slider::before {
+.switch input:checked + .slider::before 
+{
   transform: translateX(20px);
 }
 
@@ -974,7 +996,8 @@ button.player-bar__icon-btn
   overflow: hidden;
 }
 
-.player-bar__progress-fill {
+.player-bar__progress-fill 
+{
   width: 40%; 
   height: 100%;
   background: #A6DAFF;

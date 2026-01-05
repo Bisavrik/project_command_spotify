@@ -363,12 +363,14 @@ body
     border-radius: 8px;
     position: relative;
 }
+
 .modal-content h3
 {
   color: #9ED8E9;
   font-size: 24px;
   font-weight: bold;
 }
+
 .album_name
 {
   width: 80%;
@@ -382,6 +384,7 @@ body
   font-size: 24px;
   outline: none;
 }
+
 .album_name::placeholder 
 {
   color: rgba(255, 255, 255, 0.5);
@@ -466,6 +469,7 @@ body
 {
   background: rgba(255, 255, 255, 0.06);
 }
+
 .sidebar-left__playlist-avatar img 
 {
   width: 32px;
@@ -564,7 +568,8 @@ body
 }
 
 /* ARTIST HERO (Blackpink) */
-.artist-hero {
+.artist-hero 
+{
   position: relative;
   height: 220px;
   border-radius: 20px;
@@ -572,7 +577,8 @@ body
 }
 
 /* Фон с градиентом */
-.artist-hero__bg {
+.artist-hero__bg 
+{
   position: absolute;
   height: 190px;
   inset: 0;
@@ -584,7 +590,8 @@ body
 }
 
 /* Контент поверх фона */
-.artist-hero__content {
+.artist-hero__content 
+{
   position: relative;
   z-index: 2;
   display: flex;
@@ -595,7 +602,8 @@ body
 }
 
 /* Обложка */
-.artist-hero__cover img {
+.artist-hero__cover img 
+{
   width: 160px;
   height: 160px;
   border-radius: 14px;
@@ -607,19 +615,23 @@ body
 {
   margin-top: 40px;
 }
-.artist-hero__label {
+
+.artist-hero__label 
+{
   margin: 0 0 6px;
   font-size: 12px;
   color: rgba(255,255,255,0.7);
 }
 
-.artist-hero__name {
+.artist-hero__name 
+{
   margin: 0 0 10px;
   font-size: 44px;
   font-weight: 700;
 }
 
-.artist-hero__stats {
+.artist-hero__stats 
+{
   display: flex;
   align-items: center;
   gap: 8px;
@@ -627,7 +639,8 @@ body
   color: rgba(255,255,255,0.75);
 }
 
-.artist-hero__stats img {
+.artist-hero__stats img 
+{
   width: 16px;
   height: 16px;
   background: #456090;
@@ -636,7 +649,8 @@ body
 }
 
 /* TOP LINE ABOVE POPULAR TRACKS */
-.popular-tracks__top {
+.popular-tracks__top 
+{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -644,36 +658,42 @@ body
 }
 
 /* LEFT ICONS */
-.popular-tracks__icons {
+.popular-tracks__icons 
+{
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.popular-tracks__icons img {
+.popular-tracks__icons img 
+{
   width: 44px;
   height: 44px;
   cursor: pointer;
 }
 
 /* THREE DOTS */
-.popular-tracks__dots {
+.popular-tracks__dots 
+{
   width: 24px;
   height: 24px;
   cursor: pointer;
   opacity: 0.8;
 }
 
-.popular-tracks__dots:hover {
+.popular-tracks__dots:hover 
+{
   opacity: 1;
 }
 
 /* POPULAR TRACKS */
-.popular-tracks {
+.popular-tracks 
+{
   margin-top: 10px;
 }
 
-.popular-tracks__title {
+.popular-tracks__title 
+{
   margin-bottom: 14px;
   font-size: 24px;
   font-weight: 700;
@@ -681,14 +701,16 @@ body
 }
 
 /* LIST */
-.popular-tracks__list {
+.popular-tracks__list 
+{
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 /* ROW */
-.track-row {
+.track-row 
+{
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 60px;
   align-items: center;
@@ -698,19 +720,22 @@ body
   transition: background 0.2s ease;
 }
 
-.track-row:hover {
+.track-row:hover 
+{
   background: rgba(255, 255, 255, 0.06);
 }
 
 /* LEFT */
-.track-row__left {
+.track-row__left 
+{
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 /* COVER */
-.track-row__cover img {
+.track-row__cover img 
+{
   width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -718,18 +743,21 @@ body
 }
 
 /* INFO */
-.track-row__info {
+.track-row__info 
+{
   display: flex;
   flex-direction: column;
 }
 
-.track-row__name {
+.track-row__name 
+{
   margin: 0;
   font-size: 14px;
   font-weight: 600;
 }
 
-.track-row__artist {
+.track-row__artist 
+{
   margin: 2px 0 0;
   font-size: 12px;
   color: rgba(255,255,255,0.6);
@@ -738,16 +766,19 @@ body
 /* ALBUM / PLAYS / TIME */
 .track-row__album,
 .track-row__plays,
-.track-row__time {
+.track-row__time 
+{
   font-size: 13px;
   color: rgba(255,255,255,0.75);
 }
 
-.track-row__time {
+.track-row__time 
+{
   text-align: right;
 }
 
-.popular-tracks__showmore {
+.popular-tracks__showmore 
+{
   margin-bottom: 14px;
   margin-top: 15px;
   color: #93A1B8;
@@ -759,6 +790,7 @@ body
 {
   margin-top: 30px;
 }
+
 .music__header 
 {
   display: flex;
@@ -808,6 +840,7 @@ button.top-music__arrow-btn
 {
   background: rgba(255, 255, 255, 0.08);
 }
+
 .content-center__tab:hover 
 {
   background: rgba(255, 255, 255, 0.05);
@@ -861,7 +894,8 @@ button.top-music__arrow-btn
   color: #ffffff;
 }
 
-.card-artist {
+.card-artist 
+{
   font-size: 10px;
   color: #bcc3d6;
 }
@@ -1032,7 +1066,8 @@ button.top-music__arrow-btn
 }
 
 /* GRID */
-.now-in-tour_grid {
+.now-in-tour_grid 
+{
   margin-top: 20px;
   margin-left: 20px;
   display: grid;
@@ -1041,14 +1076,16 @@ button.top-music__arrow-btn
 }
 
 /* CARD */
-.tour-card {
+.tour-card 
+{
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 /* DATE BLOCK */
-.tour-card__date {
+.tour-card__date 
+{
   width: 56px;
   height: 64px;
   background: linear-gradient(180deg, #1b2b3a, #0f1c29);
@@ -1059,36 +1096,42 @@ button.top-music__arrow-btn
   justify-content: center;
 }
 
-.tour-card__month {
+.tour-card__month 
+{
   font-size: 11px;
   color: #9ed8e9;
 }
 
-.tour-card__day {
+.tour-card__day 
+{
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
 }
 
 /* INFO */
-.tour-card__info {
+.tour-card__info 
+{
   display: flex;
   flex-direction: column;
 }
 
-.tour-card__city {
+.tour-card__city 
+{
   margin: 0;
   font-size: 16px;
   font-weight: 600;
 }
 
-.tour-card__artist {
+.tour-card__artist 
+{
   margin: 2px 0;
   font-size: 12px;
   color: rgba(255,255,255,0.6);
 }
 
-.tour-card__meta {
+.tour-card__meta 
+{
   margin: 0;
   font-size: 11px;
   color: rgba(255,255,255,0.45);
@@ -1471,7 +1514,8 @@ button.player-bar__icon-btn
   overflow: hidden;
 }
 
-.player-bar__progress-fill {
+.player-bar__progress-fill 
+{
   width: 40%; 
   height: 100%;
   background: #A6DAFF;

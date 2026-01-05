@@ -869,7 +869,8 @@ button.top-music__arrow-btn
   color: #ffffff;
 }
 
-.card-artist {
+.card-artist 
+{
   font-size: 9px;
   color: #9fa9c5;
 }
@@ -1641,7 +1642,8 @@ button.player-bar__icon-btn
   overflow: hidden;
 }
 
-.player-bar__progress-fill {
+.player-bar__progress-fill 
+{
   width: 40%; 
   height: 100%;
   background: #A6DAFF;
