@@ -205,6 +205,7 @@
 
         <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
         <section class="content-center">
+          
           <div class="content-center__inner">
 
             <div class="liked">
@@ -213,81 +214,380 @@
               <div class="liked__hero">
                 <p class="liked__subtitle">Плейлист</p>
                 <h1 class="liked__title">Улюблені треки</h1>
-                <p class="liked__meta">HannaD • 100 треків</p>
+              </div> 
 
-                <div class="liked__controls">
-                  <button class="liked__btn liked__btn--play">
-                    <img src="img_love_tracks/play.svg" alt="play">
-                  </button>
+              <p class="liked__meta">HannaD • 100 треків</p>
 
-                  <button class="liked__btn">
-                    <img src="img_love_tracks/shuffle.svg" alt="shuffle">
-                  </button>
+              <div class="liked__controls">
+                <button class="liked__btn liked__btn--play">
+                  <img src="img_love_tracks/play.svg" alt="play">
+                </button>
 
-                  <button class="liked__btn">
-                    <img src="img_love_tracks/download.svg" alt="download">
-                  </button>
-                </div>
+                <button class="liked__btn">
+                  <img src="img_love_tracks/shuffle.svg" alt="shuffle">
+                </button>
+
+                <button class="liked__btn liked__btn--download">
+                  <img src="img_love_tracks/download.svg" alt="download">
+                </button>
               </div>
+              
 
               <!-- TABLE HEADER -->
-              <div class="liked__table-head">
-                <span>#</span>
-                <span>Назва</span>
-                <span>Альбом</span>
-                <span>Дата додавання</span>
-                <span>Час</span>
-              </div>
+             <div class="top-tracks__table">
 
-              <!-- TRACK -->
-              <div class="liked__row liked__row--active">
-                <span class="liked__index">1</span>
+                <!-- Заголовки -->
+                <div class="top-tracks__row top-tracks__row--head">
+                  <div> </div>
+                  <div>    </div>               
+                  <div>Дата додавання</div>
+                  <div class="top-tracks__time">Час</div>
+                </div>
 
-                <div class="liked__track">
-                  <img src="img/covers/1.jpg" class="liked__cover">
-                  <div>
-                    <p class="liked__name">ВИМОЛИВ</p>
-                    <p class="liked__artist">Jerry Heil, MONATIK, Євген Хмара</p>
+                <!-- 1 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">1</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-vymolyv.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">ВИМОЛИВ</p>
+                      <span>Jerry Heil, MONATIK, Evgeny Khmara</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">Сьогодні</div>
+
+                  <div class="top-tracks__time">
+                    <!-- <img src="img_love_tracks/icon-heart-filled.svg" alt=""> -->
+                    <span> 3:02</span>
                   </div>
                 </div>
 
-                <span class="liked__album">Вимолив</span>
-                <span class="liked__date">Сьогодні</span>
-                <span class="liked__time">3:02</span>
-              </div>
+                <!-- 2 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">2</div>
 
-              <!-- TRACK -->
-              <div class="liked__row">
-                <span class="liked__index">2</span>
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-dlya-dushi.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Для моєї душі</p>
+                      <span>Саймон Лі</span>
+                    </div>
+                  </div>
 
-                <div class="liked__track">
-                  <img src="img/covers/2.jpg" class="liked__cover">
-                  <div>
-                    <p class="liked__name">Для моєї душі</p>
-                    <p class="liked__artist">Сайона Лі</p>
+                  <div class="top-tracks__date">Сьогодні</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:45</span>
                   </div>
                 </div>
 
-                <span class="liked__album">Струни моєї душі</span>
-                <span class="liked__date">Сьогодні</span>
-                <span class="liked__time">2:56</span>
-              </div>
+                <!-- 3 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">3</div>
 
-              <!-- TRACK -->
-              <div class="liked__row">
-                <span class="liked__index">3</span>
+                  <div class="top-tracks__track">
+                    <img src="img_profile/toptrack-remember-me.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Remember me</p>
+                      <span>Hozen Rocks</span>
+                    </div>
+                  </div>
 
-                <div class="liked__track">
-                  <img src="img/covers/3.jpg" class="liked__cover">
-                  <div>
-                    <p class="liked__name">Remember Me</p>
-                    <p class="liked__artist">Hozier Becks</p>
+                  <div class="top-tracks__date">Сьогодні</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:21</span>
                   </div>
                 </div>
 
-                <span class="liked__album">Harmonic Convergence</span>
-                <span class="liked__date">Сьогодні</span>
-                <span class="liked__time">2:43</span>
+                <!-- 4 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">4</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-solo.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Solo</p>
+                      <span>MOLIN PRIM</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">Сьогодні</div>
+
+                  <div class="top-tracks__time">
+                    <span>1:34</span>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">5</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-blackpink-crown.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">How You Like That</p>
+                      <span>BLACKPINK</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">Сьогодні</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:34</span>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">6</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-blackpink-crown.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Ice Cream</p>
+                      <span>BLACKPINK</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">02.04.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:02</span>
+                  </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">7</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-blackpink-crown.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Bet Yiu Wanna</p>
+                      <span>BLACKPINK</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">02.04.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:02</span>
+                  </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">8</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-tomboy.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">02.04.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:22</span>
+                  </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">9</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-tomboy.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">LION</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">02.04.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:45</span>
+                  </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">10</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-jealousy.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">JEALOUSY</p>
+                      <span>Offset, Cardi B</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">23.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:22</span>
+                  </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">11</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-like-it.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">I LIke It</p>
+                      <span>Cardi B</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">23.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>3:12</span>
+                  </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">12</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-up.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Up</p>
+                      <span>Cardi B</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">22.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>1:11</span>
+                  </div>
+                </div>
+
+                <!-- 13 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">13</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-apt.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">APT.</p>
+                      <span>ROSÉ, Bruno Mars</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">12.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:48</span>
+                  </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">14</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-your-man.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">When I Was Your Man</p>
+                      <span>Bruno Mars</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">12.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:43</span>
+                  </div>
+                </div>
+
+                <!-- 15 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">15</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-die-with-smile.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Die With A Smile</p>
+                      <span>Lady Gaga, Bruno Mars</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">12.03.2025</div>
+
+                  <div class="top-tracks__time">
+                    <span>4:10</span>
+                  </div>
+                </div>
+
+                <!-- 16 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">16</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-shallow.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Shallow</p>
+                      <span>Lady Gaga, Bradley Cooper</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">12.03.2024</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:43</span>
+                  </div>
+                </div>
+
+                <!-- 17 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">17</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-alter-ego.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Rockstar</p>
+                      <span>LISA</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">14.02.2024</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:46</span>
+                  </div>
+                </div>
+
+                <!-- 18 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">18</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_love_tracks/toptrack-alter-ego.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">Thunder</p>
+                      <span>LISA</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">14.02.2024</div>
+
+                  <div class="top-tracks__time">
+                    <span>2:42</span>
+                  </div>
+                </div>
+
+
               </div>
 
             </div>
