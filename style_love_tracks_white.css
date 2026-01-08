@@ -177,7 +177,8 @@ body
 /* Разделительные линии */
 .sidebar-left__section--divider 
 {
-  border-top: 1px solid #426D83;  padding-top: 16px;
+  border-top: 1px solid #426D83;  
+  padding-top: 16px;
   margin-top: 16px;
 }
 
@@ -691,7 +692,8 @@ body
   width: 100%;
   margin-top: 80px;
   padding: 60px 0 40px;
-  background: url("img_love_tracks_white/bg-footer-white.svg") center center / cover no-repeat fixed;  border-top: 1px solid rgba(255,255,255,0.08);
+  background: url("img_love_tracks_white/bg-footer-white.svg") center center / cover no-repeat fixed;  
+  border-top: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px;
 }
 
@@ -788,7 +790,6 @@ body
   bottom: 0;
   height: 80px;
   z-index: 1000;
-
   background: #C5DBF2;
   border-top: 1px solid #4BA6C2;
   backdrop-filter: blur(18px);
