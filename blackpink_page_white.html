@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumtune</title>
+
+  <link rel="stylesheet" href="style_blackpink_page_white.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <!-- ЛОГО СЛЕВА -->
+        <div class="navbar__logo">
+          <img src="img_blackpink_page_white/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+        </div>
+
+        <!-- ПОИСК ПО ЦЕНТРУ -->
+        <div class="navbar__search">
+          <span class="navbar__search-icon navbar__search-icon--left">
+            <img src="img_blackpink_page_white/icon-search-white.svg" alt="Пошук">
+          </span>
+
+          <input
+            type="text"
+            class="navbar__search-input"
+            placeholder="Виконавці, треки, подкасти..."
+          >
+
+          <span class="navbar__search-icon navbar__search-icon--right">
+            <img src="img_blackpink_page_white/icon-mic-white.svg" alt="Голосовий пошук">
+          </span>
+        </div>
+
+        <!-- ИКОНКИ СПРАВА -->
+        <div class="navbar__actions">
+          <button class="navbar__icon-btn" onclick='window.location.href="notifications_white.html"' onclick='window.location.href="notifications.html"' aria-label="Сповіщення">
+            <img src="img_blackpink_page_white/icon-bell.svg" alt="Сповіщення">
+          </button>
+          <button class="navbar__icon-btn" onclick='window.location.href="profile_white.html"' aria-label="Профіль">
+            <img src="img_blackpink_page_white/icon-user-registratite.svg" alt="Профіль">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+    <main class="page-content">
+      <div class="layout">
+        <!-- ЛЕВОЕ МЕНЮ -->
+        <aside class="sidebar-left">
+          <div class="sidebar-left__inner">
+            <!-- БЛОК "МЕНЮ" -->
+            <div class="sidebar-left__section sidebar-left__section--menu">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Меню</p>
+
+              <button class="sidebar-left__primary-btn">
+                <span class="sidebar-left__primary-icon">
+                  <img src="img_blackpink_page_white/icon-home-white.svg" alt="Головна">
+                </span>
+                <span class="sidebar-left__primary-label" onclick='window.location.href="home_with_registration_white.html"'>Головна</span>
+              </button>
+
+              <button class="sidebar-left__secondary-btn">
+                <span class="sidebar-left__secondary-icon">
+                  <img src="img_blackpink_page_white/icon-library-white.svg" alt="Моя медіатека">
+                </span>
+                <span class="sidebar-left__secondary-label">Моя медіатека</span>
+              </button>
+            </div>
+
+            <!-- БЛОК "ПЛЕЙЛІСТИ" -->
+            <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
+
+              <button class="sidebar-left__text-btn" onclick='window.location.href="love_tracks_white.html"'>
+                <span class="sidebar-left__text-icon">
+                  <img src="img_blackpink_page_white/icon-heart-outline-white.svg" alt="Улюблені треки">
+                </span>
+                <span>Улюблені треки</span>
+              </button>
+
+              <button class="sidebar-left__text-btn_bt6">
+                <span class="sidebar-left__text-icon">
+                  <img src="img_blackpink_page_white/icon-plus-square-white.svg" alt="Створити плейліст">
+                </span>
+                <span>Створити плейліст</span>
+              </button>
+
+              <div class="modal" id="modal">
+                  <div class="modal-content">
+                      <span class="close" id="closeBtn">&times;</span>
+                      <h3>Придумайте назву для вашого плейлиста</h3>
+                      <input type="text" class="album_name" placeholder="Назва плейлиста">
+                      <button class="create_playlist" onclick='window.location.href="moya_mediateka_white.html"'>Створити</button>
+                  </div>
+              </div>
+
+              <script>
+                  const modal = document.getElementById("modal");
+                  const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
+                  const closeBtn = document.getElementById("closeBtn");
+
+                  // Відкрити вікно
+                  openBtn.onclick = function () 
+                  {
+                      modal.style.display = "flex";
+                  };
+
+                  // Закрити по кліку на хрестик
+                  closeBtn.onclick = function () 
+                  {
+                      modal.style.display = "none";
+                  };
+
+                  // Закрити по кліку на фон
+                  window.onclick = function (event) 
+                  {
+                      if (event.target === modal) 
+                      {
+                          modal.style.display = "none";
+                      }
+                  };
+              </script>
+
+              <div class="sidebar-left__section-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
+                <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
+                  <img src="img_blackpink_page_white/icon-playlist-menu-white.svg" alt="Меню">
+                </button>
+              </div>
+
+              <ul class="sidebar-left__playlist-list">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_blackpink_page_white/playlist-blackpink.svg" alt="Lisa">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Blackpink</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_blackpink_page_white/playlist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lady Gaga</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_blackpink_page_white/playlist-bruno-mars.svg" alt="Bruno Mars">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Bruno Mars</p>
+                    <p class="sidebar-left__playlist-meta">Виконавець</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_blackpink_page_white/playlist-bts.svg" alt="BTS">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">BTS</p>
+                    <p class="sidebar-left__playlist-meta">Гурт</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_blackpink_page_white/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lana Del Rey</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- БЛОК "НЕЩОДАВНО ПРОСЛУХАНІ" -->
+            <div class="sidebar-left__section sidebar-left__section--bottom sidebar-left__section--divider">
+              <div class="sidebar-left__recent-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
+                <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
+                  <img src="img_blackpink_page_white/icon-refresh-arrow-white.svg" alt="Оновити">
+                </button>
+              </div>
+
+              <div class="sidebar-left__clock-wrap">
+                <img src="img_blackpink_page_white/icon-clock-white.svg" alt="Clock" class="sidebar-left__clock-img">
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+        <section class="content-center">
+          <div class="content-center__inner">
+            <!-- ARTIST HERO -->
+            <div class="artist-hero">
+              <div class="artist-hero__bg"></div>
+
+              <div class="artist-hero__content">
+                <div class="artist-hero__cover">
+                  <img src="img_blackpink_page_white/artist-blackpink.svg" alt="Blackpink">
+                </div>
+
+                <div class="artist-hero__info">
+                  <p class="artist-hero__label">Виконавець</p>
+                  <h2 class="artist-hero__name">Blackpink</h2>
+
+                  <p class="artist-hero__stats">
+                    <img src="img_blackpink_page_white/icon-verify.svg" alt="">
+                    BLACKPINK · 15 297 255 796 слухачів за місяць
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="popular-tracks__top">
+              <div class="popular-tracks__icons">
+                <img src="img_blackpink_page_white/icon-play-white.svg" alt="Play">
+                <img src="img_blackpink_page_white/icon-shuffle-white.svg" alt="Shuffle">
+                <img src="img_blackpink_page_white/icon-plus-white.svg" alt="Add">
+              </div>
+
+              <img
+                src="img_blackpink_page_white/icon-dots-white.svg"
+                alt="More"
+                class="popular-tracks__dots"
+              >
+            </div>
+
+            <!-- POPULAR TRACKS -->
+            <div class="popular-tracks">
+              <div class="popular-tracks__header">
+                <h3 class="popular-tracks__title">Популярні треки</h3>
+              </div>
+
+              <div class="popular-tracks__list">
+
+                <!-- TRACK -->
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-crown-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">How You Like That</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">THE ALBUM</div>
+                  <div class="track-row__plays">345 683 297</div>
+                  <div class="track-row__time">2:34</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-crown-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Ice Cream</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">THE ALBUM</div>
+                  <div class="track-row__plays">193 640 343</div>
+                  <div class="track-row__time">3:02</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-crown-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Bet Yiu Wanna</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">THE ALBUM</div>
+                  <div class="track-row__plays">807 524 643</div>
+                  <div class="track-row__time">3:02</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-show-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Kill This Love</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">The Show</div>
+                  <div class="track-row__plays">1 634 724 434</div>
+                  <div class="track-row__time">2:46</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-show-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Playing With Fire</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">The Show</div>
+                  <div class="track-row__plays">985 458 154</div>
+                  <div class="track-row__time">2:42</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-show-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Lovasick Girls</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">The Show</div>
+                  <div class="track-row__plays">355 347 457</div>
+                  <div class="track-row__time">2:24</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-show-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">SOLO</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">The Show</div>
+                  <div class="track-row__plays">3 457 553 486</div>
+                  <div class="track-row__time">1:52</div>
+                </div>
+
+                <div class="track-row">
+                  <div class="track-row__left">
+
+                    <div class="track-row__cover">
+                      <img src="img_blackpink_page_white/album-show-blackpink.svg" alt="">
+                    </div>
+
+                    <div class="track-row__info">
+                      <p class="track-row__name">Forever Young</p>
+                      <p class="track-row__artist">BLACKPINK</p>
+                    </div>
+                  </div>
+
+                  <div class="track-row__album">The Show</div>
+                  <div class="track-row__plays">235 464 869</div>
+                  <div class="track-row__time">3:22</div>
+                </div>
+
+              </div>
+
+              <div class="popular-tracks__footer">
+                <p class="popular-tracks__showmore">Показати ще...</p>
+              </div>
+            </div>
+
+            <!-- Music -->
+             <div class="music">
+              <div class="music__header">
+                <h3 class="music__title">Музика</h3>
+                
+                <div class="top-music__controls">
+                  <button class="top-music__arrow-btn">
+                    <img src="img_blackpink_page_white/icon-arrow-left-small.svg" alt="Назад">
+                  </button>
+                  <button class="top-music__arrow-btn">
+                    <img src="img_blackpink_page_white/icon-arrow-right-small.svg" alt="Вперед">
+                  </button>
+                </div>
+              </div>
+
+              <div class="content-center__tabs">
+                <button class="content-center__tab content-center__tab--active">Популярні релізи</button>
+                <button class="content-center__tab">Альбоми</button>
+                <button class="content-center__tab">Сінгли та EP</button>
+              </div>
+
+              <div class="cards-row">
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-pink-venom.svg" alt="Pink Venom">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Pink Venom</h3>
+                    <p class="card-artist">2023 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-born-pink.svg" alt="Born Pink">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Born Pink</h3>
+                    <p class="card-artist">2022 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-kill-this-love.svg" alt="Kill This Love">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Kill This Love</h3>
+                    <p class="card-artist">2020 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-the-girls.svg" alt="The Girls">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">The Girls</h3>
+                    <p class="card-artist">2021 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-playing-fire.svg" alt="Playing Fire">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Playing Fire</h3>
+                    <p class="card-artist">2020 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-see-u-later.svg" alt="See U Later">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">See U Later</h3>
+                    <p class="card-artist">2024 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <div class="card-cover">
+                    <img src="img_blackpink_page_white/track-kick-it.svg" alt="Kick It">
+                  </div>                
+                  <div class="card-info">
+                    <h3 class="card-title">Kick It</h3>
+                    <p class="card-artist">2019 • Альбом</p> 
+                    <p class="card-track-number">19 tracks</p>
+                  </div>
+                </article>
+              </div> 
+
+             </div>
+
+             <!-- Вас можуть зацікавити -->
+              <div class="you-like">
+                <div class="you-like_header">
+                  <h3 class="you-like_title">Вас можуть <span>зацікавити</span></h3>
+                
+                  <div class="top-music__controls">
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-left-small.svg" alt="Назад">
+                    </button>
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-right-small.svg" alt="Вперед">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cards-row">
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-born-again.svg" alt="Born Again">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Born Again</h3>
+                      <p class="card-artist">(feat. Doja Cat & RAYE)</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-new-woman.svg" alt="New Woman">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">New Woman</h3>
+                      <p class="card-artist">(feat. ROSALÍA)</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-LALISA.svg" alt="LALISA">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">LALISA</h3>
+                      <p class="card-artist">LISA</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-moonlight-floor.svg" alt="Moonlit Floor">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Moonlit Floor</h3>
+                      <p class="card-artist">LISA</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-not-shy.svg" alt="Not Shy">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Not Shy</h3>
+                      <p class="card-artist">ITZY</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-dive.svg" alt="Dive">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Dive</h3>
+                      <p class="card-artist">Twice</p>
+                    </div>
+                  </article>
+
+                  <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/track-crazy.svg" alt="Crazy">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Crazy</h3>
+                      <p class="card-artist">LE SSERAFIM</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <!-- Шанувальникам також подобаються -->
+               <div class="people-love">
+                <div class="people-love_header">
+                  <h3 class="people-love_title">Шанувальникам також <span>подобаються</span></h3>
+                
+                  <div class="top-music__controls">
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-left-small.svg" alt="Назад">
+                    </button>
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-right-small.svg" alt="Вперед">
+                    </button>
+                  </div>
+                </div>
+
+               <div class="artist-row">
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_blackpink_page_white/artist-le-sserafim.svg" alt="LE SSERAFIM">
+                  </div>
+                  <p class="artist-card__name">LE SSERAFIM</p>
+                  <p class="artist-card__listeners">234 025</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_blackpink_page_white/artist-aespa.svg" alt="aespa">
+                  </div>
+                  <p class="artist-card__name">aespa</p>
+                  <p class="artist-card__listeners">690 563</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_blackpink_page_white/artist-hwa-sa.svg" alt="Hwa Sa">
+                  </div>
+                  <p class="artist-card__name">Hwa Sa</p>
+                  <p class="artist-card__listeners">254 926</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_blackpink_page_white/artist-jennie.svg" alt="JENNIE">
+                  </div>
+                  <p class="artist-card__name">JENNIE</p>
+                  <p class="artist-card__listeners">640 583</p>
+                </article>
+
+                <article class="artist-card">
+                  <div class="artist-card__avatar">
+                    <img src="img_blackpink_page_white/artist-rose.svg" alt="ROSÉ">
+                  </div>
+                  <p class="artist-card__name">ROSÉ</p>
+                  <p class="artist-card__listeners">356 206</p>
+                </article>
+              </div>
+            </div>
+
+            <!-- BLACKPINK: плейлисти виконавця -->
+             <div class="blackpink-playlist">
+              <div class="blackpink-playlist_header">
+                <h3 class="blackpink-playlist_title">BLACKPINK: <span>плейлисти</span> виконавця</h3>
+              </div>
+
+              <div class="cards-row">
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/lisa-playlist.svg" alt="Lisa’s Playlist ">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Lisa’s Playlist </h3>
+                      <p class="card-artist">YG Entertainment</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/jisoo-playlist.svg" alt="Jisoo’s Playlist ">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Jisoo’s Playlist </h3>
+                      <p class="card-artist">YG Entertainment</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/jennies-playlist.svg" alt="Jennies’s Playlist ">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Jennies’s Playlist </h3>
+                      <p class="card-artist">YG Entertainment</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/rose-playlist.svg" alt="Rose’s Playlist ">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Rose’s Playlist </h3>
+                      <p class="card-artist">YG Entertainment</p>
+                    </div>
+                </article>
+              </div>
+             </div>
+
+             <!-- Зараз в турі -->
+              <div class="now-in-tour">
+                <div class="now-in-tour_header">
+                  <h3 class="now-in-tour_title"><span>Зараз</span> в турі</h3>
+                  <p class="now-in-tour_NEAR">Усі найближчі вистави (13)</p>
+                </div>
+
+                <div class="now-in-tour_grid">
+
+                  <!-- ITEM -->
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Лютий</span>
+                      <span class="tour-card__day">14</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Сеул</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Березень</span>
+                      <span class="tour-card__day">10</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Пекін</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Квітень</span>
+                      <span class="tour-card__day">14</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Буенос-Айрес</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Лютий</span>
+                      <span class="tour-card__day">23</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Торонто</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Березень</span>
+                      <span class="tour-card__day">18</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Лісабон</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Квітень</span>
+                      <span class="tour-card__day">26</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Берлін</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Березень</span>
+                      <span class="tour-card__day">03</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Сен-Дені</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Березень</span>
+                      <span class="tour-card__day">22</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Лондон</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+
+                  <div class="tour-card">
+                    <div class="tour-card__date">
+                      <span class="tour-card__month">Травень</span>
+                      <span class="tour-card__day">01</span>
+                    </div>
+
+                    <div class="tour-card__info">
+                      <p class="tour-card__city">Токіо</p>
+                      <p class="tour-card__artist">BLACKPINK</p>
+                      <p class="tour-card__meta">сб 20:00 · KBS Arena</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Про виконавця -->
+               <div class="about-author">
+                <div class="about-author_header">
+                  <h3 class="about-author_title">Про <span>виконавця</span></h3>
+                </div>
+
+                <div class="about-author_card">
+                  <img
+                    src="img_blackpink_page_white/about-blackpink.svg"
+                    alt="BLACKPINK"
+                    class="about-author_image"
+                  >
+
+                  <div class="about-author_overlay"></div>
+
+                  <div class="about-author_content">
+                    <p class="about-author_listeners">
+                      72 780 975 слухачів на місяць
+                    </p>
+
+                    <p class="about-author_text">
+                      Південнокорейська група BlackPink — це чотири юні зірки, 
+                      дівчата з дзвінкими голосами, красиво рухаються під сучасну музику.
+                      Колективи, подібних до цього, безліч, але лише одиниці досягають успіху 
+                      і набувають справжню славу.
+                    </p>
+                  </div>                 
+                </div>
+               </div>
+
+             <!-- BLACKPINK: магазин виконавця -->
+             <div class="blackpink-shop">
+              <div class="blackpink-shop_header">
+                <h3 class="blackpink-shop_title">BLACKPINK: <span>магазин</span> виконавця</h3>
+
+                <div class="top-music__controls">
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-left-small.svg" alt="Назад">
+                    </button>
+                    <button class="top-music__arrow-btn">
+                      <img src="img_blackpink_page_white/icon-arrow-right-small.svg" alt="Вперед">
+                    </button>
+                </div>
+              </div>
+
+              <div class="cards-row">
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-game-photocard.svg" alt="Game Photocard">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Game Card</h3>
+                      <p class="card-artist">K-pop колекція фотокарток Black Pink – The Game Photocard Collection No.1-3</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-alter-ego-vinyl.svg" alt="Alter Ego Vinyl">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Alter Ego Vinyl</h3>
+                      <p class="card-artist">K-pop альбом Lisa BLACKPINK – Alter Ego Vinyl Photobook версія</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-square-up.svg" alt="Square Up">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Square Up</h3>
+                      <p class="card-artist">K-pop альбом Blackpink – Square Up</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-alter-ego-kiki-vinyl.svg" alt="Alter Ego Kiki Vinyl">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Ego Kiki Vinyl</h3>
+                      <p class="card-artist">K-pop альбом Lisa BLACKPINK – Alter Ego Kiki Vinyl Photobook версія</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-ruby.svg" alt="Ruby">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Ruby</h3>
+                      <p class="card-artist">K-pop альбом JENNIE BLACKPINK – Ruby Photobook версія</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-lalisa-vinyl.svg" alt="LaLISA Vinyl">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">LaLISA Vinyl</h3>
+                      <p class="card-artist">LISA випустила свій дебютний сольний альбом «Alter Ego» 28 лютого 2025 року.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                      <img src="img_blackpink_page_white/shop-jewel-case.svg" alt="Jewel Case">
+                    </div>                
+                    <div class="card-info">
+                      <h3 class="card-title">Jewel Case</h3>
+                      <p class="card-artist">K-pop альбом Rose (BLACKPINK) – rosie Jewel версія</p>
+                    </div>
+                </article>
+              </div>
+             </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- Верхній ряд -->
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="img_blackpink_page_white/footer-logo.svg" alt="Lumtune">
+          </div>
+
+          <div class="footer__info">
+            <p class="footer__address">
+              <img src="img_blackpink_page_white/footer-location-white.svg" alt="">
+              Address: st. Shevchenko, 25 house, UA, Odessa, 00000
+            </p>
+
+            <p class="footer__phone">
+              <img src="img_blackpink_page_white/footer-phone-white.svg" alt="">
+              (380) 00-000-00-00           
+            </p>
+
+            <p class="footer__mail">
+              <img src="img_blackpink_page_white/footer-mail-white.svg" alt="">
+              lumitune@gmail.com
+            </p>
+
+            <div class="footer__socials">
+              <img src="img_blackpink_page_white/footer-facebook-white.svg" alt="">
+              <img src="img_blackpink_page_white/footer-twitter-white.svg" alt="">
+              <img src="img_blackpink_page_white/footer-pinterest-white.svg" alt="">
+              <img src="img_blackpink_page_white/footer-rss-white.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="footer__bottom">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- PLAYER BAR -->
+    <div class="player-bar">
+      <div class="player-bar__inner">
+        <!-- Левая часть: обложка + название трека -->
+        <div class="player-bar__left">
+            <div class="player-bar__cover">
+                <img src="img_blackpink_page_white/track-die-with-a-smile.svg" alt="Die with a smile">
+            </div>
+            <div class="player-bar__track">
+                <p class="player-bar__title">The Show</p>
+                <p class="player-bar__artist">BUDGIE</p>
+            </div>
+            <div class="player-bar__icons">
+                <button class="player-bar__icon-btn">
+                    <img src="img_blackpink_page_white/like-button-player-white.svg" alt="">
+                </button>
+                <button class="player-bar__icon-btn">
+                    <img src="img_blackpink_page_white/plus-button-player-white.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Центр: кнопки и прогресс -->
+        <div class="player-bar__center">
+          <div class="player-bar__controls">
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_blackpink_page_white/spin-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_blackpink_page_white/previous-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--main">
+                <img src="img_blackpink_page_white/play-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_blackpink_page_white/next-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_blackpink_page_white/mix-button-player-white.svg" alt="">
+            </button>
+          </div>
+
+          <div class="player-bar__progress">
+            <span class="player-bar__time">0:32</span>
+            <div class="player-bar__progress-line">
+              <div class="player-bar__progress-fill"></div>
+            </div>
+            <span class="player-bar__time">3:48</span>
+          </div>
+        </div>
+
+        <!-- Правая часть: громкость / доп.иконки -->
+        <div class="player-bar__right">
+          <div class="player-bar__volume">
+            <span class="player-bar__icon">
+                <img src="img_blackpink_page_white/volume-button-player-white.svg" alt="">
+            </span>
+            <div class="player-bar__volume-line">
+              <div class="player-bar__volume-fill"></div>
+            </div>
+          </div>
+
+          <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_blackpink_page_white/device-button-player-white.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+</body>
+</html>

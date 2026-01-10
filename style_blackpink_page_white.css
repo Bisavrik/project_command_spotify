@@ -1,7 +1,7 @@
 body 
 {
   min-height: 100vh;
-  background: url("img_profile_white/bg-main-white.svg") center center / cover no-repeat fixed;
+  background: url("img_blackpink_page_white/bg-main-white.svg") center center / cover no-repeat fixed;
   font-family: "Open Sans", sans-serif;
   color: #3b3b3b;
   padding-bottom: 96px; /* место под фиксированный плеер */
@@ -14,7 +14,7 @@ body
   height: 64px;
   padding: 0 32px;
   box-sizing: border-box;
-  background: url("img_profile_white/Header_bar.svg") center center / cover no-repeat fixed;
+  background: url("img_blackpink_page_white/Header_bar.svg") center center / cover no-repeat fixed;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
 }
@@ -142,7 +142,7 @@ body
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 320px;
+  grid-template-columns: 240px minmax(0, 1fr) ;
   gap: 16px;
 }
 
@@ -206,7 +206,7 @@ body
 /* КНОПКИ "ГОЛОВНА" И "МОЯ МЕДІАТЕКА" */
 .sidebar-left__primary-btn 
 {
-  width: 100%;
+ width: 100%;
   height: 40px;
   border-radius: 999px;
   border: transparent 1px solid;
@@ -216,14 +216,15 @@ body
   gap: 10px;
   padding: 0 14px;
   cursor: pointer;
-   transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.sidebar-left__primary-btn:hover
+.sidebar-left__primary-btn:hover 
 {
   background: rgba(255, 255, 255, 0.564);
   border-color: #969696;
 }
+
 .sidebar-left__primary-icon img 
 {
   width: 18px;
@@ -307,7 +308,7 @@ body
 
 .sidebar-left__text-btn_bt6:hover 
 {
-  background: rgba(255, 255, 255, 0.564);
+    background: rgba(255, 255, 255, 0.564);
 }
 
 .sidebar-left__text-icon img 
@@ -340,12 +341,14 @@ body
     border-radius: 8px;
     position: relative;
 }
+
 .modal-content h3
 {
   color: #9ED8E9;
   font-size: 24px;
   font-weight: bold;
 }
+
 .album_name
 {
   width: 80%;
@@ -359,6 +362,7 @@ body
   font-size: 24px;
   outline: none;
 }
+
 .album_name::placeholder 
 {
   color: rgba(255, 255, 255, 0.5);
@@ -435,6 +439,11 @@ body
 }
 
 .sidebar-left__playlist:hover 
+{
+  background: rgba(255, 255, 255, 0.363);
+}
+
+.sidebar-left__playlist--active
 {
   background: rgba(255, 255, 255, 0.363);
 }
@@ -525,284 +534,237 @@ body
   padding: 18px 22px 22px;
 }
 
-/* PROFILE HEADER */
-.profile-header 
+/* ARTIST HERO (Blackpink) */
+.artist-hero 
 {
   position: relative;
-  border-radius: 24px;
+  height: 220px;
+  border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 48px;
 }
 
-/* Фоновая подсветка */
-.profile-header__bg 
+/* Фон с градиентом */
+.artist-hero__bg 
 {
   position: absolute;
-  inset: 0;  
-  z-index: 0;
-}
-
-.profile-header__content 
-{
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 140px 1fr 1.2fr auto;
-  gap: 24px;
-  padding: 60px 20px 20px;
-  align-items: center;
-  
-}
-
-.profile-header__top 
-{
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  right: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-
-.profile-header__label span
-{
-    font-size: 36px;
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.7;
-}
-
-/* Кнопки справа */
-.profile-header__actions {
-  display: flex;
-  gap: 10px;
-}
-
-.profile-header__actions button {
-  width: 30px;
-  height: 30px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-header__actions img {
-  width: 15px;
-  height: 15px;
-}
-
-/* MODAL OVERLAY */
-.edit-profile-modal {
-  position: fixed;
+  height: 190px;
   inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
+  border: transparent 1px solid;
+  border-radius: 30px;
+  background:
+    linear-gradient(90deg, rgba(147, 189, 223,0.95) 0%, rgba(147, 189, 223,0.6) 40%, rgba(147, 189, 223, 0.2) 70%);
+  z-index: 1;
 }
 
-/* MODAL BOX */
-.edit-profile-box {
-  width: 450px;
-  background: #173945;
-  border-radius: 26px;
-  padding: 26px;
+/* Контент поверх фона */
+.artist-hero__content 
+{
   position: relative;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 15px;
+  gap: 22px;
 }
 
-/* CLOSE */
-.edit-profile-close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: #9ED8E9;
+/* Обложка */
+.artist-hero__cover img 
+{
+  width: 160px;
+  height: 160px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Текст */
+.artist-hero__info
+{
+  margin-top: 40px;
+}
+
+.artist-hero__label 
+{
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #717780;
+}
+
+.artist-hero__name 
+{
+  margin: 0 0 10px;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.artist-hero__stats 
+{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.artist-hero__stats img 
+{
+  width: 16px;
+  height: 16px;
+  background: #456090;
+  border: transparent 2px solid;
+  border-radius: 50%;
+}
+
+/* TOP LINE ABOVE POPULAR TRACKS */
+.popular-tracks__top 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* LEFT ICONS */
+.popular-tracks__icons 
+{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.popular-tracks__icons img 
+{
+  width: 44px;
+  height: 44px;
   cursor: pointer;
 }
 
-/* TITLE */
-.edit-profile-title {
-  margin: 0 0 24px;
-  font-size: 26px;
-  color: #ffffff;
-  font-style: normal;
+/* THREE DOTS */
+.popular-tracks__dots 
+{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
-/* BODY */
-.edit-profile-body {
-  display: flex;
-  gap: 24px;
+.popular-tracks__dots:hover 
+{
+  opacity: 1;
 }
 
-/* AVATAR */
-.edit-profile-avatar {
+/* POPULAR TRACKS */
+.popular-tracks 
+{
+  margin-top: 10px;
+}
+
+.popular-tracks__title 
+{
+  margin-bottom: 14px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* LIST */
+.popular-tracks__list 
+{
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+/* ROW */
+.track-row 
+{
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 60px;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: #a9b9d362;
+  transition: background 0.2s ease;
+}
+
+.track-row:hover 
+{
+  background: #40a3ff3a;
+  transform: translateY(-1px);
+}
+
+/* LEFT */
+.track-row__left 
+{
+  display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.edit-profile-avatar img {
-  width: 180px;
-  height: 170px;
-  border-radius: 50%;
+/* COVER */
+.track-row__cover img 
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
-.edit-profile-upload {
-  width: 100px;
-  height: 60px;
-  border: 1.5px dashed rgba(158, 216, 233, 0.6);
-  background: transparent;
-  border-radius: 14px;
+/* INFO */
+.track-row__info 
+{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: rgba(158, 216, 233, 0.8);
-  font-size: 8px;
-  cursor: pointer;
 }
 
-.edit-profile-upload img {
-  border: none;
-  background: none;
-  width: 38px;
-  height: 32px;
-}
-
-
-/* FIELDS */
-.edit-profile-fields {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-right: 30px;
-}
-
-.edit-profile-fields label {
+.track-row__name 
+{
+  margin: 0;
   font-size: 14px;
-  opacity: 0.85;
+  font-weight: 600;
 }
 
-.edit-profile-fields input,
-.edit-profile-fields textarea {
-  width: 100%;
-  background: #2A5665;
-  border: 2px solid #52869F;
-  border-radius: 10px;
-  padding: 10px 12px;
-  color: #E5F9FF;
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
-}
-
-.edit-profile-fields textarea {
-  min-height: 110px;
-  resize: none;
-  font-style: italic;
-  line-height: 1.5;
-  overflow: hidden;
-}
-
-
-/* SAVE BUTTON */
-button.edit-profile-save {
-  margin-top: 24px;
-  margin-left: 345px;
-  width: 100px;
-  height: 40px;
-  background: #58BFE2;
-  color: #00252D;
-  font-size: 18px;
-  font-weight: 500;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-
-/* Аватар */
-.profile-header__avatar {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.profile-header__avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Инфо */
-
-.profile-header__name {
-  margin: 4px 0 12px;
-  font-size: 36px;
-  font-style: normal;
-  margin-left: 10px;
-}
-
-/* Статистика */
-.profile-header__stats {
-  display: flex;
-  gap: 28px;
-  margin-left: 10px;
-}
-
-.profile-stat {
-  text-align: left;
-}
-
-.profile-stat__value {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.profile-stat__label {
+.track-row__artist 
+{
+  margin: 2px 0 0;
   font-size: 12px;
-  opacity: 0.7;
+  color: #7E93A1;
 }
 
-/* Описание */
-.profile-header__about {
-  background: rgba(255, 255, 255, 0.258);
-  font-style: italic;
-  padding: 5px 10px;
-  border-radius: 14px;
+/* ALBUM / PLAYS / TIME */
+.track-row__album,
+.track-row__plays,
+.track-row__time 
+{
   font-size: 13px;
-  /* line-height: 1.5; */
 }
 
+.track-row__time 
+{
+  text-align: right;
+}
 
+.popular-tracks__showmore 
+{
+  margin-bottom: 14px;
+  margin-top: 15px;
+  color: #717780;
+  font-size: 14px;
+}
 
-/* До вподоби ВАМ цього тижня! */
-.top-music__header 
+/* MUSIC */
+.music 
+{
+  margin-top: 30px;
+}
+
+.music__header 
 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
 }
 
-.top-music__title 
+.music__title 
 {
-  margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
@@ -817,6 +779,33 @@ button.top-music__arrow-btn
 {
   width: 20px;
   height: 20px;
+}
+
+.content-center__tabs 
+{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.content-center__tab 
+{
+  min-width: 60px;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #006fb476;
+  cursor: pointer;
+}
+
+.content-center__tab--active 
+{
+  background: #0a5b8d9f;
+}
+.content-center__tab:hover 
+{
+  background: #a6daff;
 }
 
 .cards-row 
@@ -859,240 +848,67 @@ button.top-music__arrow-btn
 
 .card-title 
 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .card-artist 
 {
-  font-size: 9px;
+  font-size: 10px;
 }
 
-/* ===== ТОП ТРЕКОВ МЕСЯЦА ===== */
-
-.top-tracks 
+.card-track-number 
 {
-  margin-top: 48px;
+  font-size: 8px; 
 }
 
-.top-tracks__title 
+/* ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ */
+.you-like
 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 18px;
+  margin-top: 40px;
 }
 
-.top-tracks__table 
-{
-  background: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.top-tracks__row 
-{
-  display: grid;
-  grid-template-columns: 40px 1fr 140px 80px;
-  align-items: center;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background: #a9b9d362;
-  transition: background 0.2s ease;
-}
-
-.top-tracks__row:not(.top-tracks__row--head):hover 
-{
-  background: #40a3ff3a;
-  transform: translateY(-1px);
-}
-
-.top-tracks__row--head {
-  background: none;
-  box-shadow: none;
-  padding: 6px 16px 10px;
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-.top-tracks__index {
-  font-size: 18px;
-  font-weight: 500;
-  opacity: 0.85;
-}
-
-/* трек */
-
-.top-tracks__track {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.top-tracks__track img {
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.top-tracks__name {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.top-tracks__track span {
-  font-size: 11px;
-  color: #717780;
-}
-
-.top-tracks__date {
-  font-size: 13px;
-  opacity: 0.75;
-}
-
-.top-tracks__time {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  justify-content: flex-end;
-  font-size: 13px;
-}
-
-.top-tracks__time img {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  filter: drop-shadow(0 0 4px rgba(80,170,255,0.6));
-}
-
-/* ===== ВІДКРИТІ ПЛЕЙЛИСТИ ===== */
-
-.open-playlists {
-  margin-top: 56px;
-}
-
-.open-playlists__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
-.open-playlists__title {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.open-playlists__controls {
-  display: flex;
-  gap: 10px;
-}
-
-.open-playlists__arrow {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.open-playlists__arrow img {
-  width: 22px;
-  height: 22px;
-}
-
-/* ряд карточек */
-.open-playlists__row {
-  display: flex;
-  gap: 18px;
-}
-
-/* карточка */
-.playlist-card {
-  width: auto;
-  height: auto;
-  padding: 18px;
-  border-radius: 22px;
-  background: #00368d4a;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: pointer;
-  transition: transform 0.25s ease;
-}
-
-.playlist-card:hover {
-  transform: translateY(-6px);
-}
-
-/* обложки */
-.playlist-card__covers {
-  position: relative;
-  height: 120px;
-  margin-bottom: 18px;
-}
-
-.playlist-card__covers img {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.playlist-card__covers img:nth-child(1) {
-  left: 0;
-  z-index: 3;
-}
-
-.playlist-card__covers img:nth-child(2) {
-  left: 26px;
-  top: 10px;
-  z-index: 2;
-}
-
-.playlist-card__covers img:nth-child(3) {
-  left: 52px;
-  top: 20px;
-  z-index: 1;
-}
-
-/* текст */
-.playlist-card__name {
-  font-size: 16px;
-  margin: 0 0 6px;
-  font-weight: 700;
-}
-
-.playlist-card__meta {
-  font-size: 11px;
-  opacity: 0.7;
-  margin: 0;
-}
-
-
-/* Ви слідкуєте */
-.favorite-artists 
-{
-  margin-top: 56px;
-}
-
-.favorite-artists__header 
+.you-like_header
 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
 }
 
-.favorite-artists__title 
+.you-like_title
 {
-  margin: 0;
   font-size: 24px;
   font-weight: 700;
+}
+
+.you-like_title span
+{
+  color: #40A2FF;
+}
+
+/* Шанувальникам також подобаються */
+.people-love
+{
+  margin-top: 40px;
+}
+
+.people-love_header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.people-love_title
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.people-love_title span
+{
+  color: #40A2FF;
 }
 
 /* ряд кружочков с артистами */
@@ -1145,153 +961,231 @@ button.top-music__arrow-btn
   font-size: 11px;
 }
 
-
-
-/* ОТСТУПЫ МЕЖДУ БЛОКАМИ В ЦЕНТРАЛЬНОМ МЕНЮ */
-
-.favorite-artists
+/* BLACKPINK: плейлисти виконавця */
+.blackpink-playlist
 {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-
-/* ПРАВАЯ ПАНЕЛЬ */
-.sidebar-right 
-{
-  border-radius: 24px;
-  background:  url("img_profile_white/bg-left-white.svg") center center / cover no-repeat fixed;
-  border: 1px solid #969696;
-  align-self: flex-start;
-}
-
-.sidebar-right__inner 
-{
-  padding: 20px 18px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.sidebar-right__header 
+.blackpink-playlist_header
 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.sidebar-right__title 
+.blackpink-playlist_title
 {
-  margin: 0;
-  font-size: 20px;
-  margin-left: 50px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.sidebar-right__icon-btn 
+.blackpink-playlist_title span
 {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  margin-right: 6px;
+  color: #40A2FF;
 }
 
-.sidebar-right__icon-btn img 
+/* Зараз в турі */
+.now-in-tour
 {
-  width: 18px;
-  height: 18px;
+  margin-top: 40px;
 }
 
-/* ОБЛОЖКИ СПРАВА */
-.sidebar-right__cover-main img 
+.now-in-tour_header
 {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-}
-
-.sidebar-right__track 
-{
-  margin-top: 4px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 14px;
-  background: transparent;
+  justify-content: space-between;
 }
 
-.sidebar-right__track-cover img 
+.now-in-tour_title
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.now-in-tour_title span
+{
+  color: #40A2FF;
+}
+
+.now-in-tour_NEAR
+{
+  color: #d1d1d1;
+  font-size: 12px;
+}
+
+/* GRID */
+.now-in-tour_grid 
+{
+  margin-top: 20px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px 60px;
+}
+
+/* CARD */
+.tour-card 
+{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* DATE BLOCK */
+.tour-card__date 
 {
   width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  object-fit: cover;
+  height: 64px;
+  background: #b4cae4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-right__track-text 
+.tour-card__month 
 {
-  flex: 1;
-}
-
-.sidebar-right__track-title 
-{
-  margin: 0 0 2px;
-  font-size: 13px;
-}
-
-.sidebar-right__track-artist 
-{
-  margin: 0;
   font-size: 11px;
 }
 
-.sidebar-right__track-icons 
+.tour-card__day 
 {
-  display: flex;
-  gap: 6px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/* КАРТОЧКА LANA DEL REY */
-.sidebar-right__artist-card 
+/* INFO */
+.tour-card__info 
 {
   display: flex;
   flex-direction: column;
-  margin-top: 4px;
-  border-radius: 16px;
-  background: transparent;
-  overflow: hidden;
-  margin-bottom: 15px;
 }
 
-.sidebar-right__artist-cover img 
+.tour-card__city 
 {
-  width: 100%;
-  display: block;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.sidebar-right__artist-body 
+.tour-card__artist 
 {
-  padding: 10px 10px 12px;
+  margin: 2px 0;
+  font-size: 12px;
 }
 
-.sidebar-right__artist-name 
-{
-  margin: 0 0 4px;
-  font-size: 13px;
-}
-
-.sidebar-right__artist-stat 
-{
-  margin: 0 0 6px;
-  font-size: 11px;
-}
-
-.sidebar-right__artist-desc 
+.tour-card__meta 
 {
   margin: 0;
   font-size: 11px;
+  color: #717780;
 }
 
+/* Про виконавця */
+.about-author
+{
+  margin-top: 40px;
+}
+
+.about-author_header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-author_title
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about-author_title span
+{
+  color: #40A2FF;
+}
+
+.about-author_card 
+{
+  position: relative;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.about-author_image 
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-author_overlay 
+{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 26, 0) 0%,
+      rgba(3, 8, 26, 0.55) 85%,
+      rgba(3, 8, 26, 0.95) 100%
+    );
+}
+
+.about-author_content 
+{
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  max-width: 520px;
+  z-index: 2;
+}
+
+.about-author_listeners 
+{
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.about-author_text 
+{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* BLACKPINK: магазин виконавця */
+.blackpink-shop
+{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.blackpink-shop_header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blackpink-shop_title
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.blackpink-shop_title span
+{
+  color: #40A2FF;
+}
 
 /* FOOTER */
 .footer 
@@ -1377,7 +1271,7 @@ button.top-music__arrow-btn
 {
   font-size: 13px;
   text-decoration: none;
-    color: #3b3b3b;
+  color: #3b3b3b;
   transition: 0.2s;
 }
 
@@ -1546,7 +1440,6 @@ button.player-bar__icon-btn
 .player-bar__time 
 {
   font-size: 10px;
-  color: #4E646B;
   min-width: 32px;
   text-align: center;
 }
@@ -1606,4 +1499,221 @@ button.player-bar__icon-btn
   background: #054D63;
 }
 
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
 
+  .artist-hero__name {
+    font-size: 36px;
+  }
+
+  .track-row {
+    grid-template-columns: 1.4fr 1fr 80px;
+  }
+
+  .track-row__plays {
+    display: none;
+  }
+
+  .cards-row {
+    gap: 10px;
+  }
+
+  .artist-row {
+    gap: 28px;
+  }
+
+  .now-in-tour_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+  }
+}
+@media (max-width: 992px) {
+  /* SIDEBAR */
+  .sidebar-left {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* HERO */
+  .artist-hero {
+    height: auto;
+  }
+
+  .artist-hero__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .artist-hero__cover img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .artist-hero__name {
+    font-size: 32px;
+  }
+
+  /* TRACKS */
+  .track-row {
+    grid-template-columns: 1fr 60px;
+  }
+
+  .track-row__album,
+  .track-row__plays {
+    display: none;
+  }
+
+  /* CARDS */
+  .cards-row {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  /* ARTISTS */
+  .artist-row {
+    overflow-x: auto;
+    gap: 24px;
+  }
+
+  /* TOUR */
+  .now-in-tour_grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 120px;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .navbar__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .navbar__search {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* HERO */
+  .artist-hero__cover img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .artist-hero__name {
+    font-size: 26px;
+  }
+
+  /* TITLES */
+  .popular-tracks__title,
+  .music__title,
+  .you-like_title,
+  .people-love_title,
+  .blackpink-playlist_title,
+  .now-in-tour_title,
+  .about-author_title,
+  .blackpink-shop_title {
+    font-size: 20px;
+  }
+
+  /* TRACK ROW */
+  .track-row {
+    padding: 8px;
+  }
+
+  .track-row__time {
+    font-size: 11px;
+  }
+
+  /* PLAYER */
+  .player-bar__inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .player-bar__left,
+  .player-bar__right {
+    min-width: unset;
+  }
+
+  .player-bar__center {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  /* HERO */
+  .artist-hero__content {
+    padding: 12px;
+  }
+
+  .artist-hero__cover img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .artist-hero__name {
+    font-size: 22px;
+  }
+
+  /* TRACKS */
+  .track-row__cover img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .track-row__name {
+    font-size: 13px;
+  }
+
+  .track-row__artist {
+    font-size: 11px;
+  }
+
+  /* CARDS */
+  .card {
+    width: 130px;
+  }
+
+  /* ARTISTS */
+  .artist-card__avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* ABOUT */
+  .about-author_content {
+    left: 16px;
+    bottom: 16px;
+    max-width: 90%;
+  }
+
+  .about-author_text {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .footer__top {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
