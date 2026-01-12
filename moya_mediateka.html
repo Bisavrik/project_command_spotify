@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumtune</title>
+
+  <link rel="stylesheet" href="style_moya_mediateka.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <!-- ЛОГО СЛЕВА -->
+        <div class="navbar__logo">
+          <img src="img_moya_mediateka/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+        </div>
+
+        <!-- ПОИСК ПО ЦЕНТРУ -->
+        <div class="navbar__search">
+          <span class="navbar__search-icon navbar__search-icon--left">
+            <img src="img_moya_mediateka/icon-search.svg" alt="Пошук">
+          </span>
+
+          <input
+            type="text"
+            class="navbar__search-input"
+            placeholder="Виконавці, треки, подкасти..."
+          >
+
+          <span class="navbar__search-icon navbar__search-icon--right">
+            <img src="img_moya_mediateka/icon-mic.svg" alt="Голосовий пошук">
+          </span>
+        </div>
+
+        <!-- ИКОНКИ СПРАВА -->
+        <div class="navbar__actions">
+          <button class="navbar__icon-btn" onclick='window.location.href="notifications.html"' aria-label="Сповіщення">
+            <img src="img_moya_mediateka/icon-bell.svg" alt="Сповіщення">
+          </button>
+          <button class="navbar__icon-btn" onclick='window.location.href="profile.html"' aria-label="Профіль">
+            <img src="img_moya_mediateka/icon-user-registratite.svg" alt="Профіль">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+    <main class="page-content">
+      <div class="layout">
+        <!-- ЛЕВОЕ МЕНЮ -->
+        <aside class="sidebar-left">
+          <div class="sidebar-left__inner">
+            <!-- БЛОК "МЕНЮ" -->
+            <div class="sidebar-left__section sidebar-left__section--menu">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Меню</p>
+
+              <button class="sidebar-left__primary-btn">
+                <span class="sidebar-left__primary-icon">
+                  <img src="img_moya_mediateka/icon-home.svg" alt="Головна">
+                </span>
+                <span class="sidebar-left__primary-label" onclick='window.location.href="home_with_registration.html"'>Головна</span>
+              </button>
+
+              <button class="sidebar-left__secondary-btn">
+                <span class="sidebar-left__secondary-icon">
+                  <img src="img_moya_mediateka/icon-library.svg" alt="Моя медіатека">
+                </span>
+                <span class="sidebar-left__secondary-label">Моя медіатека</span>
+              </button>
+            </div>
+
+            <!-- БЛОК "ПЛЕЙЛІСТИ" -->
+            <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
+
+              <button class="sidebar-left__text-btn" onclick='window.location.href="love_tracks.html"'>
+                <span class="sidebar-left__text-icon">
+                  <img src="img_moya_mediateka/icon-heart-outline.svg" alt="Улюблені треки">
+                </span>
+                <span>Улюблені треки</span>
+              </button>
+
+              <button class="sidebar-left__text-btn_bt6">
+                <span class="sidebar-left__text-icon">
+                  <img src="img_moya_mediateka/icon-plus-square.svg" alt="Створити плейліст">
+                </span>
+                <span>Створити плейліст</span>
+              </button>
+
+              <div class="modal" id="modal">
+                  <div class="modal-content">
+                      <span class="close" id="closeBtn">&times;</span>
+
+                      <h3>Придумайте назву для вашого плейлиста</h3>
+                      <input type="text" class="album_name" placeholder="Назва плейлиста">
+                      <button class="create_playlist" onclick='window.location.href="moya_mediateka.html"'>Створити</button>
+                  </div>
+              </div>
+
+              <script>
+                  const modal = document.getElementById("modal");
+                  const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
+                  const closeBtn = document.getElementById("closeBtn");
+
+                  // Відкрити вікно
+                  openBtn.onclick = function () 
+                  {
+                      modal.style.display = "flex";
+                  };
+
+                  // Закрити по кліку на хрестик
+                  closeBtn.onclick = function () 
+                  {
+                      modal.style.display = "none";
+                  };
+
+                  // Закрити по кліку на фон
+                  window.onclick = function (event) 
+                  {
+                      if (event.target === modal) 
+                      {
+                          modal.style.display = "none";
+                      }
+                  };
+              </script>
+
+              <div class="sidebar-left__section-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
+                <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
+                  <img src="img_moya_mediateka/icon-playlist-menu.svg" alt="Меню">
+                </button>
+              </div>
+
+              <ul class="sidebar-left__playlist-list">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active" onclick='window.location.href="blackpink_page.html"'>
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_moya_mediateka/playlist-blackpink.svg" alt="Lisa">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Blackpink</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_moya_mediateka/playlist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lady Gaga</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_moya_mediateka/playlist-bruno-mars.svg" alt="Bruno Mars">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Bruno Mars</p>
+                    <p class="sidebar-left__playlist-meta">Виконавець</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_moya_mediateka/playlist-bts.svg" alt="BTS">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">BTS</p>
+                    <p class="sidebar-left__playlist-meta">Гурт</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_moya_mediateka/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lana Del Rey</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- БЛОК "НЕЩОДАВНО ПРОСЛУХАНІ" -->
+            <div class="sidebar-left__section sidebar-left__section--bottom sidebar-left__section--divider">
+              <div class="sidebar-left__recent-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
+                <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
+                  <img src="img_moya_mediateka/icon-refresh-arrow.svg" alt="Оновити">
+                </button>
+              </div>
+
+              <div class="sidebar-left__clock-wrap">
+                <img src="img_moya_mediateka/icon-clock.svg" alt="Clock" class="sidebar-left__clock-img">
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+        <section class="content-center">
+          <div class="content-center__inner">
+
+            <div class="settings">
+
+              <!-- HEADER -->
+              <div class="settings__header">
+                <h2 class="settings__title">Моя медіатека</h2>
+                <!-- <button class="settings__edit" id="editPlayBtn"><img src="img_moya_mediateka/icon-edit-moya.svg"  alt=""></button> -->
+                <img src="img_moya_mediateka/icon-edit-moya.svg" alt="Редагувати" class="edit-icon"  id="editBtn" />
+
+              </div>
+
+              <!-- ===== MODAL (ВСЕГДА В КОНЦЕ BODY) ===== -->
+                <div class="edit-modal" id="editModal">
+                    <div class="edit-modal__card">
+
+                        <button class="edit-modal__close" id="closeEdit">×</button>
+
+                        <h3>Редагування треку</h3>
+
+                        <label>Назва треку</label>
+                        <input type="text" placeholder="Назва треку">
+
+                        <div class="upload-box">
+                        Перетягніть аудіофайл або завантажте
+                        </div>
+
+                        <div class="select-row">
+                        <select><option>Жанр</option></select>
+                        <select><option>Настрій</option></select>
+                        </div>
+
+                        <button class="save-btn">Зберегти</button>
+                    </div>
+                </div>
+                <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                const editBtn = document.getElementById("editBtn");
+                const modal = document.getElementById("editModal");
+                const closeBtn = document.getElementById("closeEdit");
+
+                editBtn.addEventListener("click", () => {
+                    modal.style.display = "flex";
+                    document.body.classList.add("modal-open"); // 🔥
+                });
+
+                closeBtn.addEventListener("click", () => {
+                    modal.style.display = "none";
+                    document.body.classList.remove("modal-open"); // 🔥
+                });
+
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                    modal.style.display = "none";
+                    document.body.classList.remove("modal-open"); // 🔥
+                    }
+                });
+                });
+                </script>
+
+
+
+            </div>
+
+          </div>
+        </section>
+
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- Верхній ряд -->
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="img_moya_mediateka/footer-logo.svg" alt="Lumtune">
+          </div>
+
+          <div class="footer__info">
+            <p class="footer__address">
+              <img src="img_moya_mediateka/footer-location.svg" alt="">
+              Address: st. Shevchenko, 25 house, UA, Odessa, 00000
+            </p>
+
+            <p class="footer__phone">
+              <img src="img_moya_mediateka/footer-phone.svg" alt="">
+              (380) 00-000-00-00           
+            </p>
+
+            <p class="footer__mail">
+              <img src="img_moya_mediateka/footer-mail.svg" alt="">
+              lumitune@gmail.com
+            </p>
+
+            <div class="footer__socials">
+              <img src="img_moya_mediateka/footer-facebook.svg" alt="">
+              <img src="img_moya_mediateka/footer-twitter.svg" alt="">
+              <img src="img_moya_mediateka/footer-pinterest.svg" alt="">
+              <img src="img_moya_mediateka/footer-rss.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="footer__bottom">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- PLAYER BAR -->
+    <div class="player-bar">
+      <div class="player-bar__inner">
+        <!-- Левая часть: обложка + название трека -->
+        <div class="player-bar__left">
+            <div class="player-bar__cover">
+                <img src="img_moya_mediateka/track-die-with-a-smile.svg" alt="Die with a smile">
+            </div>
+            <div class="player-bar__track">
+                <p class="player-bar__title">The Show</p>
+                <p class="player-bar__artist">BUDGIE</p>
+            </div>
+            <div class="player-bar__icons">
+                <button class="player-bar__icon-btn">
+                    <img src="img_moya_mediateka/like-button-player.svg" alt="">
+                </button>
+                <button class="player-bar__icon-btn">
+                    <img src="img_moya_mediateka/plus-button-player.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Центр: кнопки и прогресс -->
+        <div class="player-bar__center">
+          <div class="player-bar__controls">
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_moya_mediateka/spin-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_moya_mediateka/previous-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--main">
+                <img src="img_moya_mediateka/play-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_moya_mediateka/next-button-player.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_moya_mediateka/mix-button-player.svg" alt="">
+            </button>
+          </div>
+
+          <div class="player-bar__progress">
+            <span class="player-bar__time">0:32</span>
+            <div class="player-bar__progress-line">
+              <div class="player-bar__progress-fill"></div>
+            </div>
+            <span class="player-bar__time">3:48</span>
+          </div>
+        </div>
+
+        <!-- Правая часть: громкость / доп.иконки -->
+        <div class="player-bar__right">
+          <div class="player-bar__volume">
+            <span class="player-bar__icon">
+                <img src="img_moya_mediateka/volume-button-player.svg" alt="">
+            </span>
+            <div class="player-bar__volume-line">
+              <div class="player-bar__volume-fill"></div>
+            </div>
+          </div>
+
+          <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_moya_mediateka/device-button-player.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+</body>
+</html>
