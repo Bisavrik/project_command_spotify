@@ -1106,6 +1106,224 @@ button.top-music__arrow-btn
   margin: 0;
 }
 
+/* НОВІ РЕЛІЗИ АУДІОКНИГ */
+.audiobooks 
+{
+  margin-top: 56px;
+}
+
+.audiobooks__header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.audiobooks__title 
+{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #BEF4FF;
+}
+
+.audiobooks__title span 
+{
+  color: #32aaff;
+}
+
+.audiobooks__list 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.audiobook-card__inner 
+{
+  display: flex;
+  align-items: stretch;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.audiobook-card__cover-wrap 
+{
+  flex: 0 0 150px;
+  height: 170px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.audiobook-card__cover-wrap:hover 
+{
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.audiobook-card__cover 
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.audiobook-card__body 
+{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.audiobook-card__title-row 
+{
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.audiobook-card__name 
+{
+  color: #ffffff;
+}
+
+.audiobook-card__divider 
+{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.audiobook-card__author 
+{
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.audiobook-card__genre 
+{
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.audiobook-card__desc 
+{
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.audiobook-card__meta 
+{
+  margin: 0;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* НОВІ РЕЛІЗИ ПОДКАСТІВ */
+.podcasts 
+{
+  margin-top: 64px;
+}
+
+.podcasts__header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.podcasts__title 
+{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #BEF4FF;
+}
+
+.podcasts__title span 
+{
+  color: #32aaff;
+}
+
+.podcasts__list 
+{
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.podcast-card 
+{
+  flex: 1 1 0;
+  max-width: 240px;
+  transition: all 0.2s ease;
+}
+
+.podcast-card:hover 
+{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.95);
+}
+
+.podcast-card__inner 
+{
+  height: auto;
+  border-radius: 18px;
+  background: rgba(4, 15, 39, 0.98);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.podcast-card__title 
+{
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.podcast-card__meta 
+{
+  margin: 0 0 10px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.podcast-card__cover-wrap 
+{
+  margin: 12px 0 14px;
+  width: 150px;
+  height: 150px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-left: 26px;
+}
+
+.podcast-card__cover 
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.podcast-card__desc 
+{
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 
 /* FOOTER */
 .footer 
