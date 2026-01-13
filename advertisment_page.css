@@ -1,0 +1,1603 @@
+/* Основные стили */
+body {
+    margin: 0;
+    background: #0c1222;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(
+        rgba(12, 18, 34, 0.6),
+        rgba(12, 18, 34, 0.6)
+    ), url("advertisment.img/fon12.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 0;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center; /* или flex-end — выбери сама */
+}
+
+.logo img:first-child {
+    height: 45px; /* было 70px → уменьшили */
+}
+
+.logo-text-img {
+    height: 14px; /* было 20px → уменьшили */
+    margin-left: 8px;
+}
+/* МЕНЮ — уменьшаем текст и расстояния */
+.nav a {
+    margin-left: 15px; /* было 25px */
+    color: #c7e7ff;
+    text-decoration: none;
+    font-size: 13px; /* было 16px */
+}
+
+/* КНОПКА — делаем меньше */
+.nav .btn-reg {
+    padding: 5px 12px; /* было 8px 18px */
+    font-size: 12px;   /* уменьшили */
+    border: 1px solid #5abfff;
+    border-radius: 6px; /* меньше скругление */
+}
+
+/* ХОВЕР */
+.nav a:hover {
+    color: #66cafe;
+}
+
+
+.header {
+    padding: 4px 0; /* было 20px → делаем очень маленькую */
+    border-bottom: 1px solid rgba(100, 215, 255, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-logo-img {
+    height: 200px; /* можешь менять размер */
+    margin-bottom: 10px;
+	   margin-top: -20px; /* <<< вот это опускает картинку ниже */
+}
+
+.hero-text {
+    max-width: 450px;
+}
+.logo-title {
+    font-size: 72px;
+    font-weight: 900;
+    color: #50bfff;
+}
+.hero-text h2 {
+    font-size: 32px;
+    margin-top: -35px; /* было -15px — теперь текст выше */
+    margin-left: 20px; /* сдвиг вправо */
+}
+
+.hero-text p {
+    color: #b9dfff;
+    margin-left: 20px; /* тоже немного вправо, чтобы было ровно */
+	 font-size: 12px;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+	  margin-left: 20px; /* тоже немного вправо, чтобы было ровно */
+	  margin-top: 60px;
+}
+.btn {
+    padding: 10px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.btn.dark {
+    background: #0b2a4a;
+    color: #bbf1ff;
+}
+.btn.light {
+    background: #44cfff;
+    color: #002033;
+}
+.btn:hover {
+    opacity: 0.85;
+}
+.hero-image img {
+    height: 420px;
+}
+.hero-character {
+    height: 460px;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+}
+.hero-inner {
+    position: relative;
+}
+.hero-decor-bottom {
+    position: absolute;
+    bottom: -210px;
+    left: 50%;
+    transform: translateX(-50%) translateX(500px);
+
+    width: 1200px;     /* ⬅️ УВЕЛИЧИВАЕМ */
+    height: auto;     /* ⬅️ ВАЖНО */
+
+   \
+    z-index: 1;
+    pointer-events: none;
+}
+
+.media-decor-left--mirror {
+    position: absolute;
+    left: -130;
+    bottom: -80px;
+
+    width: 620px;
+    max-width: none;
+
+    transform: scaleX(-1) translateX(250px); /* ⬅️ УХОД ВЛЕВО */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-bg-bottom{
+    position: absolute;
+    bottom: -227px;
+    left: 50%;
+
+    transform: translateX(-50%) scale(0.3); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    transform-origin: center center;
+
+    z-index: 0;
+    pointer-events: none;
+}
+.decor-note-left{
+    position: absolute;
+    left: -40px;          /* ⬅️ слева */
+    top: 120px;           /* ⬆️ регулируй по макету */
+
+    transform: translateX(-50%) scale(0.2); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-right{
+    position: absolute;
+    right: 20px;     /* ➡️ справа */
+    top: -230px;       /* ⬆️ подгони по макету */
+
+   transform: translateX(-50%) scale(0.2); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-left-top{
+    position: absolute;
+
+    left: -60px;     /* ⬅️ в левую сторону */
+    top: -220px;       /* ⬆️ выше */
+
+   transform: translateX(-50%) scale(0.1); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-under-buttons{
+    position: absolute;
+
+    left: 40px;        /* ⬅️ слева */
+    bottom: -70px;      /* ⬇️ под кнопками */
+
+    width: 55px;        /* декоративный размер */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-center{
+    position: absolute;
+
+    left: 60%;
+    top: 30%;
+  transform: translateX(-50%) scale(0.2); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+
+  
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-right-top{
+    position: absolute;
+
+    right: -190px;   /* ➡️ справа */
+    top: -230px;      /* ⬆️ вверху */
+
+   transform: translateX(-50%) scale(0.2); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-right-top-2{
+    position: absolute;
+
+    right: -400px;   /* ➡️ справа */
+    top: -220px;      /* ⬆️ вверху */
+
+   transform: translateX(-50%) scale(0.1); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-right-simple{
+    position: absolute;
+
+    right: -400px;    /* ➡️ справа */
+    top: -20%;        /* по вертикали примерно по центру */
+    transform: translateY(-50%);
+
+   transform: translateX(-50%) scale(0.1); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+.decor-note-bottom-right{
+    position: absolute;
+
+    right: -300px;    /* ➡️ справа */
+    bottom: -140px;   /* ⬇️ внизу */
+
+    transform: translateX(-50%) scale(0.1); /* ⬅️ МАКСИМАЛЬНО МАЛЕНЬКО */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+
+
+
+/* STATS */
+.stats {
+    padding: 50px 0;
+    text-align: center;
+}
+.stats-inner {
+    display: flex;
+    justify-content: space-around;
+}
+.stat {
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+.stat h3 {
+    font-size: 48px;
+    color: #aef1ff;
+}
+
+.stats-character {
+    height: 120px;      /* 👈 уменьшаем размер */
+    width: auto;        /* сохраняем пропорции */
+}
+
+.stats-bg{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;                         /* ⬅️ центр по вертикали */
+
+    transform: translate(-50%, -50%) scale(0.2);
+    transform-origin: center center;
+
+    z-index: 0;                       /* самый нижний слой */
+    pointer-events: none;
+}
+.stat-1 { 
+    top: 95px;
+    left: -40px;
+    
+}
+
+.stat-2 {
+    top: 140px;
+    left: 260px;
+   
+}
+
+.stat-3 {
+    top: 70px;
+    right: 40px;
+  
+}
+.stats-images {
+    position: relative;
+    height: 350px;
+
+}
+.stats-note-top-left {
+    position: absolute;
+    top: 20px;        /* подгони если нужно */
+    left: 30px;
+
+    width: 60px;      /* размер картинки */
+    height: auto;
+
+    z-index: 1;        /* поверх фона, но ниже карточек */
+    pointer-events: none;
+}
+.stats-note-top-right {
+    position: absolute;
+    top: 10px;        /* подгони если нужно */
+    left: 110px;
+
+    width: 40px;      /* размер */
+    height: auto;
+
+    z-index: 1;        /* над фоном */
+    pointer-events: none;
+}
+.stats-note-right-mirror {
+    position: absolute;
+    top: 50px;          /* 👈 подгони под макет */
+    right: 200px;
+
+    width: 50px;
+    height: auto;
+
+    transform: scaleX(-1);  /* 🔥 ОТЗЕРКАЛИВАНИЕ */
+    transform-origin: center;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.stats-note-top-right-2 {
+    position: absolute;
+    top: 10px;        /* вверх */
+    right: 40px;      /* вправо */
+
+    width: 110px;      /* размер картинки */
+    height: auto;
+
+    z-index: 1;        /* над фоном */
+    pointer-events: none;
+}
+.stats-note-bottom-right {
+    position: absolute;
+   top: 350px;        /* вверх */
+    right: 90px;      /* вправо */
+
+    width: 50px;       /* размер картинки */
+    height: auto;
+
+    z-index: 1;         /* поверх фона */
+    pointer-events: none;
+}
+
+
+
+
+/* декор сверху слева */
+.media-decor-left {
+    position: absolute;
+    top: -25;
+    left: 0;
+
+    width: 400px;       /* подгони под макет */
+    height: auto;
+
+    z-index: 1;         /* поверх фона */
+    pointer-events: none;
+}
+/* ====== MEDIA BLOCK ====== */
+.media-block {
+    position: relative;
+    padding: 70px 0;
+  
+    color: #e8f4ff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* внутренний layout */
+.media-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+
+
+/* заголовок */
+.media-text h2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 0 0 34px;
+    color: #eaf4ff;
+    letter-spacing: -0.2px;
+}
+
+/* основной текст */
+.media-text p {
+    font-size: 21px;
+    line-height: 1.55;
+    color: rgba(180, 210, 255, 0.75); /* 🔥 как на карте */
+   
+}
+
+.with-icon--shift {
+    margin-left: 32px; /* 🔥 сдвиг вправо */
+    display: flex;
+    align-items: center;
+    gap: 22px;   /* 🔥 ближе к тексту */
+    margin-bottom: 36px;
+	 margin-top: 74px; /* 🔥 опустить ниже */
+	 
+}
+
+.with-icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* ИКОНКА */
+.icon-img {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    transform: translateX(-10px);
+}
+
+/* ТЕКСТ */
+.item-2 .icon-text {
+    margin-left: -50px;   /* ⬅️ как ты хотела */
+    color: #94FFFF;
+    line-height: 1.3;
+}
+/* ИКОНКА */
+.icon12-img {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    transform: translateX(300px);
+}
+
+.decor-top-right {
+    position: absolute;
+    top: 70px;    /* выше */
+    right: 100px;  /* правее */
+
+    width: 60px;      /* регулируй размер */
+    height: auto;
+
+    z-index: 1;        /* поверх фона */
+    pointer-events: none;
+}
+.decor-top-center {
+    position: absolute;
+    top: 70;
+    left: 50%;
+
+    transform: translateX(-50%); /* ⬅️ центрируем */
+    
+    width: 60px;    /* регулируй размер */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.decor-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 120;
+
+    width: 40px;   /* подгони под макет */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.decor-bottom-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%); /* ⬅️ центр */
+    
+    width: 80px;   /* регулируй */
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.with-icon{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:36px;
+}
+/* ====== КАРТИНКА СПРАВА ====== */
+.media-img {
+    margin-left: auto;
+    transform: translate(120px, 156px); /* вправо и вниз как в макете */
+}
+
+.media-img img {
+    width: 430px;
+    display: block;
+	 margin-top: -36px;    /* 🔥 ОПУСКАЕМ ТЕКСТ ВНИЗ */
+}
+.media-text {
+    transform: translateY(84px);
+}
+.icon-text {
+                                         /* 🔥 сделает текст больше */
+
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+
+
+.frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px; /* ⭐ средний размер — выглядит аккуратно */
+    opacity: 0.9;
+    pointer-events: none;
+	
+    top: 800px;
+}
+.stats {
+    position: relative;
+    padding: 80px 0;
+    overflow: visible; /* или просто удалить строку */
+}
+
+
+/* ПЕРСОНАЖ — справа и вниз, как на твоём скрине */
+.stats-character {
+    position: absolute;
+    right: 410px;    /* персонаж немного выходит за правый край */
+    bottom: -70px;   /* опускаем вниз, как в макете */
+    height: 630px;   /* подбираем размер персонажа */
+    z-index: 1;      /* персонаж — снизу */
+    pointer-events: none;
+    opacity: 1;
+}
+
+/* Контейнер статистики должен быть поверх персонажа */
+.stats-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.stats-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* ВАЖНО */
+    gap: 40px;
+}
+
+.stat-img {
+    width: 300px;
+    height: auto;
+}
+
+/* ЛЕВАЯ — ВЫШЕ */
+.stat-1 {
+    transform: translateY(-20px);
+}
+
+/* СРЕДНЯЯ — НИЖЕ */
+.stat-2 {
+    transform: translateY(40px);
+}
+
+/* ПРАВАЯ — ЕЩЁ НИЖЕ */
+.stat-3 {
+    transform: translateY(80px);
+}
+
+
+/* FEATURES */
+.features {
+    padding: 80px 0;
+}
+.features-title {
+    font-size: 36px;
+    text-align: center;
+	 margin-top: 90px; /* ⬇️ опускаем вниз */
+}
+p.features-title {
+	 font-size: 40px;
+    transform: translateY(-90px);
+	 margin-left: 90px;   /* ➡️ вправо */
+}
+.features-sub {
+    text-align: center;
+    color: #9dd7ff;
+    margin-bottom: 40px;
+}
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+}
+.feature-card {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+/* картинка внизу */
+.features-bottom-decor {
+    position: absolute;
+    bottom: -250px;          /* ⬇️ ВОТ ТЕПЕРЬ ОНА ПОЕДЕТ */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 110%;
+    max-width: 1200px;
+    height: auto;
+
+    pointer-events: none;
+    z-index: 1;
+}
+/* Заголовок h2 */
+h2.features-title {
+    color: #C3D6F8;
+}
+
+/* Текст p */
+p.features-title {
+    color: #C3E5F1;
+}
+
+
+/* контент всегда поверх картинки */
+.features .container {
+    position: relative;
+    z-index: 2;
+}
+.features-bg {
+    position: absolute;
+    left: 50%;
+    bottom: -1950px;       /* ⬇️ ЕЩЁ НИЖЕ */
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+
+.features-image img{
+ transform: translateY(0);
+  height: 250px;      /* 🔥 ОСНОВНОЙ РАЗМЕР как в примере */
+}
+.feature-image img{
+    transform: translateY(60px);
+	 height: 250px; 
+}
+
+.feature12-image img{
+  transform: translateY(0px);
+   height: 250px; 
+}
+.feature13-image img{
+    transform: translateY(60px);
+	 height: 250px; 
+}
+/* ПРАВАЯ КОЛОНКА */
+.features-right-bg {
+    position: absolute;
+    top: 270px;
+    right: 65px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    z-index: 0;
+	  pointer-events: none;   /* ⛔ не мешает кликам */
+    opacity: 0.6; 
+}
+
+/* ОДИН ШАГ — ГОРИЗОНТАЛЬНО */
+.features-step.horizontal {
+    display: flex;
+    align-items: center;      /* 🔥 ИКОНКА И ТЕКСТ НА ОДНОЙ ЛИНИИ */
+    gap: 20px;
+    max-width: 420px;
+    color: #ffffff;
+}
+
+/* ИКОНКА */
+.features-step.horizontal img {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+/* ТЕКСТ */
+.step-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ШАГ — БОЛЬШЕ */
+.step-text .step {
+    font-size: 18px;      /* ⬆️ было 14px */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+   color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* ЗАГОЛОВОК — МЕНЬШЕ */
+.step-text h4 {
+    font-size: 16px;      /* ⬇️ было 20px */
+    font-weight: 500;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+/* ===== КРОК 1 ===== */
+.features-step.horizontal:nth-of-type(1) .step,
+.features-step.horizontal:nth-of-type(1) h4,
+.features-step.horizontal:nth-of-type(1) p {
+    color: #C1E1EE;
+}
+
+/* ===== КРОК 2 ===== */
+.features-step.horizontal:nth-of-type(2) .step,
+.features-step.horizontal:nth-of-type(2) h4,
+.features-step.horizontal:nth-of-type(2) p {
+    color: #9A9AB3;
+}
+
+/* ===== КРОК 3 ===== */
+.features-step.horizontal:nth-of-type(3) .step,
+.features-step.horizontal:nth-of-type(3) h4,
+.features-step.horizontal:nth-of-type(3) p {
+    color: #8E88CB;
+}
+
+
+
+/* ОПИСАНИЕ — МЕНЬШЕ И КОРОЧЕ */
+.step-text p {
+    font-size: 13px;      /* ⬇️ было 15px */
+    line-height: 1.3;
+    opacity: 0.8;
+    max-width: 200px;     /* 🔥 делает текст визуально короче */
+}
+
+/* ЛЕВЫЙ ФОН — iPhone */
+.features-left-bg {
+    position: absolute;
+    left: -120px;          /* 👈 уходит за край, как фон */
+    top: 200px;            /* ⬇️ опусти как нужно */
+left: -100px;   /* 👈 немного вправо */
+    width: 660px;          /* 🔥 размер фона */
+    max-width: none;
+    height: auto;
+
+    z-index: -1;            /* ⬅️ ФОН */
+    opacity: 0.85;         /* мягко */
+    pointer-events: none;  /* не мешает кликам */
+}
+.features .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ВЕРХНИЙ ЛЕВЫЙ ФОН */
+.features-top-left-bg {
+    position: absolute;
+    top: -40px;        /* ⬆️ немного за край сверху */
+    left: -60px;       /* 👈 немного за край слева */
+
+    width: 90px;      /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -2;       /* ⬅️ САМЫЙ НИЗ */
+    opacity: 0.8;
+    pointer-events: none;
+}
+/* ВЕРХНИЙ ЛЕВЫЙ ФОН — note1 */
+.features-top-left-note1 {
+    position: absolute;
+    top: 10px;          /* ⬆️ чуть выше */
+    left: -50px;         /* 👈 чуть за край слева */
+
+    width: 80px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -4;         /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ЛЕВЫЙ ФОН — note1-2 */
+.features-bottom-left-note1 {
+    position: absolute;
+    left: -40px;        /* 👈 за край слева */
+    bottom: -140px;      /* ⬇️ за край снизу */
+
+    width: 80px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -4;         /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* НИЖНИЙ ЛЕВЫЙ ФОН — note2 */
+.features-bottom-left-note2 {
+    position: absolute;
+    left: 30px;        /* 👈 за край слева */
+    bottom: -130px;      /* ⬇️ за край снизу */
+ top: 640px; 
+    width: 80px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -4;         /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ПРАВЫЙ ФОН — note3 */
+.features-bottom-right-note3 {
+    position: absolute;
+    right: -50px;       /* 👉 за край справа */
+    bottom: -140px;      /* ⬇️ за край снизу */
+
+    width: 80px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -4;         /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ПРАВЫЙ ФОН — note3_002 */
+.features-bottom-right-note3-2 {
+    position: absolute;
+    right: -60px;       /* 👉 за край справа */
+    bottom: -250px;      /* ⬇️ за край снизу */
+
+    width: 80px;        /* 🔥 такой же размер */
+    height: auto;
+
+    z-index: -4;         /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* ВЕРХНИЙ ПРАВЫЙ ФОН — note2_003-1 */
+.features-top-right-note2 {
+    position: absolute;
+    right: -40px;       /* 👉 за край справа */
+    top: -70px;        /* ⬆️ за край сверху */
+
+    width: 100px;        /* 🔥 такой же размер */
+    height: auto;
+
+    z-index: -4;        /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* ВЕРХНИЙ ПРАВЫЙ ФОН — note1_001 */
+.features-top-right-note1 {
+    position: absolute;
+    right: -40px;       /* 👉 за край справа */
+    top: -95px;        /* ⬆️ за край сверху */
+
+    width: 80px;        /* 🔥 такой же размер */
+    height: auto;
+
+    z-index: -4;        /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* ВЕРХНИЙ ПРАВЫЙ ФОН — note1_001-1 */
+.features-top-right-note1-1 {
+    position: absolute;
+    right: -80px;       /* 👉 за край справа */
+    top: -30px;        /* ⬆️ за край сверху */
+
+    width: 60px;        /* 🔥 такой же размер */
+    height: auto;
+
+    z-index: -4;        /* ⬅️ глубокий фон */
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+
+
+
+
+/* ВЕРХНИЙ ЛЕВЫЙ ФОН — Group 100 */
+.features-top-left-group {
+    position: absolute;
+    top: -60px;          /* ⬆️ вверх */
+    left: -100px;         /* 👈 влево */
+
+    width: 420px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ */
+    opacity: 0.9;
+    pointer-events: none;
+}
+/* НИЖНИЙ ЛЕВЫЙ ФОН */
+.features-bottom-left-bg {
+    position: absolute;
+    left: -100px;        /* 👈 за край слева */
+    bottom: -120px;      /* ⬇️ за край снизу */
+top: 457px;  
+    width: 700px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ (фон) */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ЛЕВЫЙ ФОН */
+.features12-bottom-left-bg {
+    position: absolute;
+    left: -100px;        /* 👈 за край слева */
+    bottom: -120px;      /* ⬇️ за край снизу */
+top: 457px;  
+    width: 700px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ (фон) */
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* ВЕРХНИЙ ПРАВЫЙ ФОН */
+.features11-top-right-bg {
+    position: absolute;
+    top: -190px;          /* ⬆️ чуть выше */
+    right: -150px;        /* 👉 за край справа */
+
+    width: 420px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* ВЕРХНИЙ ПРАВЫЙ ФОН */
+.features15-top-right-bg {
+    position: absolute;
+    top: -230px;          /* ⬆️ чуть выше */
+    right: -250px;        /* 👉 за край справа */
+
+    width: 420px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ПРАВЫЙ ФОН */
+.features-bottom-right-bg {
+    position: absolute;
+    right: -160px;       /* 👉 за край справа */
+    bottom: -120px;      /* ⬇️ за край снизу */
+ top: 190px; 
+    width: 480px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ (фон) */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ПРАВЫЙ ФОН */
+.features14-bottom-right-bg {
+    position: absolute;
+    right: -230px;       /* 👉 за край справа */
+    bottom: -120px;      /* ⬇️ за край снизу */
+ top: 300px; 
+    width: 480px;        /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -3;         /* ⬅️ САМЫЙ НИЗ (фон) */
+    opacity: 0.85;
+    pointer-events: none;
+}
+/* НИЖНИЙ ЦЕНТРАЛЬНЫЙ ФОН */
+.features-bottom-center-bg {
+    position: absolute;
+    left: 60%;
+    bottom: -140px;           /* ⬇️ за край снизу */
+    transform: translateX(-50%);
+ top: 230px; 
+    width: 520px;             /* 🔥 размер фона */
+    height: auto;
+
+    z-index: -4;              /* ⬅️ ГЛУБОКИЙ ФОН */
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+
+
+.cta {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+	  transform: translateY(550px); /* ⬇️ ОПУСКАЕМ ВСЁ ВНИЗ */
+}
+
+/* КАРТИНКА СЛЕВА — СВОЙ КЛАСС */
+.cta-image-left {
+    position: absolute;
+    left: 60px;
+    bottom: -20px;
+    width: 420px;
+    max-width: none;
+    pointer-events: none;
+}
+
+.cta-image-right {
+    position: absolute;
+    right: 70px;
+    bottom: -5px;     /* ⬆ было -20px → стало выше */
+    width: 360px;
+    max-width: none;
+    pointer-events: none;
+}
+
+/* КОНТЕНТ ВСЕГДА СВЕРХУ */
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+
+
+
+/* АНИМАЦИЯ ПЛАВАНИЯ */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* ВТОРАЯ ЛЕВАЯ КАРТИНКА */
+.cta-image-left-2 {
+    position: absolute;
+    left: 140px;      /* чуть правее первой */
+    top: -120px;        /* выше */
+    width: 670px;     /* маленькая декоративная */
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* отдельная анимация, чтобы не совпадала */
+.cta-image-left-2 {
+    animation: floatSmall 7s ease-in-out infinite;
+}
+/* ЛЕВАЯ КАРТИНКА */
+.cta-image-left {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ПРАВАЯ КАРТИНКА */
+.cta-image-right {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1.5s; /* чтобы не двигались одинаково */
+}
+/* ПРАВАЯ ДЕКОРАТИВНАЯ КАРТИНКА */
+.cta-image-right-2 {
+    position: absolute;
+    right: 140px;     /* чуть левее основной правой */
+    top: -120px;        /* выше */
+    width:670px;     /* декоративный размер */
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.9;
+
+    animation: floatSmallRight 7s ease-in-out infinite;
+}
+
+
+/* заголовок */
+.cta-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;              /* расстояние между иконкой и текстом */
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0b2c3f;
+    background: #5fd0ff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* иконка */
+.cta-btn-icon {
+    width: 16px;           /* размер иконки */
+    height: 16px;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(95, 208, 255, 0.7);
+}
+/* ОБЩЕЕ ДЛЯ ВСЕХ НОТ */
+.note {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.9;
+    animation: floatNote 6s ease-in-out infinite;
+}
+
+/* ФИОЛЕТОВАЯ СЛЕВА СВЕРХУ */
+.note-1 {
+    top: 20px;
+    left: 400px;
+    width: 43px;
+    animation-delay: 0s;
+}
+
+/* ГОЛУБАЯ ПО ЦЕНТРУ СВЕРХУ */
+.note-2 {
+    bottom: 10px;
+    right: 100px;
+    width: 33px;
+    animation-delay: 2.4s;
+}
+
+/* СИНЯЯ СПРАВА СВЕРХУ */
+.note-3 {
+    top: 30px;
+    right: 100px;
+    width: 70px;
+    animation-delay: 0.6s;
+}
+
+/* МАЛЕНЬКАЯ СЛЕВА СНИЗУ */
+.note-4 {
+	top: 120px;
+    bottom: 80px;
+    left: 190px;
+    width: 34px;
+    animation-delay: 1.8s;
+}
+
+/* ФИОЛЕТОВАЯ СПРАВА СНИЗУ */
+.note-5 {
+	
+    bottom: 30px;
+    right: 1100px;
+    width: 23px;
+    animation-delay: 2.4s;
+}
+/* ФИОЛЕТОВАЯ СПРАВА СНИЗУ */
+.note-6 {
+	top: 55px;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 26px;
+    animation-delay: 1.2s;
+    
+}
+
+
+/* FOOTER */
+.footer {
+    padding-top: 60px;
+    margin-top: 60px;
+	  transform: translateY(500px); /* ⬇️ ОПУСКАЕМ ВСЁ ВНИЗ */
+}
+.footer-decor-line {
+    width: 100%;
+    height: 1px;
+    background-color: #1a2a3a;
+    opacity: 0.3;
+    margin: -20px auto 35px; /* ⬆ поднимаем вверх */
+}
+
+
+
+
+/* логотип слева */
+.footer-left {
+    position: absolute;
+    left: 0;
+}
+
+.footer-logo {
+    width: 150px;
+    opacity: 0.9;
+    margin-left: 160px; /* ← подвинь ближе к центру */
+	  margin-top: 10px;   /* ⬇ опускаем вниз */
+}
+
+
+.footer-center {
+    margin-left: auto;
+    margin-right: 140px;  /* сдвиг влево */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+	 margin-top: 85px;   /* ⬇ опускаем весь блок вниз */
+}
+
+/* адрес */
+.footer-address {
+    margin-bottom: 10px;
+	
+    font-size: 9px;   /* попробуй 9px или 10px */
+
+
+}
+
+/* телефон + email */
+.footer-contacts {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 14px;
+	
+     transform: translateX(-14px); /* ➡ вправо */
+
+
+}
+
+/* строка контакта */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;  /* иконка + текст вправо */
+    font-size: 11px;
+    color: #ffffff;
+    opacity: 0.85;
+}
+
+/* иконки */
+.contact-item img {
+    width: 12px;
+    height: 12px;
+}
+
+/* соцсети */
+.socials-center {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+	  transform: translateX(-100px); /* ➡ вправо */
+}
+
+
+.socials-center img {
+    width: 16px;
+    opacity: 0.9;
+}
+.footer-bottom {
+    margin-top: 95px;
+    padding: 25px 0;
+    text-align: center;
+    border-top: none; /* ❌ убираем */
+}
+
+.footer-bottom::before {
+    content: "";
+    display: block;
+    width: 90%;              /* ← длина линии (меняй 50–80%) */
+    height: 1px;
+    background-color: #1a2a3a;
+    margin: 0 auto 25px;     /* центр + отступ вниз */
+}
+
+
+.footer-bottom a {
+    margin: 0 14px;
+    font-size: 13px;
+    text-decoration: none;
+    color:  #ffffff;
+
+}
+@media (max-width: 1200px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero-logo-img {
+        height: 160px;
+    }
+
+    .logo-title {
+        font-size: 56px;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+        margin-top: -20px;
+    }
+
+    .hero-character {
+        height: 380px;
+        right: -40px;
+    }
+
+    /* FEATURES */
+    .features-grid {
+        gap: 30px;
+    }
+
+    .features-right-bg {
+        right: 20px;
+        top: 240px;
+        transform: scale(0.9);
+    }
+
+}
+@media (max-width: 992px) {
+
+    /* HEADER */
+    .nav a {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    /* HERO */
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h2,
+    .hero-text p,
+    .hero-buttons {
+        margin-left: 0;
+    }
+
+    .hero-character {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        height: 300px;
+        margin-top: 40px;
+    }
+
+    /* FEATURES */
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-image img,
+    .feature12-image img,
+    .feature13-image img {
+        height: 220px;
+        transform: none;
+    }
+
+    .features-right-bg {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 40px;
+        opacity: 0.8;
+    }
+
+    /* STATS */
+    .stats-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stats-character {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        height: 360px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: none; /* ⬅️ если нужен бургер — скажи */
+    }
+
+    /* HERO */
+    .logo-title {
+        font-size: 42px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+        margin-top: 0;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* FEATURES */
+    .features-title {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    p.features-title {
+        font-size: 22px;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .features-step.horizontal {
+        max-width: 100%;
+    }
+
+    .step-text p {
+        max-width: 100%;
+    }
+
+    /* MEDIA BLOCK */
+    .media-inner {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .media-img img {
+        width: 100%;
+        transform: none;
+    }
+
+    /* CTA */
+    .cta {
+        transform: none;
+        height: auto;
+        padding: 80px 0;
+    }
+
+}
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .logo-title {
+        font-size: 34px;
+    }
+
+    .hero-logo-img {
+        height: 120px;
+    }
+
+    .hero-character {
+        height: 240px;
+    }
+
+    /* FEATURES */
+    .features-right-bg {
+        opacity: 0.9;
+        transform: scale(0.85);
+    }
+
+    /* ДЕКОР — скрываем */
+    .decor-note-left,
+    .decor-note-right,
+    .decor-note-left-top,
+    .decor-note-center,
+    .decor-note-right-top,
+    .decor-note-bottom-right,
+    .features-left-bg,
+    .features-top-left-group,
+    .features-bottom-center-bg {
+        display: none;
+    }
+
+    /* FOOTER */
+    .footer-center {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
