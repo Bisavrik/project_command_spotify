@@ -937,49 +937,112 @@ button.top-music__arrow-btn
   color: #717780;
 }
 
-/* MIX CARD — базово */
-.mix-card{
+/* ===== ВІДКРИТІ ПЛЕЙЛИСТИ ===== */
+
+.open-playlists {
+  margin-top: 56px;
+}
+
+.open-playlists__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.open-playlists__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.open-playlists__title span {
+  color: #40A2FF;
+}
+
+.open-playlists__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.open-playlists__arrow {
+  background: none;
+  border: none;
   cursor: pointer;
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
 }
 
-/* обложка */
-.mix-cover{
-  transition: transform .35s ease;
+.open-playlists__arrow img {
+  width: 22px;
+  height: 22px;
 }
 
-/* стопка сзади */
-.mix-stack span{
-  transition: transform .35s ease, opacity .35s ease;
+/* ряд карточек */
+.open-playlists__row {
+  display: flex;
+  gap: 18px;
 }
 
-/* HOVER — основная анимация */
-.mix-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+/* карточка */
+.playlist-card {
+  width: auto;
+  height: auto;
+  padding: 18px;
+  border-radius: 22px;
+  background: #00368d4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.25s ease;
 }
 
-/* обложка увеличивается */
-.mix-card:hover .mix-cover{
-  transform: scale(1.05);
+.playlist-card:hover {
+  transform: translateY(-6px);
 }
 
-/* стопка «разъезжается» */
-.mix-card:hover .mix-stack span:nth-child(1){
-  transform: translate(16px, -16px);
-  opacity: 0.5;
+/* обложки */
+.playlist-card__covers {
+  position: relative;
+  height: 120px;
+  margin-bottom: 18px;
 }
 
-.mix-card:hover .mix-stack span:nth-child(2){
-  transform: translate(28px, -28px);
-  opacity: 0.35;
+.playlist-card__covers img {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-/* ACTIVE — нажатие */
-.mix-card:active{
-  transform: translateY(-4px) scale(0.98);
+.playlist-card__covers img:nth-child(1) {
+  left: 0;
+  z-index: 3;
+}
+
+.playlist-card__covers img:nth-child(2) {
+  left: 26px;
+  top: 10px;
+  z-index: 2;
+}
+
+.playlist-card__covers img:nth-child(3) {
+  left: 52px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* текст */
+.playlist-card__name {
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.playlist-card__meta {
+  font-size: 11px;
+  opacity: 0.7;
+  margin: 0;
 }
 
 /* FOOTER */
