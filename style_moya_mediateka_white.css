@@ -635,6 +635,7 @@ body
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.6);
+  color: #e9f6ff;
 
   display: none;
 
@@ -1069,6 +1070,7 @@ button.top-music__arrow-btn
 .audiobooks__title span 
 {
   color: #40A2FF;
+  cursor: pointer;
 }
 
 .audiobooks__list 
@@ -1169,6 +1171,7 @@ button.top-music__arrow-btn
 .podcasts__title span 
 {
   color: #40A2FF;
+  cursor: pointer;
 }
 
 .podcasts__list 
