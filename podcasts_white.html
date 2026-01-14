@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumtune</title>
+
+  <link rel="stylesheet" href="style_podcasts_white.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <!-- ЛОГО СЛЕВА -->
+        <div class="navbar__logo">
+          <img src="img_podcasts_white/logo-lumtune.svg" alt="Lumtune" class="navbar__logo-img">
+        </div>
+
+        <!-- ПОИСК ПО ЦЕНТРУ -->
+        <div class="navbar__search">
+          <span class="navbar__search-icon navbar__search-icon--left">
+            <img src="img_home_with_registration_white/icon-search-white.svg" alt="Пошук">
+          </span>
+
+          <input
+            type="text"
+            class="navbar__search-input"
+            placeholder="Виконавці, треки, подкасти..."
+          >
+
+          <span class="navbar__search-icon navbar__search-icon--right">
+            <img src="img_home_with_registration_white/icon-mic-white.svg" alt="Голосовий пошук">
+          </span>
+        </div>
+
+        <!-- ИКОНКИ СПРАВА -->
+        <div class="navbar__actions">
+          <button class="navbar__icon-btn" onclick='window.location.href="notifications_white.html"' aria-label="Сповіщення">
+            <img src="img_home_with_registration_white/icon-bell.svg" alt="Сповіщення">
+          </button>
+          <button class="navbar__icon-btn" onclick='window.location.href="profile_white.html"' aria-label="Профіль">
+            <img src="img_home_with_registration_white/icon-user-registratite.svg" alt="Профіль">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+    <main class="page-content">
+      <div class="layout">
+        <!-- ЛЕВОЕ МЕНЮ -->
+        <aside class="sidebar-left">
+          <div class="sidebar-left__inner">
+            <!-- БЛОК "МЕНЮ" -->
+            <div class="sidebar-left__section sidebar-left__section--menu">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Меню</p>
+
+              <button class="sidebar-left__primary-btn" onclick='window.location.href="home_with_registration_white.html"'>
+                <span class="sidebar-left__primary-icon">
+                  <img src="img_podcasts_white/icon-home-white.svg" alt="Головна">
+                </span>
+                <span class="sidebar-left__primary-label">Головна</span>
+              </button>
+
+              <button class="sidebar-left__secondary-btn" onclick='window.location.href="moya_mediateka_white.html"'>
+                <span class="sidebar-left__secondary-icon">
+                  <img src="img_podcasts_white/icon-library-white.svg" alt="Моя медіатека">
+                </span>
+                <span class="sidebar-left__secondary-label">Моя медіатека</span>
+              </button>
+            </div>
+
+            <!-- БЛОК "ПЛЕЙЛІСТИ" -->
+            <div class="sidebar-left__section sidebar-left__section--playlists sidebar-left__section--divider">
+              <p class="sidebar-left__caption sidebar-left__caption-main">Плейлісти</p>
+
+              <button class="sidebar-left__text-btn" onclick='window.location.href="love_tracks_white.html"'>
+                <span class="sidebar-left__text-icon">
+                  <img src="img_podcasts_white/icon-heart-outline-white.svg" alt="Улюблені треки">
+                </span>
+                <span>Улюблені треки</span>
+              </button>
+
+              <button class="sidebar-left__text-btn_bt6">
+                <span class="sidebar-left__text-icon">
+                  <img src="img_podcasts_white/icon-plus-square-white.svg" alt="Створити плейліст">
+                </span>
+                <span>Створити плейліст</span>
+              </button>
+
+              <div class="modal" id="modal">
+                  <div class="modal-content">
+                      <span class="close" id="closeBtn">&times;</span>
+
+                      <h3>Придумайте назву для вашого плейлиста</h3>
+                      <input type="text" class="album_name" placeholder="Назва плейлиста">
+                      <button class="create_playlist" onclick='window.location.href="moya_mediateka_white.html"'>Створити</button>
+                  </div>
+              </div>
+
+              <script>
+                  const modal = document.getElementById("modal");
+                  const openBtn = document.querySelector(".sidebar-left__text-btn_bt6");
+                  const closeBtn = document.getElementById("closeBtn");
+
+                  // Відкрити вікно
+                  openBtn.onclick = function () 
+                  {
+                      modal.style.display = "flex";
+                  };
+
+                  // Закрити по кліку на хрестик
+                  closeBtn.onclick = function () 
+                  {
+                      modal.style.display = "none";
+                  };
+
+                  // Закрити по кліку на фон
+                  window.onclick = function (event) 
+                  {
+                      if (event.target === modal) 
+                      {
+                          modal.style.display = "none";
+                      }
+                  };
+              </script>
+
+              <div class="sidebar-left__section-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Ваші плейлісти</p>
+                <button class="sidebar-left__menu-btn" aria-label="Меню плейлістів">
+                  <img src="img_podcasts_white/icon-playlist-menu-white.svg" alt="Меню">
+                </button>
+              </div>
+
+              <ul class="sidebar-left__playlist-list">
+                <li class="sidebar-left__playlist sidebar-left__playlist--active" onclick='window.location.href="blackpink_page_white.html"'>
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_podcasts_white/playlist-blackpink.svg" alt="Lisa">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Blackpink</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_podcasts_white/playlist-lady-gaga.svg" alt="Lady Gaga">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lady Gaga</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_podcasts_white/playlist-bruno-mars.svg" alt="Bruno Mars">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Bruno Mars</p>
+                    <p class="sidebar-left__playlist-meta">Виконавець</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_podcasts_white/playlist-bts.svg" alt="BTS">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">BTS</p>
+                    <p class="sidebar-left__playlist-meta">Гурт</p>
+                  </div>
+                </li>
+
+                <li class="sidebar-left__playlist">
+                  <div class="sidebar-left__playlist-avatar">
+                    <img src="img_podcasts_white/playlist-lana-del-rey.svg" alt="Lana Del Rey">
+                  </div>
+                  <div class="sidebar-left__playlist-content">
+                    <p class="sidebar-left__playlist-name">Lana Del Rey</p>
+                    <p class="sidebar-left__playlist-meta">Виконавиця</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- БЛОК "НЕЩОДАВНО ПРОСЛУХАНІ" -->
+            <div class="sidebar-left__section sidebar-left__section--bottom sidebar-left__section--divider">
+              <div class="sidebar-left__recent-header">
+                <p class="sidebar-left__caption sidebar-left__caption-small">Нещодавно прослухані</p>
+                <button class="sidebar-left__refresh-btn" aria-label="Оновити список">
+                  <img src="img_podcasts_white/icon-refresh-arrow-white.svg" alt="Оновити">
+                </button>
+              </div>
+
+              <div class="sidebar-left__clock-wrap">
+                <img src="img_podcasts_white/icon-clock-white.svg" alt="Clock" class="sidebar-left__clock-img">
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+        <section class="content-center">
+          <div class="content-center__inner">
+            <!-- ТАБЫ -->
+            <div class="content-center__tabs">
+              <button class="content-center__tab content-center__tab--active">Всі</button>
+              <button class="content-center__tab">Треки</button>
+              <button class="content-center__tab">Інше</button>
+            </div>
+
+            <!-- НОВІ РЕЛІЗИ ПОДКАСТІВ -->
+            <section class="podcasts">
+              <div class="podcasts__header">
+                <h2 class="podcasts__title">
+                  Нові релізи <span>подкастів</span>
+                </h2>
+              </div>
+
+              <div class="podcasts__list">
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Хроніки майбутнього
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_podcasts_white/podcast-1-5.svg" alt="Подкаст 1" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • «Яким буде світ за 50 років? Чи зможемо ми
+                      вибирати?» Ми говоримо про наукові відкриття,
+                      як вони можуть змінити наше майбутнє.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 10. Тіньові справи
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_podcasts_white/podcast-2-5.svg" alt="Подкаст 2" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • Реальні кримінальні історії, розказані зсередини. Ми аналізуємо
+                      резонансні злочини, розслідування,
+                      хто і чому порушує закон.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Теорії змови
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibu...
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_podcasts_white/podcast-3-5.svg" alt="Подкаст 3" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год 22 хв • Від таємного уряду до фейкової
+                      висадки на Місяць – розбираємось у теоріях
+                      змови та шукаємо, де правда, а де — вигадка.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+              <!-- НОВІ РЕЛІЗИ АУДІОКНИГ -->
+            <section class="audiobooks">
+              <div class="audiobooks__header">
+                <h2 class="audiobooks__title">
+                  Нові релізи <span>аудіокниг</span>
+                </h2>
+              </div>
+
+              <div class="audiobooks__list">
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_podcasts_white/audiobook-1.svg" alt="Тінь минулого" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Тінь минулого</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">Xonnie Hlnn</span>
+                      </p>
+                      <p class="audiobook-card__genre">Історичний роман, Драма</p>
+                      <p class="audiobook-card__desc">
+                        Під час холодної осені 1921 року, в невеликому гірському містечку, загубленому серед Карпат,
+                        молодий лікар Арсен випадково рятує від смерті незнайому жінку...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_podcasts_white/audiobook-2.svg" alt="Остання надія" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Остання надія</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">NewTree</span>
+                      </p>
+                      <p class="audiobook-card__genre">Драма, Сучасна проза</p>
+                      <p class="audiobook-card__desc">
+                        П’ятеро друзів з дитинства опинилися на життєвому роздоріжжі. Хтось бореться з залежностями,
+                        хтось не може пробачити собі старі помилки...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap">
+                      <img src="img_podcasts_white/audiobook-3.svg" alt="Голос снів" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Голос снів</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">Аманда Т.</span>
+                      </p>
+                      <p class="audiobook-card__genre">Психологічний трилер</p>
+                      <p class="audiobook-card__desc">
+                        Психотерапевт Андрій починає чути голоси своїх пацієнтів у снах. Вони розповідають йому про події,
+                        які ще не відбулись, але невдовзі стають реальністю...
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- НОВІ РЕЛІЗИ ПОДКАСТІВ -->
+            <section class="podcasts">
+              <div class="podcasts__header">
+                <h2 class="podcasts__title">
+                  Популярні <span>подкасти</span>
+                </h2>
+              </div>
+
+              <div class="podcasts__list">
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Шанс на нове життя.
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_moya_mediateka/podcast-1-2.svg" alt="Подкаст 1" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год. 22 хв. • «Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.»
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Будь з природою.
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_moya_mediateka/podcast-2-2.svg" alt="Подкаст 2" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год. 22 хв. • «Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.»
+                    </p>
+                  </div>
+                </article>
+
+                <article class="podcast-card">
+                  <div class="podcast-card__inner">
+                    <h3 class="podcast-card__title">
+                      Частина 1. Голос темряви.
+                    </h3>
+                    <p class="podcast-card__meta">
+                      Епізод • Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                    </p>
+
+                    <div class="podcast-card__cover-wrap">
+                      <img src="img_moya_mediateka/podcast-3-2.svg" alt="Подкаст 3" class="podcast-card__cover">
+                    </div>
+
+                    <p class="podcast-card__desc">
+                      Лип. 2024 • 5 год. 22 хв. • «Ти коли-небудь відчував, що хтось стежить за тобою в темряві? Чи бачив силует у дзеркалі, якого не мало бути?»
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+             <!-- Популярні АУДІОКНИГ -->
+            <section class="audiobooks">
+              <div class="audiobooks__header">
+                <h2 class="audiobooks__title">
+                  Популярні <span>Аудіокниги</span>
+                </h2>
+              </div>
+
+              <div class="audiobooks__list">
+                <article class="audiobook-card">
+                  <div class="audiobook-card__inner">
+                    <div class="audiobook-card__cover-wrap-2">
+                      <img src="img_podcasts_white/audiobook-1-1-5.svg" alt="Тінь минулого" class="audiobook-card__cover">
+                    </div>
+
+                    <div class="audiobook-card__body">
+                      <p class="audiobook-card__title-row">
+                        <span class="audiobook-card__name">Як жити у цьому світі</span>
+                        <span class="audiobook-card__divider"> | </span>
+                        <span class="audiobook-card__author">Dolor Sit Amet</span>
+                      </p>
+                      <p class="audiobook-card__genre">Фантастика, Містика</p>
+                      <p class="audiobook-card__desc">
+                        Duis viverra sapien elit, nec accumsan enim pellentesque semper. Praesent eget diam vitae lacus accumsan ultricies. Maecenas tincidunt dui ac nunc luctus, eget ultricies turpis ornare. Nunc tincidunt ligula a lectus vestibulum volutpat eu at massa. Proin aliquam turpis vel elit blandit, eget feugiat nisi varius. Sed ullamcorper porta risus, iaculis efficitur erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur auctor dolor varius dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris vitae eleifend urna. Integer tincidunt, augue porttitor rhoncus consequat, orci lorem dictum velit.
+                      </p>
+                      <p class="audiobook-card__meta">
+                        Серп. 2023<br>
+                        12 год. 22 хв.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                
+              </div>
+            </section>
+
+
+          </div>
+        </section>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ LANA DEL REY RADIO -->
+        <aside class="sidebar-right">
+          <div class="sidebar-right__inner">
+            <header class="sidebar-right__header">
+              <h3 class="sidebar-right__title">Podkast name</h3>
+            </header>
+
+            <div class="sidebar-right__cover-main">
+              <img src="img_podcasts_white/radio-podkast.svg" alt="Lana Del Rey main cover">
+            </div>
+
+            <div class="sidebar-right__track">
+              <div class="sidebar-right__track-text">
+                <p class="sidebar-right__track-title">Chapter name</p>
+                <p class="sidebar-right__track-artist">Author name</p>
+              </div>
+              <div class="sidebar-right__track-icons">
+                <button class="sidebar-right__icon-btn">
+                  <img src="img_podcasts_white/icon-add.svg" alt="Додати">
+                </button>
+              </div>
+            </div>
+
+                          <!-- TABLE HEADER -->
+             <div class="top-tracks__table">
+
+                <!-- 1 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">1</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-1.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 2 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">2</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-2.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 3 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">3</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-3.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 4 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">4</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-4.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 5 -->
+             <div class="top-tracks__row">
+                  <div class="top-tracks__index">5</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-5.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 6 -->
+              <div class="top-tracks__row">
+                  <div class="top-tracks__index">6</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-6.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+                <!-- 7 -->
+                <div class="top-tracks__row">
+                  <div class="top-tracks__index">7</div>
+
+                  <div class="top-tracks__track">
+                    <img src="img_podcasts_white/toptrack-7.svg" alt="">
+                    <div>
+                      <p class="top-tracks__name">TOMBOY</p>
+                      <span>(G)I-DLE</span>
+                    </div>
+                  </div>
+
+                  <div class="top-tracks__date">3:22</div>
+                </div>
+
+
+              </div>
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- Верхній ряд -->
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="img_podcasts_white/footer-logo.svg" alt="Lumtune">
+          </div>
+
+          <div class="footer__info">
+            <p class="footer__address">
+              <img src="img_podcasts_white/footer-location-white.svg" alt="">
+              Address: st. Shevchenko, 25 house, UA, Odessa, 00000
+            </p>
+
+            <p class="footer__phone">
+              <img src="img_podcasts_white/footer-phone-white.svg" alt="">
+              (380) 00-000-00-00           
+            </p>
+
+            <p class="footer__mail">
+              <img src="img_podcasts_white/footer-mail-white.svg" alt="">
+              lumitune@gmail.com
+            </p>
+
+            <div class="footer__socials">
+              <img src="img_podcasts_white/footer-facebook-white.svg" alt="">
+              <img src="img_podcasts_white/footer-twitter-white.svg" alt="">
+              <img src="img_podcasts_white/footer-pinterest-white.svg" alt="">
+              <img src="img_podcasts_white/footer-rss-white.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="footer__bottom">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- PLAYER BAR -->
+    <div class="player-bar">
+      <div class="player-bar__inner">
+        <!-- Левая часть: обложка + название трека -->
+        <div class="player-bar__left">
+            <div class="player-bar__cover">
+                <img src="img_podcasts_white/track-die-with-a-smile.svg" alt="Die with a smile">
+            </div>
+            <div class="player-bar__track">
+                <p class="player-bar__title">The Show</p>
+                <p class="player-bar__artist">BUDGIE</p>
+            </div>
+            <div class="player-bar__icons">
+                <button class="player-bar__icon-btn">
+                    <img src="img_podcasts_white/like-button-player-white.svg" alt="">
+                </button>
+                <button class="player-bar__icon-btn">
+                    <img src="img_podcasts_white/plus-button-player-white.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Центр: кнопки и прогресс -->
+        <div class="player-bar__center">
+          <div class="player-bar__controls">
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_podcasts_white/spin-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_podcasts_white/previous-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--main">
+                <img src="img_podcasts_white/play-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_podcasts_white/next-button-player-white.svg" alt="">
+            </button>
+            <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_podcasts_white/mix-button-player-white.svg" alt="">
+            </button>
+          </div>
+
+          <div class="player-bar__progress">
+            <span class="player-bar__time">0:32</span>
+            <div class="player-bar__progress-line">
+              <div class="player-bar__progress-fill"></div>
+            </div>
+            <span class="player-bar__time">3:48</span>
+          </div>
+        </div>
+
+        <!-- Правая часть: громкость / доп.иконки -->
+        <div class="player-bar__right">
+          <div class="player-bar__volume">
+            <span class="player-bar__icon">
+                <img src="img_podcasts_white/volume-button-player-white.svg" alt="">
+            </span>
+            <div class="player-bar__volume-line">
+              <div class="player-bar__volume-fill"></div>
+            </div>
+          </div>
+
+          <button class="player-bar__btn player-bar__btn--small">
+                <img src="img_podcasts_white/device-button-player-white.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+</body>
+</html>
