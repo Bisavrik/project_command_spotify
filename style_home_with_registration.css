@@ -1008,6 +1008,7 @@ button.top-music__arrow-btn
 .podcasts__title span 
 {
   color: #32aaff;
+  cursor: pointer;
 }
 
 .podcasts__list 
@@ -1108,6 +1109,7 @@ button.top-music__arrow-btn
 .audiobooks__title span 
 {
   color: #32aaff;
+  cursor: pointer;
 }
 
 .audiobooks__list 
