@@ -351,21 +351,28 @@
                 <div class="settings__row">
                   <h4 class="settings__section-title">Колір системи</h4>
 
-                  <select class="settings__select">
+                  <select class="settings__select" id="themeSelect">
+				  <option value="settings_white.html">Світла</option>
                    <option value="settings.html">Основна</option>
-  <option value="settings_white.html">Світла</option>
+  
                   </select>
 
-                  <script>
-                    document.querySelectorAll('.switch input').forEach((toggle, index) => {
-                      toggle.addEventListener('change', () => {
-                        localStorage.setItem('setting_' + index, toggle.checked);
-                      });
+                   <script>
+    /* переключатели */
+    document.querySelectorAll('.switch input').forEach((toggle, index) => {
+      toggle.addEventListener('change', () => {
+        localStorage.setItem('setting_' + index, toggle.checked);
+      });
 
-                      const saved = localStorage.getItem('setting_' + index);
-                      if (saved !== null) toggle.checked = saved === 'true';
-                    });
-                  </script>
+      const saved = localStorage.getItem('setting_' + index);
+      if (saved !== null) toggle.checked = saved === 'true';
+    });
+
+    /* 🔥 ПЕРЕХОД ПО SELECT */
+    document.getElementById('themeSelect').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+  </script>
                 </div>
 
             </div>

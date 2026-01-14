@@ -351,46 +351,29 @@
                 <div class="settings__row">
                   <h4 class="settings__section-title">Колір системи</h4>
 
-                  <select class="settings__select">
+                  <select class="settings__select" id="themeSelect">
+				   <option value="settings_white.html">Світла</option>
                     <option value="settings.html">Основна</option>
-  <option value="settings_white.html">Світла</option>
+ 
                   </select>
 
 
-                  <script>
-                    document.addEventListener('DOMContentLoaded', () => {
+                   <script>
+    /* переключатели */
+    document.querySelectorAll('.switch input').forEach((toggle, index) => {
+      toggle.addEventListener('change', () => {
+        localStorage.setItem('setting_' + index, toggle.checked);
+      });
 
-                      // переключатели
-                      document.querySelectorAll('.switch input').forEach((toggle, index) => {
-                        toggle.addEventListener('change', () => {
-                          localStorage.setItem('setting_' + index, toggle.checked);
-                        });
+      const saved = localStorage.getItem('setting_' + index);
+      if (saved !== null) toggle.checked = saved === 'true';
+    });
 
-                        const saved = localStorage.getItem('setting_' + index);
-                        if (saved !== null) toggle.checked = saved === 'true';
-                      });
-
-                      // тема
-                      const themeSelect = document.querySelector('.settings__select');
-                      if (!themeSelect) return;
-
-                      const savedTheme = localStorage.getItem('theme');
-                      if (savedTheme) {
-                        themeSelect.value = savedTheme;
-                      }
-
-                      themeSelect.addEventListener('change', () => {
-                        const value = themeSelect.value;
-                        localStorage.setItem('theme', value);
-
-                        if (value === 'Світла') {
-                          window.location.assign('settings_white.html');
-                        }
-                      });
-
-                    });
-                  </script>
-
+    /* 🔥 ПЕРЕХОД ПО SELECT */
+    document.getElementById('themeSelect').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+  </script>
 
                 </div>
 
