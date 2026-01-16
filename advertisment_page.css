@@ -124,9 +124,13 @@ body {
 .btn:hover {
     opacity: 0.85;
 }
-.hero-image img {
-    height: 420px;
+.hero-image img{
+  height: 420px;      /* если нужна именно такая высота */
+  width: auto;        /* 🔥 сохраняет пропорции */
+  max-width: 390%;    /* 🔒 не выходит за контейнер */
+  display: block;
 }
+
 .hero-character {
     height: 460px;
     position: absolute;
@@ -316,23 +320,19 @@ body {
     color: #aef1ff;
 }
 
-.stats-character {
-    height: 120px;      /* 👈 уменьшаем размер */
-    width: auto;        /* сохраняем пропорции */
-}
-
 .stats-bg{
-    position: absolute;
+  position: absolute;
+  height: 200px;
+  width: auto;
 
-    left: 50%;
-    top: 50%;                         /* ⬅️ центр по вертикали */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* ❌ БЕЗ scale */
 
-    transform: translate(-50%, -50%) scale(0.2);
-    transform-origin: center center;
-
-    z-index: 0;                       /* самый нижний слой */
-    pointer-events: none;
+  z-index: 0;
+  pointer-events: none;
 }
+
 .stat-1 { 
     top: 95px;
     left: -40px;
@@ -561,11 +561,11 @@ body {
 /* ====== КАРТИНКА СПРАВА ====== */
 .media-img {
     margin-left: auto;
-    transform: translate(120px, 156px); /* вправо и вниз как в макете */
+    transform: translate(88px, 156px); /* вправо и вниз как в макете */
 }
 
 .media-img img {
-    width: 430px;
+    width: 420px;
     display: block;
 	 margin-top: -36px;    /* 🔥 ОПУСКАЕМ ТЕКСТ ВНИЗ */
 }
